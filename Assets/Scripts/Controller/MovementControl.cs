@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class MovementControl : MonoBehaviour
 {
 
-    [SerializeField] private GameObject playerToMove;
+    private GameObject playerToMove;
     [SerializeField] private float speed = 5f;
     private InputAction moveAction;
     private Vector2 pMovement;
@@ -14,6 +14,7 @@ public class MovementControl : MonoBehaviour
     // sets up and enables the movement input action
     public void Initialize(InputAction moveAction)
     {
+        playerToMove = this.gameObject;
         this.moveAction = moveAction;
         this.moveAction.Enable();
     }
@@ -25,6 +26,9 @@ public class MovementControl : MonoBehaviour
         pMovement = this.moveAction.ReadValue<Vector2>();
         Vector3 pVelocity = new Vector3(pMovement.x * speed, playerToMove.GetComponent<Rigidbody>().velocity.y, pMovement.y * speed);
         playerToMove.GetComponent<Rigidbody>().velocity = pVelocity;
-
+        if (pVelocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(playerToMove.GetComponent<Rigidbody>().velocity.normalized);
+        }
     }
 }
