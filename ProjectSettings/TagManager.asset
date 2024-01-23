@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - grapple-pull-player
+  - laser-tag
+  - grapple-pull-object
+  - waypoint
   layers:
   - Default
   - TransparentFX
