@@ -8,7 +8,6 @@ public class SwanAttackState : ISwanState
     private Swan swan;
     float cooldown = 0.2f;
     float next;
-    Animator anim;
     public SwanAttackState(Swan swan)
     {
         this.swan = swan;
@@ -36,6 +35,7 @@ public class SwanAttackState : ISwanState
             if (Time.time > next)
             {
                 swan.arm_1.SetBool("attack", false);
+                swan.arm_2.SetBool("attack", false);
                 swan.state = new SwanMoveState(swan);
             }
         }
