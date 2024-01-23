@@ -10,5 +10,7 @@ namespace Assets.Scripts.Interfaces
     {
         void Attack();
         void Die();
+
+        void Update();
     }
 }

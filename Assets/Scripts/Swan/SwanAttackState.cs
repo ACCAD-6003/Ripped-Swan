@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwanAttackState : MonoBehaviour, ISwanState
+public class SwanAttackState : ISwanState
 {
     private Swan swan;
-    float cooldown = 0.3f;
+    float cooldown = 0.2f;
+    float next;
+    Animator anim;
     public SwanAttackState(Swan swan)
     {
         this.swan = swan;
-        //next = Time.time + cooldown;
+        next = Time.time + cooldown;
     }
 
     public void Attack()
@@ -24,14 +26,18 @@ public class SwanAttackState : MonoBehaviour, ISwanState
     }
 
     // TODO: Implement
-    void Update()
+    public void Update()
     {
-        // If swan is attacking, enable bounding box collision
+        // If swan is in attack state, set attack anim to be true
         if (swan.state is SwanAttackState)
         {
-
+            swan.arm_1.SetBool("attack", true);
+            // If swan stops attacking, switch to move state
+            if (Time.time > next)
+            {
+                swan.arm_1.SetBool("attack", false);
+                swan.state = new SwanMoveState(swan);
+            }
         }
-        // If swan stops attacking, switch to move state
-        swan.state = new SwanMoveState(swan);
     }
 }

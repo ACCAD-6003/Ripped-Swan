@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-internal class SwanDeathState : MonoBehaviour, ISwanState
+internal class SwanDeathState : ISwanState
 {
     private Swan swan;
 

@@ -9,15 +9,24 @@ public class Swan : MonoBehaviour
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
+    public Animator arm_1;
+    public Animator arm_2;
     void Start()
     {
         state = new SwanMoveState(this);
         healthPoints = 5;
+
+        arm_1 = this.gameObject.transform.Find("Arm_1/Arm").GetComponent<Animator>();
+        arm_2 = this.gameObject.transform.Find("Arm_2/Arm").GetComponent<Animator>();
     }
 
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0) && state is SwanMoveState)
+        {
+            state = new SwanAttackState(this);
+        }
+        state.Update();
     }
 
     public void hit()

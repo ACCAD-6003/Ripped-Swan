@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-internal class SwanMoveState : MonoBehaviour, ISwanState
+internal class SwanMoveState : ISwanState
 {
     private Swan swan;
 
@@ -18,5 +18,9 @@ internal class SwanMoveState : MonoBehaviour, ISwanState
     public void Die()
     {
         swan.state = new SwanDeathState(swan);
+    }
+
+    public void Update()
+    {
     }
 }
