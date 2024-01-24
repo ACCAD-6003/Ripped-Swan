@@ -8,6 +8,7 @@ public class SwanController : MonoBehaviour
 {
 
     [SerializeField] private MovementControl movementController;
+    [SerializeField] private JumpControl jumpController;
   
     private PlayerInput pScheme;
     
@@ -18,6 +19,8 @@ public class SwanController : MonoBehaviour
     {
         pScheme = new PlayerInput();
         movementController.Initialize(pScheme.Base.Movement);
+        jumpController.Initialize(pScheme.Base.Jump);
+
      
     }
     private void OnEnable()
