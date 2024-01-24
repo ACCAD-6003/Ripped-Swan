@@ -57,12 +57,8 @@ public class PatrolFollow : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //Scene thisScene = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(thisScene.name);
+            Swan swan = collision.gameObject.GetComponent<Swan>();
+            swan.hit();
         }
     }
-    
-
-
-
 }

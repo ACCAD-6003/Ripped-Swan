@@ -1,6 +1,7 @@
 ﻿using Assets.Scripts.Interfaces;
 using UnityEngine;
 
+/* NOTE: There's a good chance we won't need this class*/
 internal class SwanMoveState : ISwanState
 {
     private Swan swan;

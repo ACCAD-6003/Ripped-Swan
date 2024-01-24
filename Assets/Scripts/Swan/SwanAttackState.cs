@@ -9,7 +9,6 @@ public class SwanAttackState : ISwanState
     float cooldown = 0.2f;
     float next;
 
-
     public SwanAttackState(Swan swan)
     {
         this.swan = swan;
@@ -26,7 +25,6 @@ public class SwanAttackState : ISwanState
         swan.state = new SwanDeathState(swan);
     }
 
-    // TODO: Implement
     public void Update()
     {
         // If swan is in attack state, set attack anim to be true
@@ -36,10 +34,10 @@ public class SwanAttackState : ISwanState
             // If swan stops attacking, switch to move state
             if (Time.time > next)
             {
-                if (swan.arm == "left") 
-                    swan.arm = "right";
-                else if (swan.arm == "right") 
-                    swan.arm = "left";
+                if (swan.arm == Swan.Arm.Left) 
+                    swan.arm = Swan.Arm.Right;
+                else if (swan.arm == Swan.Arm.Right) 
+                    swan.arm = Swan.Arm.Left;
                 swan.arm_1.SetBool("attack", false);
                 swan.arm_2.SetBool("attack", false);
                 swan.state = new SwanMoveState(swan);
@@ -49,7 +47,7 @@ public class SwanAttackState : ISwanState
 
     private void selectArmToUse()
     {
-        if (swan.arm == "left")
+        if (swan.arm == Swan.Arm.Left)
             swan.arm_1.SetBool("attack", true);
         else
             swan.arm_2.SetBool("attack", true);

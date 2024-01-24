@@ -13,13 +13,17 @@ public class Swan : MonoBehaviour
     public Animator arm_1;
     public Animator arm_2;
 
-    // I know this is janky, but it should work for now - Musab
     // Used to switch arms during attack
-    public string arm;
+    public enum Arm
+    {
+        Left,
+        Right
+    }
+    public Arm arm;
 
     void Start()
     {
-        arm = "left";
+        arm = Arm.Left;
 
         state = new SwanMoveState(this);
         healthPoints = 5;
@@ -49,6 +53,7 @@ public class Swan : MonoBehaviour
 
     public void hit()
     {
+        Debug.Log("Player hit!");
         healthPoints--;
         if (healthPoints <= 0)
         {
