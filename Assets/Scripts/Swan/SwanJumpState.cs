@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwanJump : MonoBehaviour
+public class SwanJumpState : MonoBehaviour
 {
     [SerializeField] private int totalFlaps;
 

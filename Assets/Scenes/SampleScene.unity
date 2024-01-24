@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementController: {fileID: 1942770883}
+  jumpController: {fileID: 1942770890}
 --- !u!4 &106047774
 Transform:
   m_ObjectHideFlags: 0
@@ -58568,6 +58569,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &1942770890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942770857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259908d4649f4194a9596f25fd62c3f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sj: {fileID: 1942770891}
+--- !u!114 &1942770891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942770857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8496bb2ffd1bee44a0980e8e110ff3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  flapForce: 5
+  totalFlaps: 2
+  flaps: 2
 --- !u!1 &1946990644
 GameObject:
   m_ObjectHideFlags: 0

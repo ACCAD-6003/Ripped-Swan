@@ -8,6 +8,7 @@ TagManager:
   - laser-tag
   - grapple-pull-object
   - waypoint
+  - Ground
   layers:
   - Default
   - TransparentFX
