@@ -37,6 +37,16 @@ public class Swan : MonoBehaviour
         state.Update();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (state is SwanAttackState && collision.gameObject.tag == "enemy")
+        {
+            Debug.Log("Enemy Hit!");
+            IEnemy enemy = collision.gameObject.GetComponent<IEnemy>();
+            enemy.TakeDamage();
+        } 
+    }
+
     public void hit()
     {
         healthPoints--;

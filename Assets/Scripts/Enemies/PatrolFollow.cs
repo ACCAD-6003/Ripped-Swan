@@ -57,8 +57,8 @@ public class PatrolFollow : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Scene thisScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(thisScene.name);
+            //Scene thisScene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(thisScene.name);
         }
     }
     
