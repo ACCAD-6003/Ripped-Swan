@@ -11,8 +11,16 @@ public class Swan : MonoBehaviour
     public ISwanState state;
     public Animator arm_1;
     public Animator arm_2;
+
+
+    // I know this is janky, but it should work for now - Musab
+    // Used to switch arms during attack
+    public string arm;
+
     void Start()
     {
+        arm = "left";
+
         state = new SwanMoveState(this);
         healthPoints = 5;
 
