@@ -9,9 +9,9 @@ public class Swan : MonoBehaviour
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
+
     public Animator arm_1;
     public Animator arm_2;
-
 
     // I know this is janky, but it should work for now - Musab
     // Used to switch arms during attack

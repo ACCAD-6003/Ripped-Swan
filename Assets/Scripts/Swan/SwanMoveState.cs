@@ -4,7 +4,7 @@ using UnityEngine;
 internal class SwanMoveState : ISwanState
 {
     private Swan swan;
-
+    
     public SwanMoveState(Swan swan)
     {
         this.swan = swan;
@@ -22,5 +22,6 @@ internal class SwanMoveState : ISwanState
 
     public void Update()
     {
+        /* TODO: Change sprite animation based on direction player is facing */
     }
 }
