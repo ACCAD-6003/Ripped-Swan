@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SwanAttackState : ISwanState
 {
-    private Swan swan;
+    private SwanPunch swan;
     float cooldown = 0.2f;
     float next;
 
-    public SwanAttackState(Swan swan)
+    public SwanAttackState(SwanPunch swan)
     {
         this.swan = swan;
         next = Time.time + cooldown;
@@ -34,10 +34,10 @@ public class SwanAttackState : ISwanState
             // If swan stops attacking, switch to move state
             if (Time.time > next)
             {
-                if (swan.arm == Swan.Arm.Left) 
-                    swan.arm = Swan.Arm.Right;
-                else if (swan.arm == Swan.Arm.Right) 
-                    swan.arm = Swan.Arm.Left;
+                if (swan.arm == SwanPunch.Arm.Left) 
+                    swan.arm = SwanPunch.Arm.Right;
+                else if (swan.arm == SwanPunch.Arm.Right) 
+                    swan.arm = SwanPunch.Arm.Left;
                 swan.arm_1.SetBool("attack", false);
                 swan.arm_2.SetBool("attack", false);
                 swan.state = new SwanMoveState(swan);
@@ -47,7 +47,7 @@ public class SwanAttackState : ISwanState
 
     private void selectArmToUse()
     {
-        if (swan.arm == Swan.Arm.Left)
+        if (swan.arm == SwanPunch.Arm.Left)
             swan.arm_1.SetBool("attack", true);
         else
             swan.arm_2.SetBool("attack", true);

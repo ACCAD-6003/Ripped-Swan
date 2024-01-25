@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Swan : MonoBehaviour
+public class SwanPunch : MonoBehaviour
 {
     [Tooltip("Health Points")]
     [Range(0, 10)]
