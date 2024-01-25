@@ -44,6 +44,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""67b08f57-aea3-45ae-b8d0-f99387cbbe6a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -134,6 +143,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""520e81d4-3ed9-4eb6-91be-e765fb4f9cb3"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fed19f51-617d-48c3-9e8a-3fe98e9d3d0e"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -144,6 +175,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base = asset.FindActionMap("Base", throwIfNotFound: true);
         m_Base_Movement = m_Base.FindAction("Movement", throwIfNotFound: true);
         m_Base_Jump = m_Base.FindAction("Jump", throwIfNotFound: true);
+        m_Base_Attack = m_Base.FindAction("Attack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,12 +239,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<IBaseActions> m_BaseActionsCallbackInterfaces = new List<IBaseActions>();
     private readonly InputAction m_Base_Movement;
     private readonly InputAction m_Base_Jump;
+    private readonly InputAction m_Base_Attack;
     public struct BaseActions
     {
         private @PlayerInput m_Wrapper;
         public BaseActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Base_Movement;
         public InputAction @Jump => m_Wrapper.m_Base_Jump;
+        public InputAction @Attack => m_Wrapper.m_Base_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -228,6 +262,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -238,6 +275,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -259,5 +299,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
 }

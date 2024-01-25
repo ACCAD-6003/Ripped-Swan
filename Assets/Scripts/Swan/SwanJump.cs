@@ -8,7 +8,7 @@ public class SwanJump : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float flapForce;
     [SerializeField] private int totalFlaps;
-    [SerializeField] private int flaps;
+     private int flaps;
     enum JumpStates { GROUNDED, AIRBORN}
 
     JumpStates jumpState;
@@ -17,6 +17,7 @@ public class SwanJump : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
        jumpState = JumpStates.GROUNDED;
+        flaps = totalFlaps;
     }
 
     // Update is called once per frame
@@ -30,6 +31,7 @@ public class SwanJump : MonoBehaviour
         if(jumpState == JumpStates.GROUNDED)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+            jumpState = JumpStates.AIRBORN;
         }
 
         else
@@ -40,12 +42,20 @@ public class SwanJump : MonoBehaviour
 
     private void flap()
     {
-        rb.AddForce(transform.up * flapForce, ForceMode.VelocityChange);
+        if (flaps > 0)
+        {
+            rb.AddForce(transform.up * flapForce, ForceMode.VelocityChange);
+            flaps--;
+        }
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag.Equals("Ground"))
+        {
+            jumpState = JumpStates.GROUNDED;
+            flaps = totalFlaps;
+        }
     }
 }

@@ -9,7 +9,7 @@ public class SwanController : MonoBehaviour
 
     [SerializeField] private MovementControl movementController;
     [SerializeField] private JumpControl jumpController;
-  
+    [SerializeField] private AttackControl attackController;
     private PlayerInput pScheme;
     
 
@@ -20,12 +20,10 @@ public class SwanController : MonoBehaviour
         pScheme = new PlayerInput();
         movementController.Initialize(pScheme.Base.Movement);
         jumpController.Initialize(pScheme.Base.Jump);
+        attackController.Initialize(pScheme.Base.Attack);
 
      
     }
-    private void OnEnable()
-    {
-       
-    }
+  
 }
 

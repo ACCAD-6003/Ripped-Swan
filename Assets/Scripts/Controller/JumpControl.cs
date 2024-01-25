@@ -9,12 +9,12 @@ public class JumpControl : MonoBehaviour
 
     public void Initialize(InputAction jumpAction)
     {
-        jumpAction.performed += jumpAction_performed;
+        jumpAction.performed += JumpAction_performed;
         jumpAction.Enable();
 
     }
-    // Start is called before the first frame update
-    private void jumpAction_performed(InputAction.CallbackContext obj)
+    
+    private void JumpAction_performed(InputAction.CallbackContext obj)
     {
         Debug.Log("Jump");
         sj.Jump();

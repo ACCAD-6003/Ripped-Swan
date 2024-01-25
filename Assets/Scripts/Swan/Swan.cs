@@ -28,13 +28,18 @@ public class Swan : MonoBehaviour
         arm_2 = gameObject.transform.Find("Arm_2/Arm").GetComponent<Animator>();
     }
 
-    void Update()
+     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            state = new SwanAttackState(this);
-        }
+       
         state.Update();
+    } 
+
+
+    public void attack()
+    {
+       
+            state = new SwanAttackState(this);
+       
     }
 
     public void hit()
