@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 internal class SwanDeathState : ISwanState
 {
-    private SwanPunch swan;
+    private Swan swan;
 
-    public SwanDeathState(SwanPunch swan)
+    public SwanDeathState(Swan swan)
     {
         this.swan = swan;
     }
