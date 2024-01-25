@@ -9,6 +9,7 @@ TagManager:
   - grapple-pull-object
   - waypoint
   - Ground
+  - enemy
   layers:
   - Default
   - TransparentFX

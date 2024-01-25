@@ -10,6 +10,10 @@ public class FollowCamera : MonoBehaviour
     [Tooltip("Speed at which the camera approaches the player's new position.")] [Range(0, 1)]
     public float smoothTime = 0.3F;
 
+
+    [Tooltip("Fix the cameras z-axis.")]
+    public bool fixedZ = true;
+
     private float val = 1;
 
     private Vector3 position;
@@ -29,9 +33,15 @@ public class FollowCamera : MonoBehaviour
             Vector3 targetPosition = target.transform.position + offset;
 
             // Smoothly move the camera towards that target position
-            // transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, Time.smoothDeltaTime*val);
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-            // transform.position = Vector3.Lerp(transform.position, targetPosition, Time.smoothDeltaTime);
+            Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            if (fixedZ)
+            {
+                Vector3 newPosition = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z);
+                transform.position = newPosition;
+            } else
+            {
+                transform.position = smoothedPosition;
+            }
         }
     }
     

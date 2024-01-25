@@ -25,11 +25,12 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public void TakeDamage()
     {
         hitPoints--;
-        if (hitPoints < 0) Die();
+        if (hitPoints <= 0) Die();
     }
 
     public void Die()
     {
+        Debug.Log("Enemy Dead!");
         Destroy(gameObject);
     }
 

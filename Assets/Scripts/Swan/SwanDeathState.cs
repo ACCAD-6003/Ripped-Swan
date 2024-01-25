@@ -1,11 +1,12 @@
 ﻿using Assets.Scripts.Interfaces;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 internal class SwanDeathState : ISwanState
 {
-    private Swan swan;
+    private SwanPunch swan;
 
-    public SwanDeathState(Swan swan)
+    public SwanDeathState(SwanPunch swan)
     {
         this.swan = swan;
     }
@@ -16,7 +17,11 @@ internal class SwanDeathState : ISwanState
         // TODO: If swan is dead, play death animation and show game over screen
         if (swan.state is SwanDeathState)
         {
+            // TODO: Play death animation
+            // TODO: Show game over screen
 
+            //Scene thisScene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(thisScene.name);
         }
     }
 
