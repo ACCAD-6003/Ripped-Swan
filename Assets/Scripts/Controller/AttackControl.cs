@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class AttackControl : MonoBehaviour
 {
-    [SerializeField] private Swan s;
+    [SerializeField] private SwanPunch s;
 
     public void Initialize(InputAction attackAction)
     {
