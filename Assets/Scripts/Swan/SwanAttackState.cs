@@ -6,23 +6,13 @@ using UnityEngine;
 public class SwanAttackState : ISwanState
 {
     private Swan swan;
-    float cooldown = 0.2f;
+    float cooldown = 0.3f;
     float next;
 
     public SwanAttackState(Swan swan)
     {
         this.swan = swan;
         next = Time.time + cooldown;
-    }
-
-    public void Attack()
-    {
-        // already attacking
-    }
-
-    public void Die()
-    {
-        swan.state = new SwanDeathState(swan);
     }
 
     public void Update()

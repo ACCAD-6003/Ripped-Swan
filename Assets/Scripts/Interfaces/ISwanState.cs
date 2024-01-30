@@ -8,9 +8,6 @@ namespace Assets.Scripts.Interfaces
 {
     public interface ISwanState
     {
-        void Attack();
-        void Die();
-
         void Update();
     }
 }

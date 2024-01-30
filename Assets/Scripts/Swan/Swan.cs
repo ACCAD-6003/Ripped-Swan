@@ -17,7 +17,7 @@ public class Swan : MonoBehaviour
         state = new SwanMoveState(this);
         healthPoints = 5;
 
-        animator = gameObject.transform.Find("/PlayerSprite").GetComponent<Animator>();
+        animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
     }
 
     void Update()
