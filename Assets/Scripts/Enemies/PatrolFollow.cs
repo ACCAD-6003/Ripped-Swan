@@ -58,7 +58,7 @@ public class PatrolFollow : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Swan swan = collision.gameObject.GetComponent<Swan>();
-            swan.hit();
+            //swan.hit();
         }
     }
 }

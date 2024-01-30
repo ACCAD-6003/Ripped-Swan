@@ -10,6 +10,7 @@ public class Swan : MonoBehaviour
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
+
     public Animator animator;
 
     void Start()
@@ -37,13 +38,16 @@ public class Swan : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (state is SwanAttackState && collision.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy")
         {
-            Debug.Log("Enemy Hit!");
-            IEnemy enemy = collision.gameObject.GetComponent<IEnemy>();
-            enemy.TakeDamage();
+            if (state is SwanAttackState)
+            {
+                Debug.Log("Enemy Hit!");
+                IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
+                enemy.TakeDamage();
+            }
         }
     }
 }
