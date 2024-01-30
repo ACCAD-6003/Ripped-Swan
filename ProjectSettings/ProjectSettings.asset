@@ -903,11 +903,16 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 2
+<<<<<<< Updated upstream
   cloudProjectId: 
+=======
+  windowsGamepadBackendHint: 0
+  cloudProjectId: 8b153707-4e48-45ab-b895-0125f3142942
+>>>>>>> Stashed changes
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Ripped-Swan 2024-01-29_20-28-48
+  organizationId: jack-1220418
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
