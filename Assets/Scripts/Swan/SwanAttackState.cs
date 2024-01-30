@@ -6,7 +6,7 @@ using UnityEngine;
 public class SwanAttackState : ISwanState
 {
     private Swan swan;
-    float cooldown = 0.3f;
+    float cooldown = 0.3f; // cooldown based on animation length, this needs to change when we get the final sprites
     float next;
 
     public SwanAttackState(Swan swan)
