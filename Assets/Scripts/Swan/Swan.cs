@@ -21,11 +21,19 @@ public class Swan : MonoBehaviour
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
     }
 
-    void Update()
+     void Update()
     {
         if (Input.GetMouseButtonDown(0))
             state = new SwanAttackState(this);
         state.Update();
+    } 
+
+
+    public void attack()
+    {
+       
+            state = new SwanAttackState(this);
+       
     }
 
     public void hit()
