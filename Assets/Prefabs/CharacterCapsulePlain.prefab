@@ -114,7 +114,6 @@ GameObject:
   - component: {fileID: 4700932873500088630}
   - component: {fileID: 7538375754350133878}
   - component: {fileID: 4058586610612931628}
-  - component: {fileID: 4651832878960000262}
   m_Layer: 6
   m_Name: CharacterCapsulePlain
   m_TagString: Player
@@ -439,17 +438,3 @@ MonoBehaviour:
   preciseMovement: 0
   HP: 10
   currentPlayerHP: 0
---- !u!114 &4651832878960000262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840583522201341030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab36637c29ca23548abcb4bae5a3a6fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 8
-  timeBeforeSlide: 1
