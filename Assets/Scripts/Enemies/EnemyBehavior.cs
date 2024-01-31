@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-
+    [SerializeField] private float xDirection;
     [SerializeField] LayerMask wallMask; // mask so vision ignores walls
     [SerializeField] private float moveSpeed = 3f;
-    [SerializeField] private float visionRange = 5f;  //how far they can see
+    [SerializeField] private float visionRange = 20f;  //how far they can see
+    [SerializeField] private float AttackVisionRange = 2f;
     [SerializeField][Range(0f, 359f)] private float fieldOfView = 90f; // Cone field of view angle
     [SerializeField] private float chaseTime = 10f;   //how long you want them to flee for
 
     private enum State
     {
         Idle, Walk,Pursuit,
-        Attack
+        Attack, Damaged
     }
 
     private State currentState;
     private Transform target; // will be the prey when in sight
     private Rigidbody rb;
+   
 
 
 
@@ -29,7 +31,7 @@ public class EnemyBehavior : MonoBehaviour
         currentState = State.Idle; // start in idle
         rb = GetComponent<Rigidbody>(); //rigidbody for movement
 
-        rb.velocity = new Vector3(randomValue(), 0, randomValue()); //initial movement
+        rb.velocity = new Vector3(0, 0, 0); //initial movement
        // StartCoroutine(RandomDirection()); // starts a couroutine for what to do when in idle
 
     }
@@ -42,7 +44,7 @@ public class EnemyBehavior : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
-                IdleState();
+                //nothing happens lol
                 break;
             case State.Walk:
                 WalkState();
@@ -51,7 +53,10 @@ public class EnemyBehavior : MonoBehaviour
                 PursuitState();
                 break;
             case State.Attack:
-                //attack
+                AttackState();
+                break;
+            case State.Damaged:
+                //call Damage
                 break;
 
         }
@@ -69,14 +74,8 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 
-    // Can read Prey.IdleState() for further comments as it is near identical excluding what compareTag is being used
-    void IdleState()
-    {
-
-       
-
-
-    }
+    
+   
 
 
 
@@ -92,7 +91,7 @@ public class EnemyBehavior : MonoBehaviour
 
             if (angle < fieldOfView * 0.5f)
             {
-                if (collider.CompareTag("Prey") && Vector3.Distance(transform.position, collider.transform.position) < visionRange)
+                if (collider.CompareTag("Player") && Vector3.Distance(transform.position, collider.transform.position) < visionRange)
                 {
 
                     float distancetoTarget = Vector3.Distance(transform.position, targetPosition);
@@ -101,7 +100,7 @@ public class EnemyBehavior : MonoBehaviour
 
                         currentState = State.Attack;
                         target = collider.transform;
-                        StartCoroutine(Chasing(target));
+                       // StartCoroutine(Chasing(target));
                         break;
 
                     }
@@ -140,33 +139,24 @@ public class EnemyBehavior : MonoBehaviour
         currentState = State.Idle;
     }
 
-    // destroys prey on collision
-    private void OnCollisionEnter(Collision collision)
+    
+
+
+    
+
+    private void AttackState()
     {
-        if (collision.gameObject.tag.Equals("Prey"))
-        {
-            currentState = State.Idle;
-            Destroy(collision.gameObject);
-        }
+        //Attack with Collider
+        //or shoot projectile
     }
 
 
-    //changes direction randomly over a random interval between 1 and 3 seconds
-    private IEnumerator RandomDirection()
+    public void BeginWalk()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(1f, 3f));
-            if (currentState == State.Idle)
-            {
-                if (Random.Range(0f, 100f) < 95f)
-                {
-                    Vector3 move = new Vector3(randomValue(), 0, randomValue());
-                    move = Vector3.Normalize(move);
-                    rb.velocity = moveSpeed * move;
-                }
-            }
-        }
+        currentState = State.Walk;
+        Vector3 move = new Vector3(xDirection, 0, 0);
+        move = Vector3.Normalize(move);
+        rb.velocity = moveSpeed * move;
 
     }
 }
