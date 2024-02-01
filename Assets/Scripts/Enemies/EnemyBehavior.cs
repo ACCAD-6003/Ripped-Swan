@@ -14,7 +14,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private enum State
     {
-        Idle, Walk,Pursuit,
+        Idle, Walk,Pursuit,Prepare,
         Attack, Damaged
     }
 
@@ -45,10 +45,11 @@ public class EnemyBehavior : MonoBehaviour
         {
             case State.Idle:
                 IdleState();
+                Scout();
                 break;
             case State.Walk:
                 walk();
-                WalkState();
+                Scout();
                 break;
             case State.Pursuit:
                 PursuitState();
@@ -89,7 +90,7 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 
-    void WalkState()
+    void Scout()
     {
         // Check for prey in the cone of vision
         Collider[] colliders = Physics.OverlapSphere(transform.position, visionRange);
@@ -108,9 +109,9 @@ public class EnemyBehavior : MonoBehaviour
                     if (!Physics.Raycast(transform.position, directionToTarget, distancetoTarget, wallMask))
                     {
 
-                        currentState = State.Attack;
+                        currentState = State.Pursuit;
                         target = collider.transform;
-                       // StartCoroutine(Chasing(target));
+                        StartCoroutine(Chasing(target));
                         break;
 
                     }
@@ -125,28 +126,29 @@ public class EnemyBehavior : MonoBehaviour
     {
         Vector3 chaseDirection = -(transform.position - target.position);
         Vector3 movement = chaseDirection.normalized * moveSpeed;
+        movement.y = 0f;
         rb.velocity = movement;
     }
 
 
 
 
-    // for random movement while in idle
-    float randomValue()
-    {
-        float r = 0;
-        while (r == 0)
-            r = Random.Range(-10f, 10f);
-
-        return r;
-    }
+   
 
     // will stay in pursuit state for a certain amount of time
     IEnumerator Chasing(Transform target)
     {
-        currentState = State.Attack;
+        currentState = State.Pursuit;
         yield return new WaitForSeconds(chaseTime);
-        currentState = State.Idle;
+        currentState = State.Prepare;
+    }
+
+
+
+    IEnumerator Prepare()
+    {
+
+
     }
 
     
@@ -160,7 +162,7 @@ public class EnemyBehavior : MonoBehaviour
         //or shoot projectile
     }
 
-
+    /*
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player" && currentState == State.Attack)
@@ -169,6 +171,19 @@ public class EnemyBehavior : MonoBehaviour
             swan.hit();
         }
         
+    }
+
+    */
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Swan swan = other.gameObject.GetComponent<Swan>();
+            swan.hit();
+        }
     }
 
 
