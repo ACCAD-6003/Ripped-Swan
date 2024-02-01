@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyBehavior : MonoBehaviour
 {
+    [SerializeField] private float prepTime;
     [SerializeField] private float xDirection;
     [SerializeField] LayerMask wallMask; // mask so vision ignores walls
     [SerializeField] private float moveSpeed = 3f;
@@ -14,7 +17,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private enum State
     {
-        Idle, Walk,Pursuit,Prepare,
+        Idle, Walk,Pursuit,Cooldown,
         Attack, Damaged
     }
 
@@ -53,9 +56,10 @@ public class EnemyBehavior : MonoBehaviour
                 break;
             case State.Pursuit:
                 PursuitState();
+                AttackRange();
                 break;
             case State.Attack:
-                AttackState();
+                
                 break;
             case State.Damaged:
                 //call Damage
@@ -94,6 +98,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         // Check for prey in the cone of vision
         Collider[] colliders = Physics.OverlapSphere(transform.position, visionRange);
+
         foreach (var collider in colliders)
         {
             Vector3 targetPosition = collider.transform.position;
@@ -121,6 +126,31 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 
+
+    void AttackRange()
+    {
+        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity);
+        int i = 0;
+        //Check when there is a new collider coming into contact with the box
+        while (i < hitColliders.Length)
+        {
+            //Output all of the collider names
+            Debug.Log("Hit : " + hitColliders[i].name + i);
+            if (hitColliders[i].gameObject.CompareTag("Player")){
+                currentState = State.Idle;
+                StartCoroutine(Attack());
+
+            }
+            //Increase the number of Colliders in the array
+            i++;
+        }
+    }
+
+
+
+
+
+
     // pursues the prey while in the Pursuit State
     void PursuitState()
     {
@@ -140,40 +170,29 @@ public class EnemyBehavior : MonoBehaviour
     {
         currentState = State.Pursuit;
         yield return new WaitForSeconds(chaseTime);
-        currentState = State.Prepare;
+        currentState = State.Idle;
     }
 
 
 
-    IEnumerator Prepare()
+    IEnumerator Attack()
     {
-
-
-    }
-
-    
-
-
-    
-
-    private void AttackState()
-    {
-        //Attack with Collider
-        //or shoot projectile
-    }
-
-    /*
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player" && currentState == State.Attack)
-        {
-            Swan swan = collision.gameObject.GetComponent<Swan>();
-            swan.hit();
-        }
+      
+        yield return new WaitForSeconds(prepTime);
+        currentState = State.Attack;
+        BoxCollider myBC = gameObject.GetComponent<BoxCollider>();
+        myBC.enabled = true;
+        yield return new WaitForSeconds(1f);
+        myBC.enabled = false;
+        currentState = State.Cooldown;
+        yield return new WaitForSeconds(1f);
+        currentState = State.Idle;
         
     }
 
-    */
+    
+
+
 
 
 
@@ -194,5 +213,14 @@ public class EnemyBehavior : MonoBehaviour
         move = Vector3.Normalize(move);
         rb.velocity = moveSpeed * move;
 
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        //Use the same vars you use to draw your Overlap SPhere to draw your Wire Sphere.
+        Gizmos.DrawWireSphere(transform.position, visionRange);
+        Gizmos.DrawWireCube(transform.position +transform.forward*.7f, transform.localScale);
+       
     }
 }
