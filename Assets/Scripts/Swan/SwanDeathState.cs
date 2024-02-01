@@ -17,7 +17,7 @@ internal class SwanDeathState : ISwanState
         // TODO: If swan is dead, play death animation and show game over screen
         // TODO: Play death animation
         // TODO: Show game over screen
-        //Scene thisScene = SceneManager.GetActiveScene();
-        //SceneManager.LoadScene(thisScene.name);
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
     }
 }
