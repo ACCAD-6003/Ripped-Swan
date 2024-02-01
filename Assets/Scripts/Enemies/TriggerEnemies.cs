@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TriggerEnemies : MonoBehaviour
 {
-
+    [SerializeField] Transform enemyParent; //Parent of the enemies this will trigger
+    [SerializeField] Transform wallParent;  //Are of the walls that will be enabled
+    [SerializeField] FollowCamera playerCam; //will set camera to an area
     
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,7 @@ public class TriggerEnemies : MonoBehaviour
         {
             for(int i = 0; i < transform.childCount; i++)
             {
-                transform.GetChild(i).GetComponent<EnemyBehavior>().BeginWalk();
+                enemyParent.GetChild(i).GetComponent<EnemyBehavior>().BeginWalk();
             }
         }
     }
