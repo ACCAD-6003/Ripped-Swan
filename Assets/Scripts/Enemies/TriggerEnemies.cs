@@ -23,12 +23,15 @@ public class TriggerEnemies : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        Debug.Log(other.gameObject.tag);
+        if (other.gameObject.CompareTag("Player"))
         {
-            for(int i = 0; i < transform.childCount; i++)
+            for(int i = 0; i < enemyParent.childCount; i++)
             {
                 enemyParent.GetChild(i).GetComponent<EnemyBehavior>().BeginWalk();
             }
+            gameObject.SetActive(false);
         }
+
     }
 }

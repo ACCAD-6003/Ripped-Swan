@@ -44,9 +44,10 @@ public class EnemyBehavior : MonoBehaviour
         switch (currentState)
         {
             case State.Idle:
-                //nothing happens lol
+                IdleState();
                 break;
             case State.Walk:
+                walk();
                 WalkState();
                 break;
             case State.Pursuit:
@@ -76,7 +77,16 @@ public class EnemyBehavior : MonoBehaviour
 
     
    
+    void IdleState()
+    {
+        rb.velocity = new Vector3(0, 0, 0);
+    }
 
+
+    void walk()
+    {
+        rb.velocity = new Vector3(xDirection*moveSpeed, 0, 0);
+    }
 
 
     void WalkState()
@@ -148,6 +158,17 @@ public class EnemyBehavior : MonoBehaviour
     {
         //Attack with Collider
         //or shoot projectile
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player" && currentState == State.Attack)
+        {
+            Swan swan = collision.gameObject.GetComponent<Swan>();
+            swan.hit();
+        }
+        
     }
 
 
