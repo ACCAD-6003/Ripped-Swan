@@ -30,7 +30,7 @@ public class MovementControl : MonoBehaviour
         {
             if (pVelocity.x > 0)
             {
-                // transform.rotation = Quaternion.LookRotation(playerToMove.GetComponent<Rigidbody>().velocity.normalized);
+               
                 transform.rotation = Quaternion.LookRotation(Vector3.right);
             }
             else if(pVelocity.x < 0){
