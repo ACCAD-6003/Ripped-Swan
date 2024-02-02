@@ -10,14 +10,14 @@ public class Swan : MonoBehaviour
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
-
     public Animator animator;
+
+    public int enemiesKilled;
 
     void Start()
     {
         state = new SwanMoveState(this);
-        healthPoints = 5;
-
+        enemiesKilled = 0;
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
     }
 
@@ -53,6 +53,7 @@ public class Swan : MonoBehaviour
                 Debug.Log("Enemy Hit!");
                 IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
                 enemy.TakeDamage();
+                enemiesKilled++;
             }
         }
     }
