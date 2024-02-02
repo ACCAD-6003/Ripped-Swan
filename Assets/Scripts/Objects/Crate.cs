@@ -5,25 +5,17 @@ using UnityEngine.InputSystem.HID;
 
 public class Crate : MonoBehaviour
 {
-    [SerializeField]
-    private float forceMagnitude;
-
     Rigidbody rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-
-        if (rb != null)
+        if (other.gameObject.tag == "Player")
         {
-            var forceDirection = collision.gameObject.transform.position - transform.position;
-            forceDirection.y = 0;
-            forceDirection.Normalize();
-
-            rb.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
+            rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse);
         }
     }
 }
