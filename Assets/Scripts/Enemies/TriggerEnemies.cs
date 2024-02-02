@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerEnemies : MonoBehaviour
 {
     [SerializeField] Transform enemyParent; //Parent of the enemies this will trigger
-    [SerializeField] Transform wallParent;  //Are of the walls that will be enabled
+    [SerializeField] Transform CameraPositions;  //Positions for the camera to go  to
     [SerializeField] FollowCamera playerCam; //will set camera to an area
     
     // Start is called before the first frame update
@@ -17,21 +17,11 @@ public class TriggerEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //When all enemies are gone, free camera
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    public void callLock(int index)
     {
-        Debug.Log(other.gameObject.tag);
-        if (other.gameObject.CompareTag("Player"))
-        {
-            for(int i = 0; i < enemyParent.childCount; i++)
-            {
-                enemyParent.GetChild(i).GetComponent<EnemyBehavior>().BeginWalk();
-            }
-            gameObject.SetActive(false);
-        }
-
+        playerCam.lockCamera(CameraPositions.GetChild(index));
     }
 }
