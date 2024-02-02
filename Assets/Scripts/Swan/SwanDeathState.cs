@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 internal class SwanDeathState : ISwanState
 {
-    private SwanPunch swan;
+    private Swan swan;
 
-    public SwanDeathState(SwanPunch swan)
+    public SwanDeathState(Swan swan)
     {
         this.swan = swan;
     }
@@ -15,19 +15,9 @@ internal class SwanDeathState : ISwanState
     public void Update()
     {
         // TODO: If swan is dead, play death animation and show game over screen
-        if (swan.state is SwanDeathState)
-        {
-            // TODO: Play death animation
-            // TODO: Show game over screen
-
-            //Scene thisScene = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(thisScene.name);
-        }
+        // TODO: Play death animation
+        // TODO: Show game over screen
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
     }
-
-
-    // No need to implement, swan is dead
-    public void Attack() {} 
-    public void Die() {}
-
 }

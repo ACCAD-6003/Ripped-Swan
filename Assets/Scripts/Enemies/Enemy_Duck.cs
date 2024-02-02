@@ -11,10 +11,13 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     private double damage;
     public double Damage { get { return damage; } }
 
+
+    Rigidbody rb;
     public void Start()
     {
         damage = 0.5;
-        hitPoints = 1;
+        hitPoints = 3;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void Attack()
@@ -22,10 +25,16 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         // The attack for a basic duck is just moving towards you
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        hitPoints--;
-        if (hitPoints <= 0) Die();
+        Debug.Log("Enemy Hit!");
+        hitPoints -=damage;
+        KnockbackEnemy();
+        if (HitPoints <= 0)
+        {
+            Die();
+            Swan.enemiesKilled++;
+        }
     }
 
     public void Die()
@@ -34,4 +43,8 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 
+    private void KnockbackEnemy()
+    {
+        rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse);
+    }
 }
