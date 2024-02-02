@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13091,6 +13091,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 523573802}
+    - target: {fileID: 1716328301663214440, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03221202
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716328301663214440, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2122117
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716328301663214440, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710623
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716328301663214440, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710737
+      objectReference: {fileID: 0}
+    - target: {fileID: 1716328301663214440, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Name
       value: Swan Variant
@@ -13138,6 +13158,18 @@ PrefabInstance:
     - target: {fileID: 2493170928736159077, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172004157699790236, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172004157699790236, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5390625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6172004157699790236, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
