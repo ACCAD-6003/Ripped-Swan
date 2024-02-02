@@ -14,7 +14,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public void Start()
     {
         damage = 0.5;
-        hitPoints = 1;
+        hitPoints = 3;
     }
 
     public void Attack()
@@ -22,10 +22,16 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         // The attack for a basic duck is just moving towards you
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        hitPoints--;
-        if (hitPoints <= 0) Die();
+        Debug.Log("Enemy Hit!");
+        hitPoints -=damage;
+        KnockbackEnemy();
+        if (HitPoints <= 0)
+        {
+            Die();
+            Swan.enemiesKilled++;
+        }
     }
 
     public void Die()
@@ -34,4 +40,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 
+    void KnockbackEnemy()
+    {
+    }
 }

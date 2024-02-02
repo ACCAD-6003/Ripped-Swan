@@ -9,5 +9,5 @@ public interface IEnemy
 
     void Attack();
     void Die();
-    void TakeDamage();
+    void TakeDamage(int damage);
 }
