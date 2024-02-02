@@ -9,6 +9,7 @@ public class tr_Destroy : MonoBehaviour
 
     void OnCollisionEnter()
     {
+        Debug.Log("Destroy " + target);
         Destroy(target);
     }
 }

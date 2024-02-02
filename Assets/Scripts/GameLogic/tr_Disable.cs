@@ -8,6 +8,7 @@ public class tr_Disable : MonoBehaviour
 
     void OnCollisionEnter()
     {
+        Debug.Log("Disable " + target);
         target.SetActive(false);
     }
 }
