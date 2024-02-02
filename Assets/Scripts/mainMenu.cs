@@ -5,36 +5,41 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class mainMenu : MonoBehaviour
+namespace BrawnSwan
 {
-    public Scrollbar scrollbar;
-    public TMP_Text progressText;
 
-    public void LoadLevel(int sceneIndex)
+
+    public class mainMenu : MonoBehaviour
     {
-        StartCoroutine(LoadAsynchronously(sceneIndex));
-        //SceneManager.LoadScene(1);
-    }
+        public Scrollbar scrollbar;
+        public TMP_Text progressText;
 
-    IEnumerator LoadAsynchronously (int sceneIndex)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
-
-        while(!operation.isDone)
+        public void LoadLevel(int sceneIndex)
         {
-            float progress = Mathf.Clamp01(operation.progress / .9f);
-
-            scrollbar.size = progress;
-            progressText.text = progress * 100f + "%";
-
-            yield return null;
+            StartCoroutine(LoadAsynchronously(sceneIndex));
+            //SceneManager.LoadScene(1);
         }
-    }
 
-    public void QuitGame()
-    {
-        Debug.Log("Quit");
-        Application.Quit();
+        IEnumerator LoadAsynchronously(int sceneIndex)
+        {
+            AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+
+            while (!operation.isDone)
+            {
+                float progress = Mathf.Clamp01(operation.progress / .9f);
+
+                scrollbar.size = progress;
+                progressText.text = progress * 100f + "%";
+
+                yield return null;
+            }
+        }
+
+        public void QuitGame()
+        {
+            Debug.Log("Quit");
+            Application.Quit();
+        }
+
     }
-    
 }

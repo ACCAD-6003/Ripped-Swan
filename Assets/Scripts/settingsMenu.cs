@@ -5,58 +5,60 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-
-public class settingsMenu : MonoBehaviour
+namespace BrawnSwan
 {
-    Resolution[] resolutions;
-    public TMP_Dropdown resDropdown;
-    public AudioMixer audioMixer;
-
-    private void Start()
+    public class settingsMenu : MonoBehaviour
     {
-        resolutions = Screen.resolutions;
+        Resolution[] resolutions;
+        public TMP_Dropdown resDropdown;
+        public AudioMixer audioMixer;
 
-        resDropdown.ClearOptions();
+        private void Start()
+        {
+            resolutions = Screen.resolutions;
 
-        List<string> resList = new List<string>();
+            resDropdown.ClearOptions();
 
-        int currentResIndex = 0;
+            List<string> resList = new List<string>();
 
-        for(int i = 0; i < resolutions.Length; i++) 
-        { 
-            string option = resolutions[i].width + " x " + +resolutions[i].height;
-            resList.Add(option);
+            int currentResIndex = 0;
 
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
+            for (int i = 0; i < resolutions.Length; i++)
             {
-                currentResIndex = i;
+                string option = resolutions[i].width + " x " + +resolutions[i].height;
+                resList.Add(option);
+
+                if (resolutions[i].width == Screen.currentResolution.width &&
+                    resolutions[i].height == Screen.currentResolution.height)
+                {
+                    currentResIndex = i;
+                }
             }
+            resDropdown.AddOptions(resList);
+            resDropdown.value = currentResIndex;
+            resDropdown.RefreshShownValue();
         }
-        resDropdown.AddOptions(resList);
-        resDropdown.value = currentResIndex;
-        resDropdown.RefreshShownValue();
-    }
 
-    public void SetVolume(float masterVolume)
-    {
-        //Debug.Log(masterVolume);
-        audioMixer.SetFloat("MasterVolume", masterVolume);
-    }
+        public void SetVolume(float masterVolume)
+        {
+            //Debug.Log(masterVolume);
+            audioMixer.SetFloat("MasterVolume", masterVolume);
+        }
 
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-    }
+        public void SetQuality(int qualityIndex)
+        {
+            QualitySettings.SetQualityLevel(qualityIndex);
+        }
 
-    public void SetFS(bool isFS)
-    {
-        Screen.fullScreen = isFS;
-    }
+        public void SetFS(bool isFS)
+        {
+            Screen.fullScreen = isFS;
+        }
 
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        public void SetResolution(int resolutionIndex)
+        {
+            Resolution resolution = resolutions[resolutionIndex];
+            Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        }
     }
 }
