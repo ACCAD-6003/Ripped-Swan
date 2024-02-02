@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MovementControl : MonoBehaviour
 {
-
+    public static Vector3 direction;
     private GameObject playerToMove;
     [SerializeField] private float speed = 5f;
     private InputAction moveAction;
@@ -17,6 +17,9 @@ public class MovementControl : MonoBehaviour
         playerToMove = this.gameObject;
         this.moveAction = moveAction;
         this.moveAction.Enable();
+
+        direction = Vector3.right;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
 
@@ -30,11 +33,14 @@ public class MovementControl : MonoBehaviour
         {
             if (pVelocity.x > 0)
             {
-               
-                transform.rotation = Quaternion.LookRotation(Vector3.right);
+                // transform.rotation = Quaternion.LookRotation(playerToMove.GetComponent<Rigidbody>().velocity.normalized);
+                direction = Vector3.right;
+                transform.rotation = Quaternion.LookRotation(direction);
             }
-            else if(pVelocity.x < 0){
-                transform.rotation = Quaternion.LookRotation(Vector3.left);
+            else if(pVelocity.x < 0)
+            {
+                direction = Vector3.left;
+                transform.rotation = Quaternion.LookRotation(direction);
             }
         }
     }

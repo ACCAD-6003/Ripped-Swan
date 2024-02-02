@@ -2,31 +2,39 @@ using Assets.Scripts.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Swan : MonoBehaviour
 {
+    public static int enemiesKilled;
+    public Animator animator;
+    public BoxCollider boxCollider;
+    private int damage;
+
     [Tooltip("Health Points")]
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
-    public Animator animator;
 
-    public int enemiesKilled;
 
     void Start()
     {
         state = new SwanMoveState(this);
         enemiesKilled = 0;
+        damage = 1;
+
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider>();
+        boxCollider.enabled = false;
     }
 
      void Update()
-    {
+     {
         if (Input.GetMouseButtonDown(0))
             state = new SwanAttackState(this);
         state.Update();
-    } 
+     } 
 
 
     public void attack()
@@ -44,17 +52,13 @@ public class Swan : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy" &&
+            state is SwanAttackState)
         {
-            if (state is SwanAttackState)
-            {
-                Debug.Log("Enemy Hit!");
-                IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
-                enemy.TakeDamage();
-                enemiesKilled++;
-            }
+            IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
+            enemy.TakeDamage(damage);
         }
     }
 }
