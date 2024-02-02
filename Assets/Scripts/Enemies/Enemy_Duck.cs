@@ -11,10 +11,13 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     private double damage;
     public double Damage { get { return damage; } }
 
+
+    Rigidbody rb;
     public void Start()
     {
         damage = 0.5;
         hitPoints = 3;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void Attack()
@@ -40,7 +43,8 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 
-    void KnockbackEnemy()
+    private void KnockbackEnemy()
     {
+        rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse);
     }
 }
