@@ -4,6 +4,8 @@ public class FollowCamera : MonoBehaviour
 {
     public GameObject target;
 
+    private bool locked;
+
     [Tooltip("How far the camera stays from the player.")]
     public Vector3 offset = new Vector3(0, -2, -12);
 
@@ -23,11 +25,12 @@ public class FollowCamera : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        locked = false;
     }
 
     private void Update()
     {
-        if (target && shouldUpdate())
+        if (target && shouldUpdate() && !locked)
         {
             // Define a target position above and behind the target transform
             Vector3 targetPosition = target.transform.position + offset;
@@ -47,7 +50,7 @@ public class FollowCamera : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (target && !shouldUpdate())
+        if (target && !shouldUpdate() && !locked)
         {
             // Define a target position above and behind the target transform
             Vector3 targetPosition = target.transform.position + offset;
@@ -72,5 +75,17 @@ public class FollowCamera : MonoBehaviour
         }
 
         return true;
+    }
+
+
+    public void lockCamera(Transform t)
+    {
+        locked = true;
+        gameObject.transform.position = t.position;
+    }
+
+    public void freeCamera()
+    {
+        locked = false;
     }
 }
