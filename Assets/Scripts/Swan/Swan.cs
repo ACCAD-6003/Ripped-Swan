@@ -1,4 +1,5 @@
 using Assets.Scripts.Interfaces;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,46 +10,28 @@ public class Swan : MonoBehaviour
     [Range(0, 10)]
     public int healthPoints;
     public ISwanState state;
+    public Animator animator;
 
-    public Animator arm_1;
-    public Animator arm_2;
-
-    // Used to switch arms during attack
-    public enum Arm
-    {
-        Left,
-        Right
-    }
-    public Arm arm;
+    public int enemiesKilled;
 
     void Start()
     {
-        arm = Arm.Left;
-
         state = new SwanMoveState(this);
-        healthPoints = 5;
-
-        arm_1 = gameObject.transform.Find("Arm_1/Arm").GetComponent<Animator>();
-        arm_2 = gameObject.transform.Find("Arm_2/Arm").GetComponent<Animator>();
+        enemiesKilled = 0;
+        animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
     }
 
-    void Update()
+     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {
             state = new SwanAttackState(this);
-        }
         state.Update();
-    }
+    } 
 
-    private void OnCollisionEnter(Collision collision)
+
+    public void attack()
     {
-        if (state is SwanAttackState && collision.gameObject.tag == "enemy")
-        {
-            Debug.Log("Enemy Hit!");
-            IEnemy enemy = collision.gameObject.GetComponent<IEnemy>();
-            enemy.TakeDamage();
-        } 
+        state = new SwanAttackState(this);
     }
 
     public void hit()
@@ -58,6 +41,20 @@ public class Swan : MonoBehaviour
         if (healthPoints <= 0)
         {
             state = new SwanDeathState(this);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "enemy")
+        {
+            if (state is SwanAttackState)
+            {
+                Debug.Log("Enemy Hit!");
+                IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
+                enemy.TakeDamage();
+                enemiesKilled++;
+            }
         }
     }
 }
