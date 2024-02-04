@@ -138,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   moveSpeed: 3
-  visionRange: 1.5
+  visionRange: 3
   AttackVisionRange: 2
   fieldOfView: 359
   chaseTime: 10

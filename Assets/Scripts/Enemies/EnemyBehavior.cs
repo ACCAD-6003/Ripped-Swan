@@ -200,7 +200,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && currentState== State.Attack)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
             swan.hit();
