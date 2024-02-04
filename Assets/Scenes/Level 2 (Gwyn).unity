@@ -3292,7 +3292,7 @@ GameObject:
   - component: {fileID: 299976158}
   m_Layer: 0
   m_Name: ground elevated
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -6047,7 +6047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3582052588954403331, guid: 988c65b6caaf95648bb2f623128bc54f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3582052588954403331, guid: 988c65b6caaf95648bb2f623128bc54f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7915,7 +7915,7 @@ GameObject:
   - component: {fileID: 688038082}
   m_Layer: 0
   m_Name: ground elevated
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -10264,7 +10264,7 @@ GameObject:
   - component: {fileID: 789981319}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14425,7 +14425,7 @@ GameObject:
   - component: {fileID: 1103376501}
   m_Layer: 0
   m_Name: Train barricade
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19514,7 +19514,7 @@ GameObject:
   - component: {fileID: 1249600758}
   m_Layer: 0
   m_Name: train track
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22245,7 +22245,7 @@ GameObject:
   - component: {fileID: 1527255211}
   m_Layer: 0
   m_Name: enemy nav mesh
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -23566,7 +23566,7 @@ GameObject:
   - component: {fileID: 1621745575}
   m_Layer: 0
   m_Name: stairs
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27251,7 +27251,7 @@ GameObject:
   - component: {fileID: 1789232331}
   m_Layer: 0
   m_Name: stairs
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29325,7 +29325,7 @@ GameObject:
   - component: {fileID: 1819514719}
   m_Layer: 0
   m_Name: Cube (41)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30209,7 +30209,7 @@ GameObject:
   - component: {fileID: 1834576625}
   m_Layer: 0
   m_Name: Cube (43)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33119,7 +33119,7 @@ GameObject:
   - component: {fileID: 2046187771}
   m_Layer: 0
   m_Name: house
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35021,7 +35021,7 @@ GameObject:
   - component: {fileID: 2145354441}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
