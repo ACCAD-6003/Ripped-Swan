@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 890bf3215cfcb634a88c806fd741b153
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/EnenyTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lvl1 whitebox.unity
     guid: 3085d1b91443a3e478b9cbf8dc4a266d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 2.unity
     guid: e3f6e45be55cfd743ad59db1eb91d8a9
   m_configObjects: {}
