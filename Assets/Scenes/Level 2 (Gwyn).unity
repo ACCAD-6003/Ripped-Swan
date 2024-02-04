@@ -17411,7 +17411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4032279034258384526, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6172004157699790236, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_FlipX
