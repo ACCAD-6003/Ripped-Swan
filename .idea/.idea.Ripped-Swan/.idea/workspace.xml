@@ -7,11 +7,10 @@
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Destroy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Destroy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tr_lvl2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tr_lvl2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/tr_lvl2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/tr_lvl2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +105,8 @@
       <workItem from="1706843121206" duration="148000" />
       <workItem from="1706843612898" duration="8000" />
       <workItem from="1706843628580" duration="366000" />
+      <workItem from="1707075240249" duration="1051000" />
+      <workItem from="1707077350837" duration="20000" />
     </task>
     <servers />
   </component>

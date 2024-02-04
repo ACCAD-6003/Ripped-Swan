@@ -17,6 +17,7 @@ public class Swan : MonoBehaviour
     public int healthPoints;
     public ISwanState state;
 
+    public bool swanPoweredUp;
 
     void Start()
     {
@@ -27,6 +28,8 @@ public class Swan : MonoBehaviour
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
+
+        swanPoweredUp = false;
     }
 
      void Update()
@@ -59,6 +62,14 @@ public class Swan : MonoBehaviour
         {
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
             enemy.TakeDamage(damage);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "bread")
+        {
+            swanPoweredUp = true; // TODO: implement power up mechanic
         }
     }
 }

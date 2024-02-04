@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Interfaces;
 using UnityEngine;
 
-internal class SwanMoveState : ISwanState
+public class SwanMoveState : ISwanState
 {
     private Swan swan;
     
@@ -17,11 +17,11 @@ internal class SwanMoveState : ISwanState
             Input.GetKey(KeyCode.W) ||
             Input.GetKey(KeyCode.S))
         {
-            swan.animator.SetBool("isWalking", true);
+            //swan.animator.SetBool("isWalking", true);
         }
         else
         {
-            swan.animator.SetBool("isWalking", false);
+            //swan.animator.SetBool("isWalking", false);
         }
     }
 }

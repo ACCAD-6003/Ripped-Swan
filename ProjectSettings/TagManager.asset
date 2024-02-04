@@ -10,6 +10,7 @@ TagManager:
   - waypoint
   - Ground
   - enemy
+  - bread
   layers:
   - Default
   - TransparentFX
