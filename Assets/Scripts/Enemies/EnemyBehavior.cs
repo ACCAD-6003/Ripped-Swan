@@ -42,7 +42,7 @@ public class EnemyBehavior : MonoBehaviour
     {
 
       
-        Debug.Log("Current State of" + gameObject.name + " is : " + currentState);
+        //Debug.Log("Current State of" + gameObject.name + " is : " + currentState);
         switch (currentState)
         {
             case State.Idle:
@@ -134,7 +134,7 @@ public class EnemyBehavior : MonoBehaviour
         while (i < hitColliders.Length)
         {
             //Output all of the collider names
-            Debug.Log("Hit : " + hitColliders[i].name + i);
+            //Debug.Log("Hit : " + hitColliders[i].name + i);
             if (hitColliders[i].gameObject.CompareTag("Player")){
                 currentState = State.Idle;
                 StartCoroutine(Attack());
@@ -178,13 +178,16 @@ public class EnemyBehavior : MonoBehaviour
     {
       
         yield return new WaitForSeconds(prepTime);
+        
         currentState = State.Attack;
         BoxCollider myBC = gameObject.GetComponent<BoxCollider>();
         myBC.enabled = true;
-        yield return new WaitForSeconds(1f);
+        gameObject.transform.GetChild(1).gameObject.SetActive(true);
+        yield return new WaitForSeconds(.5f);
+        gameObject.transform.GetChild(1).gameObject.SetActive(false);
         myBC.enabled = false;
         currentState = State.Cooldown;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         currentState = State.Idle;
         
     }
@@ -197,7 +200,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && currentState== State.Attack)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
             swan.hit();
