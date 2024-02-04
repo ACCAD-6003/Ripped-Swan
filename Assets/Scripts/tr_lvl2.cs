@@ -3,9 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class tr_lvl2 : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter (Collider col)
     {
-        Debug.Log("Load Next scene");
-        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("Load Next scene");
+            SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }
