@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2.unity
     guid: e3f6e45be55cfd743ad59db1eb91d8a9
   - enabled: 0
+    path: Assets/Scenes/InitialScene.unity
+    guid: 2174e9fb414910d42acca23eb19eaf30
+  - enabled: 0
     path: Assets/Scenes/EnenyTest.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
