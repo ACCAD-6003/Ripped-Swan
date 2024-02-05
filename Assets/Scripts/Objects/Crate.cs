@@ -15,7 +15,13 @@ public class Crate : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse);
+            if (Input.GetKey(KeyCode.E))
+            {
+                rb.AddForce(MovementControl.direction * 10 * -1, ForceMode.Impulse); // pull towards player
+            } else
+            {
+                rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse); // push away from player
+            }
         }
     }
 }
