@@ -13,7 +13,7 @@ public class Swan : MonoBehaviour
     private int damage;
 
     [Tooltip("Health Points")]
-    [Range(0, 10)]
+    [Range(0, 100)]
     public int healthPoints;
     public ISwanState state;
 
