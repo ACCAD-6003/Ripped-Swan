@@ -42,7 +42,7 @@ public class EnemyBehavior : MonoBehaviour
     {
 
       
-        Debug.Log("Current State of" + gameObject.name + " is : " + currentState);
+        //Debug.Log("Current State of" + gameObject.name + " is : " + currentState);
         switch (currentState)
         {
             case State.Idle:
@@ -134,7 +134,7 @@ public class EnemyBehavior : MonoBehaviour
         while (i < hitColliders.Length)
         {
             //Output all of the collider names
-            Debug.Log("Hit : " + hitColliders[i].name + i);
+            //Debug.Log("Hit : " + hitColliders[i].name + i);
             if (hitColliders[i].gameObject.CompareTag("Player")){
                 currentState = State.Idle;
                 StartCoroutine(Attack());

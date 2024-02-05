@@ -9,13 +9,14 @@ public class SampleAgentScript : MonoBehaviour
 
     public GameObject bulletPrefab; // The bullet prefab
     public Transform firePoint; // The position from which the bullets are fired
-    public float fireRate = 2.0f; // How many bullets to shoot per second
+    public float burstRate = 1.0f / 3.0f; // How many bursts to shoot per second
+    public int burstCount = 3; // Number of bullets per burst
 
     public float proximityDistance = 10f; // The proximity distance for AI shooting
 
     public float rotationSpeed = 5.0f; // Adjust the rotation speed for smoothness
 
-    private float nextFireTime;
+    private float nextBurstTime;
 
     private Animator animator; // Reference to the Animator component
 
@@ -24,6 +25,9 @@ public class SampleAgentScript : MonoBehaviour
         // Define our Agent
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        // Set the initial burst time
+        nextBurstTime = Time.time;
     }
 
     void Update()
@@ -37,23 +41,14 @@ public class SampleAgentScript : MonoBehaviour
             // Set the animator bool "Fire" to true to start the "Fire" animation
             animator.SetBool("Fire", true);
 
-            // Check if it's time to fire a bullet
-            if (Time.time > nextFireTime)
+            // Check if it's time for a burst
+            if (Time.time > nextBurstTime)
             {
-                // Calculate the direction to the player
-                Vector3 directionToPlayer = target.position - firePoint.position;
-                directionToPlayer.Normalize();
+                // Fire the burst
+                FireBullet();
 
-                // Calculate the rotation to smoothly face the player
-                Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-                // Create a bullet and set its direction
-                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody>().velocity = directionToPlayer * 11.5f; // You may need to adjust the speed
-
-                // Set the next time the AI can fire
-                nextFireTime = Time.time + 1.0f / fireRate;
+                // Set the next time for the next burst
+                nextBurstTime = Time.time + burstRate;
             }
         }
         else
@@ -61,6 +56,43 @@ public class SampleAgentScript : MonoBehaviour
             // Set the animator bool "Fire" to false to stop the "Fire" animation
             animator.SetBool("Fire", false);
         }
+    }
+
+    void FireBullet()
+    {
+        // Calculate the direction to the player
+        Vector3 directionToPlayer = target.position - firePoint.position;
+        directionToPlayer.Normalize();
+
+        // Use LookAt to smoothly face the player
+        firePoint.LookAt(target);
+
+        // Calculate the lob trajectory by adding an upward force
+        Vector3 lobDirection = directionToPlayer + Vector3.up * 0.5f; // Adjust the upward force as needed
+
+        // Introduce a small delay between each bullet instantiation
+        float delayBetweenBullets = 0.2f; // Adjust as needed
+
+        // Fire the burst with a slight delay between bullets
+        for (int i = 0; i < burstCount; i++)
+        {
+            Invoke("SpawnBullet", i * delayBetweenBullets);
+        }
+    }
+
+    void SpawnBullet()
+    {
+        // Create a bullet and set its direction
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        // Set the bullet's collider as a trigger
+        bullet.GetComponent<Collider>().isTrigger = true;
+
+        // Calculate the lob trajectory by adding an upward force
+        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.3f; // Adjust the upward force as needed
+
+        // Set the bullet's direction and speed
+        bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized * 11f; // You may need to adjust the speed
     }
 
     void OnCollisionEnter(Collision collision)
