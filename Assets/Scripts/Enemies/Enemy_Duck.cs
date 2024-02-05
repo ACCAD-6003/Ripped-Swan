@@ -12,17 +12,29 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     private double damage;
     public double Damage { get { return damage; } }
 
+    public SpriteRenderer spriteRenderer; // Now public
 
     Rigidbody rb;
 
-    void Awake() { 
+    public Color damageFlashColor = Color.red;
+    public float damageFlashDuration = 0.1f;
+
+    void Awake()
+    {
         behavior = GetComponent<EnemyBehavior>();
+        rb = GetComponent<Rigidbody>();
     }
+
     public void Start()
     {
         damage = 0.5;
         hitPoints = 3;
-        rb = GetComponent<Rigidbody>();
+
+        // If spriteRenderer is not assigned, try to get it from the GameObject
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
     }
 
     public void Attack()
@@ -32,14 +44,26 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage)
     {
-        Debug.Log("Enemy Hit!");
-        hitPoints -=damage;
+        StartCoroutine(FlashDamage());
+        hitPoints -= damage;
         KnockbackEnemy();
         if (HitPoints <= 0)
         {
             Die();
             Swan.enemiesKilled++;
         }
+    }
+
+    private IEnumerator FlashDamage()
+    {
+        // Change sprite color to damageFlashColor
+        spriteRenderer.color = damageFlashColor;
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(damageFlashDuration);
+
+        // Revert back to the original color
+        spriteRenderer.color = Color.white; // You can use the originalColor variable if you have it defined
     }
 
     public void Die()
