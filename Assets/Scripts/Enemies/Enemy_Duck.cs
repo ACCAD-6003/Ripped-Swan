@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy_Duck : MonoBehaviour, IEnemy
 {
+    EnemyBehavior behavior;
     private double hitPoints;
     public double HitPoints { get { return hitPoints; } set { hitPoints = value; } }
 
@@ -13,6 +14,10 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
 
     Rigidbody rb;
+
+    void Awake() { 
+        behavior = GetComponent<EnemyBehavior>();
+    }
     public void Start()
     {
         damage = 0.5;

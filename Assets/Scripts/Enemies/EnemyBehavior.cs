@@ -211,13 +211,21 @@ public class EnemyBehavior : MonoBehaviour
      public IEnumerator BeginWalk()
     {
         currentState = State.Walk;
-        Vector3 move = new Vector3(xDirection, 0, 0);
+        Vector3 move = new Vector3(xDirection, 9.8f, 0);
         move = Vector3.Normalize(move);
         rb.velocity = moveSpeed * move;
         yield return new WaitForSeconds(1f);
         if (currentState == State.Walk)
         currentState = State.Idle;
 
+    }
+
+
+    public IEnumerator TakeDamage()
+    {
+        currentState = State.Damaged;
+        yield return new WaitForSeconds (.5f);
+        currentState = State.Idle;
     }
 
     private void OnDrawGizmos()
