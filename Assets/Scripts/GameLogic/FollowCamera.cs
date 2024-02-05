@@ -4,6 +4,7 @@ public class FollowCamera : MonoBehaviour
 {
     public GameObject target;
 
+    private GameObject lockedTarget;
     private bool locked;
 
     [Tooltip("How far the camera stays from the player.")]
@@ -46,6 +47,24 @@ public class FollowCamera : MonoBehaviour
                 transform.position = smoothedPosition;
             }
         }
+
+        else if (locked)
+        {
+            // Define a target position above and behind the target transform
+            Vector3 targetPosition = lockedTarget.transform.position + offset;
+
+            // Smoothly move the camera towards that target position
+            Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            if (fixedZ)
+            {
+                Vector3 newPosition = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z);
+                transform.position = newPosition;
+            }
+            else
+            {
+                transform.position = smoothedPosition;
+            }
+        }
     }
     
     private void FixedUpdate()
@@ -54,6 +73,17 @@ public class FollowCamera : MonoBehaviour
         {
             // Define a target position above and behind the target transform
             Vector3 targetPosition = target.transform.position + offset;
+
+            // Smoothly move the camera towards that target position
+            // transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, Time.smoothDeltaTime*val);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            // transform.position = Vector3.Lerp(transform.position, targetPosition, Time.smoothDeltaTime);
+        }
+
+        else if (locked)
+        {
+            // Define a target position above and behind the target transform
+            Vector3 targetPosition = lockedTarget.transform.position + offset;
 
             // Smoothly move the camera towards that target position
             // transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, Time.smoothDeltaTime*val);
@@ -81,7 +111,7 @@ public class FollowCamera : MonoBehaviour
     public void lockCamera(Transform t)
     {
         locked = true;
-        gameObject.transform.position = t.position;
+        lockedTarget = t.gameObject;
     }
 
     public void freeCamera()
