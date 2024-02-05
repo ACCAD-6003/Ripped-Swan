@@ -11,6 +11,7 @@ public class Swan : MonoBehaviour
     public Animator animator;
     public BoxCollider boxCollider;
     private int damage;
+    public float powerUpStart;
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
@@ -37,7 +38,13 @@ public class Swan : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             state = new SwanAttackState(this);
         state.Update();
+        checkPowerUp();
      } 
+
+    private void checkPowerUp()
+    {
+        if (Time.time - powerUpStart > 20) swanPoweredUp = false; // Powerup lasts for 20 seconds
+    }
 
 
     public void attack()
@@ -61,7 +68,7 @@ public class Swan : MonoBehaviour
             state is SwanAttackState)
         {
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
-            enemy.TakeDamage(damage);
+            enemy.TakeDamage(damage, swanPoweredUp);
         }
     }
 
@@ -70,6 +77,8 @@ public class Swan : MonoBehaviour
         if (collision.gameObject.tag == "bread")
         {
             swanPoweredUp = true; // TODO: implement power up mechanic
+            powerUpStart = Time.time;
+            Destroy(collision.gameObject);
         }
     }
 }
