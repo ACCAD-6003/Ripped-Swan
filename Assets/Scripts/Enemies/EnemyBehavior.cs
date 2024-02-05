@@ -200,7 +200,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && currentState== State.Attack)
+        if (other.gameObject.CompareTag("Player") && currentState== State.Attack && !other.isTrigger)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
             swan.hit();
@@ -208,12 +208,15 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 
-    public void BeginWalk()
+     public IEnumerator BeginWalk()
     {
         currentState = State.Walk;
         Vector3 move = new Vector3(xDirection, 0, 0);
         move = Vector3.Normalize(move);
         rb.velocity = moveSpeed * move;
+        yield return new WaitForSeconds(1f);
+        if (currentState == State.Walk)
+        currentState = State.Idle;
 
     }
 
