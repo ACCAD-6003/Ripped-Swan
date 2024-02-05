@@ -25,6 +25,7 @@ public class TriggerProc : MonoBehaviour
         {
             int hold = transform.GetSiblingIndex();
             te.callLock(hold );
+            gameObject.SetActive(false);
         }
     }
 }
