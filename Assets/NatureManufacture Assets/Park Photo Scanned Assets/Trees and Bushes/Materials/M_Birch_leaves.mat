@@ -8,20 +8,24 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Birch_leaves
-  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: fceaa1c4a58081d42980b531710b2ab4, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_FLAT
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
-    RenderType: TransparentCutout
+    AllLockedGUIDS: 4809759552b27cd4188ce1bf4853b5c6
+    OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
+      _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -2208,7 +2212,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2234,7 +2238,7 @@ Material:
     - _SkinThicknessMapInvert: 0
     - _SkinThicknessMapUV: 0
     - _SkinThicknessPower: 1
-    - _SmoothnessPower: 1
+    - _SmoothnessPower: 0
     - _SmoothnessTextureChannel: 0
     - _Specular2ndLayer: 0
     - _SpecularHighlights: 1

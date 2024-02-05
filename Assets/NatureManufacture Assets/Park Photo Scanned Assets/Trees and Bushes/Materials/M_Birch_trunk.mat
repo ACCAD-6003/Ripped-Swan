@@ -20,7 +20,11 @@ Material:
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_FLAT _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI
+      _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -306,7 +310,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7071e2642773295448b6396992f4f0ec, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 4}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -547,8 +551,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - DSGI: 0
     - GeometryShader_Enabled: 1
     - Instancing: 0
+    - LightmapFlags: 0
     - Tessellation_Enabled: 1
     - _1st2nd_Shades_Feather: 0.0001
     - _1stShadeMapMask_Inverse: 0
@@ -635,7 +641,7 @@ Material:
     - _AlphaTextureStochastic: 0
     - _AlphaTextureUV: 0
     - _AlphaToCoverage: 0
-    - _AmbientOcclusionPower: 1
+    - _AmbientOcclusionPower: 0
     - _AngleCompareTo: 0
     - _AngleMinAlpha: 0
     - _AngleType: 0
@@ -1279,6 +1285,7 @@ Material:
     - _FlipbookTexArrayUV: 0
     - _FlipbookTiled: 0
     - _ForgotToLockMaterial: 1
+    - _GIEmissionMultiplier: 1
     - _GITDEMaxEmissionMultiplier: 0
     - _GITDEMaxEmissionMultiplier1: 0
     - _GITDEMaxEmissionMultiplier2: 0
@@ -1852,7 +1859,7 @@ Material:
     - _MatcapUVToBlend: 1
     - _MetalicPower: 1
     - _Metallic: 0
-    - _MetallicPower: 1
+    - _MetallicPower: 0
     - _Mirror: 0
     - _MirrorColorThemeIndex: 0
     - _MirrorTextureBlendType: 0
@@ -2240,7 +2247,7 @@ Material:
     - _SkinThicknessMapInvert: 0
     - _SkinThicknessMapUV: 0
     - _SkinThicknessPower: 1
-    - _SmoothnessPower: 1
+    - _SmoothnessPower: 0
     - _SmoothnessTextureChannel: 0
     - _SmothnessPower: 1
     - _Specular2ndLayer: 0
@@ -2582,6 +2589,7 @@ Material:
     - m_end_audioLink: 0
     - m_end_backFace: 0
     - m_end_backlight: 0
+    - m_end_bakedLighting: 0
     - m_end_blending: 0
     - m_end_brdf: 0
     - m_end_brdfadvanced: 0
@@ -2624,7 +2632,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
     - m_lightingCategory: 0
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
@@ -2723,6 +2731,7 @@ Material:
     - m_start_audioLink: 0
     - m_start_backFace: 0
     - m_start_backlight: 0
+    - m_start_bakedLighting: 0
     - m_start_blending: 0
     - m_start_brdf: 0
     - m_start_brdfadvanced: 0
@@ -2868,7 +2877,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.7867647, g: 0.7867647, b: 0.7867647, a: 1}
+    - _Color: {r: 0.7372549, g: 0.7372549, b: 0.7372549, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
