@@ -23,6 +23,7 @@ public class TriggerEnemies : MonoBehaviour
             if(enemyParent.GetChild(enemyGroup).childCount == 0) {
 
                 playerCam.freeCamera();
+                enemyGroup++;
             }
         }
         //When all enemies are gone, free camera
@@ -33,7 +34,7 @@ public class TriggerEnemies : MonoBehaviour
         playerCam.lockCamera(CameraPositions.GetChild(index));
         for (int i = 0; i < enemyParent.GetChild(enemyGroup).childCount; i++)
         {
-            enemyParent.GetChild(enemyGroup).GetChild(i).GetComponent<EnemyBehavior>().BeginWalk();
+            StartCoroutine(enemyParent.GetChild(enemyGroup).GetChild(i).GetComponent<EnemyBehavior>().BeginWalk());
         }
     }
 }
