@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - bread
   - health_pickup
+  - rangeEnemy
   layers:
   - Default
   - TransparentFX
