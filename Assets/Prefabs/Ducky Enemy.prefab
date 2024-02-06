@@ -138,7 +138,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
-  moveSpeed: 3
+  moveSpeed: 9
   visionRange: 6
   AttackVisionRange: 2
   fieldOfView: 359
