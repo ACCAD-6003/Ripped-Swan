@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44965214, g: 0.4967789, b: 0.5598252, a: 1}
+  m_IndirectSpecularColor: {r: 0.44965184, g: 0.49677896, b: 0.55982506, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3760,6 +3760,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7441240883648158890, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50.28985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441240883648158891, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240883648158891, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7970869449839974829, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
     - target: {fileID: 7441240884938770772, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
       propertyPath: m_Name
       value: dir_UI
@@ -3808,6 +3820,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7441240884981486921, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240884981486921, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7970869449839974829, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240885008695044, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 151.51904
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441240885008695045, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240885008695045, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7970869449839974829, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240885493980143, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
+    - target: {fileID: 7441240885493980143, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7970869449839974829, guid: 84390c5ae2d794b22a13596ed9e5c9b3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
 --- !u!1001 &43954809
