@@ -52,7 +52,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
             Die();
             Swan.enemiesKilled++;
         }
-        if (isPoweredUp)
+        if (isPoweredUp && !isKockedOut)
             KnockedOut();
     }
 
