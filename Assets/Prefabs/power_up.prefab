@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3582052588954403329}
   - component: {fileID: 3582052588954403328}
   - component: {fileID: 3582052588954403455}
-  - component: {fileID: 3582052588954403454}
+  - component: {fileID: 1818121555345986262}
   m_Layer: 0
   m_Name: power_up
   m_TagString: bread
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 593
+  m_VersionIndex: 601
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -330,8 +330,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3582052588954403453}
   m_Mesh: {fileID: 0}
---- !u!64 &3582052588954403454
-MeshCollider:
+--- !u!65 &1818121555345986262
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -340,7 +340,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.8750001, y: 0.75000006, z: 0.875}
+  m_Center: {x: 0.93749994, y: 0.3750001, z: 0.3125}
