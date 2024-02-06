@@ -80,5 +80,10 @@ public class Swan : MonoBehaviour
             powerUpStart = Time.time;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "health_pickup")
+        {
+            healthPoints++;
+            Destroy(collision.gameObject);
+        }
     }
 }
