@@ -94,13 +94,22 @@ public class SampleAgentScript : MonoBehaviour
         // Set the bullet's direction and speed
         bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized * 11f; // You may need to adjust the speed
     }
-
+    /*
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Scene thisScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(thisScene.name);
+        }
+    }
+    */
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") && other.isTrigger)
+        {
+            Destroy(gameObject);
         }
     }
 }
