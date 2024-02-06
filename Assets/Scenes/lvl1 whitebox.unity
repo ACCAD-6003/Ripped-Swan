@@ -11650,6 +11650,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!212 &888995203 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+  m_PrefabInstance: {fileID: 1993977315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &919505866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21690,6 +21695,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1995703510}
     m_Modifications:
+    - target: {fileID: 1105197983241439569, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 888995203}
     - target: {fileID: 1105197983241439570, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
       propertyPath: m_RootOrder
       value: 1
