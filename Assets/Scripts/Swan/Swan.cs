@@ -20,6 +20,11 @@ public class Swan : MonoBehaviour
 
     public bool swanPoweredUp;
 
+    public AudioSource punch_hit;
+    public AudioSource punch_miss;
+    public AudioSource powerUp_Sound;
+    public AudioSource hurt;
+
     void Start()
     {
         state = new SwanMoveState(this);
@@ -43,7 +48,7 @@ public class Swan : MonoBehaviour
 
     private void checkPowerUp()
     {
-        if (Time.time - powerUpStart > 20) swanPoweredUp = false; // Powerup lasts for 20 seconds
+        if (Time.time - powerUpStart > 10) swanPoweredUp = false; // Powerup lasts for 10 seconds
     }
 
 
@@ -56,6 +61,7 @@ public class Swan : MonoBehaviour
     {
         Debug.Log("Player hit!");
         healthPoints--;
+        hurt.Play();
         if (healthPoints <= 0)
         {
             state = new SwanDeathState(this);
@@ -67,6 +73,7 @@ public class Swan : MonoBehaviour
         if (other.gameObject.tag == "enemy" &&
             state is SwanAttackState)
         {
+            punch_hit.Play();  
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
             enemy.TakeDamage(damage, swanPoweredUp);
         }
@@ -76,8 +83,9 @@ public class Swan : MonoBehaviour
     {
         if (collision.gameObject.tag == "bread")
         {
-            swanPoweredUp = true; // TODO: implement power up mechanic
+            swanPoweredUp = true;
             powerUpStart = Time.time;
+            powerUp_Sound.Play();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "health_pickup")
