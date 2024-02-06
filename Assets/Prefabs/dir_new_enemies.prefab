@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ducky Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
 --- !u!4 &2063869814055670312 stripped
