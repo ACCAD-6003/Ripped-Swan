@@ -100,7 +100,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     private bool isKnockoutOver()
     {
-        return isKockedOut && Time.time - knockoutStart > 1;
+        return isKockedOut && Time.time - knockoutStart > 0.5;
     }
 
     private IEnumerator FlashDamage()
