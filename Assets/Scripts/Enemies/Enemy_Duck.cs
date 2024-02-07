@@ -23,6 +23,8 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public Color damageFlashColor = Color.red;
     public float damageFlashDuration = 0.1f;
 
+    public int knockback;
+
     void Awake()
     {
         behavior = GetComponent<EnemyBehavior>();
@@ -32,7 +34,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public void Start()
     {
         damage = 0.5;
-        hitPoints = 3;
+        hitPoints = 5;
         rb = GetComponent<Rigidbody>();
         spriteTransform = this.gameObject.transform.GetChild(0);
         isKockedOut = false;
@@ -100,7 +102,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     private bool isKnockoutOver()
     {
-        return isKockedOut && Time.time - knockoutStart > 3;
+        return isKockedOut && Time.time - knockoutStart > 0.5;
     }
 
     private IEnumerator FlashDamage()
@@ -126,7 +128,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         // TODO: change to use rigidbody instead of transform
         // rb.AddForce(MovementControl.direction * 30, ForceMode.Impulse);
         Vector3 position = gameObject.transform.position;
-        position.x = position.x + (3 * MovementControl.direction.x);
+        position.x = position.x + (knockback * MovementControl.direction.x);
         gameObject.transform.position = position;
     }
 }

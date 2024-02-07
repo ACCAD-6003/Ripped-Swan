@@ -24,7 +24,7 @@ public class TriggerEnemies : MonoBehaviour
             {
                 // Free camera and set the desired position
                 playerCam.freeCamera();
-               // SetCameraPositionOnUnlock(playerCam.transform, 20f, -8.5f);
+                // SetCameraPositionOnUnlock(playerCam.transform, 20f, -8.5f);
                 enemyGroup++;
             }
         }
@@ -33,8 +33,8 @@ public class TriggerEnemies : MonoBehaviour
 
     //private void SetCameraPositionOnUnlock(Transform cameraTransform, float y, float z)
     //{
-      //  Vector3 newPosition = new Vector3(cameraTransform.position.x, y, z);
-        //cameraTransform.position = newPosition;
+    //  Vector3 newPosition = new Vector3(cameraTransform.position.x, y, z);
+    //cameraTransform.position = newPosition;
     //}
 
     public void callLock(int index)
