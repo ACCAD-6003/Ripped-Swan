@@ -8,7 +8,7 @@ public class tr_end : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Debug.Log("Load Next scene");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(0);
         }
     }
 }
