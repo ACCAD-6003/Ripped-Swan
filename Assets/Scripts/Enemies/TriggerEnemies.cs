@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerEnemies : MonoBehaviour
 {
+    [SerializeField] Transform walls;
     private int enemyGroup;
     [SerializeField] Transform enemyParent; //Parent of the enemies this will trigger
     [SerializeField] Transform CameraPositions;  //Positions for the camera to go to
@@ -22,6 +21,7 @@ public class TriggerEnemies : MonoBehaviour
         {
             if (enemyParent.GetChild(enemyGroup).childCount == 0)
             {
+                walls.GetChild(enemyGroup).gameObject.SetActive(false);
                 // Free camera and set the desired position
                 playerCam.freeCamera();
                 // SetCameraPositionOnUnlock(playerCam.transform, 20f, -8.5f);
@@ -39,10 +39,11 @@ public class TriggerEnemies : MonoBehaviour
 
     public void callLock(int index)
     {
+        walls.GetChild(index).gameObject.SetActive(true);
         playerCam.lockCamera(CameraPositions.GetChild(index));
         for (int i = 0; i < enemyParent.GetChild(enemyGroup).childCount; i++)
         {
-            StartCoroutine(enemyParent.GetChild(enemyGroup).GetChild(i).GetComponent<EnemyBehavior>().BeginWalk());
+          //  StartCoroutine(enemyParent.GetChild(enemyGroup).GetChild(i).GetComponent<EnemyBehavior>().BeginWalk());
         }
     }
 }

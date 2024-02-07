@@ -13,10 +13,10 @@ public class BlockWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent.childCount <= 1)
+       /* if (transform.parent.childCount <= 1)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
 
