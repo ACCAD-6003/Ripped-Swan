@@ -18,13 +18,13 @@ public class SampleAgentScript : MonoBehaviour
 
     private float nextBurstTime;
 
-    private Animator animator; // Reference to the Animator component
+    //private Animator animator; // Reference to the Animator component
 
     void Start()
     {
         // Define our Agent
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
 
         // Set the initial burst time
         nextBurstTime = Time.time;
@@ -39,7 +39,7 @@ public class SampleAgentScript : MonoBehaviour
         if (distanceToPlayer <= proximityDistance)
         {
             // Set the animator bool "Fire" to true to start the "Fire" animation
-            animator.SetBool("Fire", true);
+            //animator.SetBool("Fire", true);
 
             // Check if it's time for a burst
             if (Time.time > nextBurstTime)
@@ -51,10 +51,10 @@ public class SampleAgentScript : MonoBehaviour
                 nextBurstTime = Time.time + burstRate;
             }
         }
-        else
+        //else
         {
             // Set the animator bool "Fire" to false to stop the "Fire" animation
-            animator.SetBool("Fire", false);
+            //animator.SetBool("Fire", false);
         }
     }
 

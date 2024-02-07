@@ -39,6 +39,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063869813352197467}
     m_Modifications:
+    - target: {fileID: 97503735367569836, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.056642182
+      objectReference: {fileID: 0}
+    - target: {fileID: 97503735367569836, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.056642182
+      objectReference: {fileID: 0}
+    - target: {fileID: 97503735367569836, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.056642182
+      objectReference: {fileID: 0}
     - target: {fileID: 1105197983241439568, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
       propertyPath: moveSpeed
       value: 9
@@ -90,6 +102,10 @@ PrefabInstance:
     - target: {fileID: 1105197983241439571, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
       propertyPath: m_Name
       value: Ducky Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105197983241439573, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
       propertyPath: m_FlipX
