@@ -23,6 +23,8 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public Color damageFlashColor = Color.red;
     public float damageFlashDuration = 0.1f;
 
+    public int knockback;
+
     void Awake()
     {
         behavior = GetComponent<EnemyBehavior>();
@@ -126,7 +128,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         // TODO: change to use rigidbody instead of transform
         // rb.AddForce(MovementControl.direction * 30, ForceMode.Impulse);
         Vector3 position = gameObject.transform.position;
-        position.x = position.x + (3 * MovementControl.direction.x);
+        position.x = position.x + (knockback * MovementControl.direction.x);
         gameObject.transform.position = position;
     }
 }

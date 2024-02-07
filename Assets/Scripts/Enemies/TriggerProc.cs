@@ -24,7 +24,7 @@ public class TriggerProc : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             int hold = transform.GetSiblingIndex();
-            te.callLock(hold );
+            te.callLock(hold);
             gameObject.SetActive(false);
         }
     }
