@@ -160,6 +160,7 @@ MonoBehaviour:
   knockoutStart: 0
   damageFlashColor: {r: 1, g: 0, b: 0, a: 1}
   damageFlashDuration: 0.1
+  knockback: 0
 --- !u!65 &1105197983241439579
 BoxCollider:
   m_ObjectHideFlags: 0
