@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -40,6 +41,13 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1.0f;
+    }
+    
+    public void MainMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()

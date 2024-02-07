@@ -15,8 +15,9 @@ public class Crate : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (other.gameObject.GetComponent<SwanController>().held)
             {
+                Debug.Log("holding");
                 rb.AddForce(MovementControl.direction * 10 * -1, ForceMode.Impulse); // pull towards player
             } else
             {
