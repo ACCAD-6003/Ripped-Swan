@@ -32,7 +32,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public void Start()
     {
         damage = 0.5;
-        hitPoints = 3;
+        hitPoints = 5;
         rb = GetComponent<Rigidbody>();
         spriteTransform = this.gameObject.transform.GetChild(0);
         isKockedOut = false;
@@ -100,7 +100,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     private bool isKnockoutOver()
     {
-        return isKockedOut && Time.time - knockoutStart > 3;
+        return isKockedOut && Time.time - knockoutStart > 1;
     }
 
     private IEnumerator FlashDamage()
