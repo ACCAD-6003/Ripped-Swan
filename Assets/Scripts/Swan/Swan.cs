@@ -48,7 +48,11 @@ public class Swan : MonoBehaviour
 
     private void checkPowerUp()
     {
-        if (Time.time - powerUpStart > 10) swanPoweredUp = false; // Powerup lasts for 10 seconds
+        if (swanPoweredUp && Time.time - powerUpStart > 8) // Powerup lasts for 10 seconds
+        {
+            swanPoweredUp = false;
+            transform.localScale = Vector3.one;
+        }
     }
 
 
@@ -84,6 +88,7 @@ public class Swan : MonoBehaviour
         if (collision.gameObject.tag == "bread")
         {
             swanPoweredUp = true;
+            transform.localScale = Vector3.one * 2;
             powerUpStart = Time.time;
             powerUp_Sound.Play();
             Destroy(collision.gameObject);

@@ -1,10 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPointManager : MonoBehaviour
 {
-    public static Vector3 lastCheckPointPos = new Vector3(3, 2, 2);
+    //private GameObject startPos;
+    public static Vector3 lastCheckPointPos = new Vector3(-6, 0, -2);
+
+    private void Start()
+    {
+        lastCheckPointPos = transform.position;
+    }
 
     private void Awake()
     {
