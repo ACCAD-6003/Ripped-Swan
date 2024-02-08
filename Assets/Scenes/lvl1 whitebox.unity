@@ -22219,7 +22219,7 @@ PrefabInstance:
       objectReference: {fileID: 1424516703}
     - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: healthPoints
-      value: 4
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: powerUp_Sound

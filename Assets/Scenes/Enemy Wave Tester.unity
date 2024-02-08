@@ -1177,6 +1177,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+--- !u!82 &275783317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3362708856601615338, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+  m_PrefabInstance: {fileID: 535341996868791886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &471104074 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4076104069526502601, guid: 11115e42ae4075248bee94842aefd7d1, type: 3}
@@ -3101,7 +3106,7 @@ GameObject:
   - component: {fileID: 1319778985}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11569,6 +11574,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 563358451}
+    - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: spawnSound
+      value: 
+      objectReference: {fileID: 275783317}
     - target: {fileID: 535341996461645543, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11585,6 +11594,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 563358451}
+    - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: spawnSound
+      value: 
+      objectReference: {fileID: 275783317}
     - target: {fileID: 535341997066118777, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11597,6 +11610,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 575551664}
+    - target: {fileID: 3362708856601615338, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: m_Volume
+      value: 0.352
+      objectReference: {fileID: 0}
     - target: {fileID: 4717315355517053051, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: m_Name
       value: Dir_Waves
