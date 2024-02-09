@@ -16,7 +16,7 @@ Material:
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_LightmapFlags: 4
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -307,8 +307,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 1b1402b26fb20034e8c3961f871b2328, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
         m_Texture: {fileID: 0}
@@ -1693,7 +1693,7 @@ Material:
     - _MainSaturationGlobalMask: 0
     - _MainSaturationGlobalMaskBlendType: 2
     - _MainTexStochastic: 0
-    - _MainTexUV: 0
+    - _MainTexUV: 5
     - _MainUseVertexColorAlpha: 0
     - _MainVertexColoring: 0
     - _MainVertexColoringEnabled: 0
@@ -2605,9 +2605,9 @@ Material:
     - m_end_vertexGlitching: 0
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
-    - m_lightingCategory: 1
-    - m_mainCategory: 0
-    - m_modifierCategory: 0
+    - m_lightingCategory: 0
+    - m_mainCategory: 1
+    - m_modifierCategory: 1
     - m_postprocessing: 0
     - m_renderingCategory: 0
     - m_specialFXCategory: 0
@@ -2679,7 +2679,7 @@ Material:
     - m_start_OutlineStencilPassBackOptions: 0
     - m_start_OutlineStencilPassFrontOptions: 0
     - m_start_PathAudioLink: 0
-    - m_start_PoiLightData: 1
+    - m_start_PoiLightData: 0
     - m_start_PoiShading: 1
     - m_start_RGBAColors: 0
     - m_start_RGBMask: 0
@@ -2689,7 +2689,7 @@ Material:
     - m_start_StencilPassBackOptions: 0
     - m_start_StencilPassFrontOptions: 0
     - m_start_StencilPassOptions: 0
-    - m_start_Stochastic: 0
+    - m_start_Stochastic: 1
     - m_start_Text: 0
     - m_start_TextFPS: 0
     - m_start_TextInstanceTime: 0
@@ -2705,9 +2705,9 @@ Material:
     - m_start_audioLink: 0
     - m_start_backFace: 0
     - m_start_backlight: 0
-    - m_start_bakedLighting: 0
+    - m_start_bakedLighting: 1
     - m_start_blending: 0
-    - m_start_brdf: 0
+    - m_start_brdf: 1
     - m_start_brdfadvanced: 0
     - m_start_brdfglobalmask: 0
     - m_start_clearCoat: 0
@@ -2748,7 +2748,7 @@ Material:
     - m_start_vertexManipulation: 0
     - m_start_videoEffects: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:
@@ -2851,7 +2851,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.4433962, g: 0.23676634, b: 0.10666606, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
