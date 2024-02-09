@@ -23,9 +23,11 @@ public class TriggerProc : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
             int hold = transform.GetSiblingIndex();
             te.callLock(hold);
             gameObject.SetActive(false);
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }

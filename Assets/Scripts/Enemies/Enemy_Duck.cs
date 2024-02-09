@@ -125,10 +125,10 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     private void KnockbackEnemy()
     {
-        // TODO: change to use rigidbody instead of transform
-        // rb.AddForce(MovementControl.direction * 30, ForceMode.Impulse);
-        Vector3 position = gameObject.transform.position;
+    
+         rb.AddForce(MovementControl.direction * 10, ForceMode.Impulse);
+     /*   Vector3 position = gameObject.transform.position;
         position.x = position.x + (knockback * MovementControl.direction.x);
-        gameObject.transform.position = position;
+        gameObject.transform.position = position; */
     }
 }

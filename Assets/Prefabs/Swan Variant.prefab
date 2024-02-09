@@ -1174,8 +1174,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   boxCollider: {fileID: 0}
-  healthPoints: 5
+  powerUpStart: 0
+  healthPoints: 25
   swanPoweredUp: 0
+  punch_hit: {fileID: 0}
+  punch_miss: {fileID: 0}
+  powerUp_Sound: {fileID: 0}
+  hurt: {fileID: 0}
 --- !u!114 &1942770890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1242,6 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9acc68a7890c344faecb7e6b183423f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  held: 0
   movementController: {fileID: 1942770890}
   jumpController: {fileID: 1942770893}
   attackController: {fileID: 1942770891}

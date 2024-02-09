@@ -155,6 +155,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         Vector3 chaseDirection = -(transform.position - target.position);
         Vector3 movement = chaseDirection.normalized * moveSpeed;
+        if (movement.y > 0f) 
         movement.y = 0f;
         rb.velocity = movement;
     }
