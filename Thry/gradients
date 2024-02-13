@@ -1,1 +1,3 @@
 a8424632faa464d45b573017c466abf0:={"colorKeys":[{"color":{"r":0.3396226,"g":0.3396226,"b":0.3396226,"a":1},"time":0.6606088},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Fixed}
+d73f98995de753d45981446d12d3551c:={"colorKeys":[{"color":{"r":1,"g":1,"b":1,"a":1},"time":0},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Fixed}
+6ad6a79a9a9dbb54f9b1808618febdc3:={"colorKeys":[{"color":{"r":0.6132076,"g":0.6132076,"b":0.6132076,"a":1},"time":0.6030365},{"color":{"r":1,"g":1,"b":1,"a":1},"time":1}],"alphaKeys":[{"alpha":1,"time":0},{"alpha":1,"time":1}],"mode":Fixed}
