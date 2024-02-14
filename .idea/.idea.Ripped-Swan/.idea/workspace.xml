@@ -5,19 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_06.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_06.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_07.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_08.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_08.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_09.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_09.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_11.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Examples/Built-In Samples.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Examples/Sample Resources.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 10x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 12x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 14x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 15x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 16x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 17x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 10x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 12x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 14x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 15x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 16x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 17x.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sprite_Shadow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sprite_Shadow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/HD and URP Support Packs/HD RP 12.1 Unity 2021.3 Park Photoscanned.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/HD and URP Support Packs/URP 12.1 Unity 2021.3 Park Photoscanned.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ducky Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Ducky Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox beta.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyWaveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyWaveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "whitebox-LVL-1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -127,7 +139,7 @@
       <workItem from="1707261185907" duration="65000" />
       <workItem from="1707261335077" duration="4000" />
       <workItem from="1707261345019" duration="816000" />
-      <workItem from="1707934982582" duration="892000" />
+      <workItem from="1707934982582" duration="301000" />
     </task>
     <servers />
   </component>
