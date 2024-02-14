@@ -12,6 +12,7 @@ public class EnemyWaveController : MonoBehaviour
     public Transform fixedCameraPosition;
     public float delayBeforeSpawn = 0.1f;
     public float cameraAttachSpeed = 2f;
+    public GameObject arenaCollision;
 
     public GameObject arrowUI;
     public float arrowDisplayTime = 3f;
@@ -42,6 +43,7 @@ public class EnemyWaveController : MonoBehaviour
             {
                 Debug.Log("Detaching Camera");
                 yield return StartCoroutine(DetachCamera());
+                EnableCollision();
             }
 
             yield return new WaitForSeconds(delayBeforeSpawn);
@@ -55,6 +57,7 @@ public class EnemyWaveController : MonoBehaviour
                 Debug.Log("Attaching Camera");
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
+                DisableCollision();
             }
 
             yield return new WaitForSeconds(timeBetweenWaves);
@@ -87,6 +90,15 @@ public class EnemyWaveController : MonoBehaviour
     {
         yield return new WaitForSeconds(arrowDisplayTime);
         arrowUI.SetActive(false);
+    }
+    void EnableCollision()
+    {
+        arenaCollision.SetActive(true);
+    }
+
+    void DisableCollision()
+    {
+        arenaCollision.SetActive(false);
     }
 
     IEnumerator DetachCamera()
