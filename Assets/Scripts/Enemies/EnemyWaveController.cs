@@ -4,21 +4,22 @@ using UnityEngine.UI;
 
 public class EnemyWaveController : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    public Transform[] spawnPoints; // Array of spawn points
-    public float timeBetweenWaves = 10f;
-    public int numberOfWaves = 3;
-    public Camera mainCamera;
-    public Transform fixedCameraPosition;
-    public float delayBeforeSpawn = 0.1f;
-    public float cameraAttachSpeed = 2f;
-    public GameObject arenaCollision;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private Transform[] spawnPoints; // Array of spawn points
+    [SerializeField] private float timeBetweenWaves = 10f;
+    [SerializeField] private int numberOfWaves = 3;
+    
+    [SerializeField] private Transform fixedCameraPosition;
+    [SerializeField] private float delayBeforeSpawn = 0.1f;
+    [SerializeField] private float cameraAttachSpeed = 2f;
+    [SerializeField] private GameObject arenaCollision;
 
-    public GameObject arrowUI;
-    public float arrowDisplayTime = 3f;
+    [SerializeField] private GameObject arrowUI;
+    [SerializeField] private float arrowDisplayTime = 3f;
 
-    public AudioSource spawnSound; // Reference to the AudioSource component
+    [SerializeField] private AudioSource spawnSound; // Reference to the AudioSource component
 
+    private Camera mainCamera;
     private FollowCamera followCameraScript;
     private bool isCameraDetached = false;
     private float originalCameraZPosition;
@@ -26,6 +27,10 @@ public class EnemyWaveController : MonoBehaviour
 
     private void Start()
     {
+        if (Camera.main != null)
+        {
+            mainCamera = Camera.main;
+        }
         followCameraScript = mainCamera.GetComponent<FollowCamera>();
         originalCameraZPosition = mainCamera.transform.position.z;
         originalCameraRotation = mainCamera.transform.rotation;
