@@ -9,6 +9,7 @@ public class Swan : MonoBehaviour
 {
     public static int enemiesKilled;
     public Animator animator;
+    public Animator flippedAnimator;
     public BoxCollider boxCollider;
     private int damage;
     public float powerUpStart;
@@ -32,6 +33,7 @@ public class Swan : MonoBehaviour
         damage = 1;
 
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        flippedAnimator = gameObject.transform.Find("SwanSpriteFlip").GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 

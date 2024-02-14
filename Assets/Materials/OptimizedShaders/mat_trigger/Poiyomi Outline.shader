@@ -1869,7 +1869,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 					}
 				}
 				#endif
-				float3 offset = outlineNormal * (lineWidth * (1.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
+				float3 offset = outlineNormal * (lineWidth * (0.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
 				if ((1.0 /*_OutlineExpansionMode*/) == 2)
 				{
 					float3 lightDirection = normalize(_WorldSpaceLightPos0 + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz);
@@ -2880,7 +2880,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				poiLight.rampedLightMap = poiEdgeNonLinear(poiLight.nDotL, 0.1, .1);
 				#endif
 				
-				if ((0.0 /*_AlphaPremultiply*/))
+				if ((1.0 /*_AlphaPremultiply*/))
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -2900,7 +2900,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				if ((3.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
@@ -4440,7 +4440,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 					}
 				}
 				#endif
-				float3 offset = outlineNormal * (lineWidth * (1.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
+				float3 offset = outlineNormal * (lineWidth * (0.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
 				if ((1.0 /*_OutlineExpansionMode*/) == 2)
 				{
 					float3 lightDirection = normalize(_WorldSpaceLightPos0 + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz);
@@ -4648,7 +4648,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 			#ifdef POI_PASS_OUTLINE
 			void applyOutlineColor(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiLight poiLight, in PoiMods poiMods, in PoiCam poiCam)
 			{
-				clip((1.0 /*_EnableOutlines*/) - 0.01);
+				clip((0.0 /*_EnableOutlines*/) - 0.01);
 				float OutlineMask = tex2D(_OutlineMask, TRANSFORM_TEX(poiMesh.uv[(0.0 /*_OutlineMaskUV*/)], _OutlineMask) + _Time.x * float4(0,0,0,0))[(0.0 /*_OutlineMaskChannel*/)];
 				if ((0.0 /*_OutlineVertexColorMask*/) > 0)
 				{
@@ -5291,7 +5291,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				poiLight.rampedLightMap = poiEdgeNonLinear(poiLight.nDotL, 0.1, .1);
 				#endif
 				
-				if ((0.0 /*_AlphaPremultiply*/))
+				if ((1.0 /*_AlphaPremultiply*/))
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -5306,7 +5306,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				return float4(poiFragData.finalColor + poiFragData.emission * poiMods.globalEmission, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
@@ -6788,7 +6788,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 					}
 				}
 				#endif
-				float3 offset = outlineNormal * (lineWidth * (1.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
+				float3 offset = outlineNormal * (lineWidth * (0.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
 				if ((1.0 /*_OutlineExpansionMode*/) == 2)
 				{
 					float3 lightDirection = normalize(_WorldSpaceLightPos0 + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz);
@@ -7798,7 +7798,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				poiLight.finalLighting = 1;
 				poiLight.rampedLightMap = poiEdgeNonLinear(poiLight.nDotL, 0.1, .1);
 				#endif
-				if ((0.0 /*_AlphaPremultiply*/))
+				if ((1.0 /*_AlphaPremultiply*/))
 				{
 					poiFragData.baseColor *= saturate(poiFragData.alpha);
 				}
@@ -7814,7 +7814,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				if ((3.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
@@ -9214,7 +9214,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 					}
 				}
 				#endif
-				float3 offset = outlineNormal * (lineWidth * (1.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
+				float3 offset = outlineNormal * (lineWidth * (0.0 /*_EnableOutlines*/) / 100) * outlineMask * distanceOffset;
 				if ((1.0 /*_OutlineExpansionMode*/) == 2)
 				{
 					float3 lightDirection = normalize(_WorldSpaceLightPos0 + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz);
@@ -9623,7 +9623,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/b71086d1d75ae7e4
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				return float4(poiFragData.finalColor, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
