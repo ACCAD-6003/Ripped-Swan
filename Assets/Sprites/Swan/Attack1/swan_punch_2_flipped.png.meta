@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 715a00e89d317534a9870a7c8c39c63c
+guid: dff576fec97de5842b78a52a43eedf0f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,62 +114,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: swan_punch_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2387
-        height: 3035
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 113373e4a70f80e4fb47bc26562c97cc
-      internalID: 1832274577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: swan_punch_1
-      rect:
-        serializedVersion: 2
-        x: 2464
-        y: 0
-        width: 4193
-        height: 3035
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0aba534308612b44ca85c62a3be32bf3
-      internalID: -35382097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8c83c7d57be4cd740ab7da3433ba0a02
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      swan_punch_1: -35382097
-      swan_punch_0: 1832274577
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
