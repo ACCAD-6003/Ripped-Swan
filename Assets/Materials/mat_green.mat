@@ -2605,7 +2605,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
     - m_lightingCategory: 1
-    - m_mainCategory: 0
+    - m_mainCategory: 1
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
@@ -2850,7 +2850,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.31706125, g: 0.8962264, b: 0.32387498, a: 1}
+    - _Color: {r: 0.4008989, g: 0.8584906, b: 0.4070826, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}

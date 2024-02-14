@@ -7,20 +7,25 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Grass
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Name: road
+  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
+  m_ValidKeywords:
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    AllLockedGUIDS: 7bc411db89cc4724fb86d1826fb80d4c
+    OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI
+      _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -302,7 +307,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0a82bf558e766e444b9288d8c3e60579, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -501,16 +506,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _TextGlyphs:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ToonRamp:
-        m_Texture: {fileID: 2800000, guid: 61bd594533da4fc42bd46ef93ba5a4f6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 732b4977557d2954f822f01846fa0dba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VertexGlitchMap:
@@ -1028,7 +1029,7 @@ Material:
     - _DetailTexStochastic: 0
     - _DetailTexUV: 0
     - _DetailTintThemeIndex: 0
-    - _DisableDirectionalInAdd: 1
+    - _DisableDirectionalInAdd: 0
     - _DissolveAlpha: 0
     - _DissolveAlpha0: 0
     - _DissolveAlpha1: 0
@@ -1216,7 +1217,7 @@ Material:
     - _EnableGITDEmission3: 0
     - _EnableIridescence: 0
     - _EnableMirrorOptions: 0
-    - _EnableOutlines: 0
+    - _EnableOutlines: 1
     - _EnablePathing: 0
     - _EnableRim2Lighting: 0
     - _EnableRimLighting: 0
@@ -1642,7 +1643,7 @@ Material:
     - _LightingAdditiveType: 1
     - _LightingCap: 1
     - _LightingCapEnabled: 1
-    - _LightingCastedShadows: 0
+    - _LightingCastedShadows: 1
     - _LightingColorMode: 0
     - _LightingDebugVisualize: 0
     - _LightingDetailShadowMapsUV: 0
@@ -1671,7 +1672,7 @@ Material:
     - _LightingWrappedNormalization: 0
     - _LightingWrappedWrap: 0
     - _LineColorThemeIndex: 0
-    - _LineWidth: 1
+    - _LineWidth: 5
     - _LockTooltip: 0
     - _MainALHueShiftBand: 0
     - _MainALHueShiftCTIndex: 0
@@ -2467,7 +2468,7 @@ Material:
     - g_start_deliot: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
-    - m_OutlineCategory: 0
+    - m_OutlineCategory: 1
     - m_end_ALDecalSpectrum: 0
     - m_end_ALVolumeColor: 0
     - m_end_Alpha: 0
@@ -2850,7 +2851,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.12322002, g: 0.6698113, b: 0.15939148, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}
@@ -3000,10 +3001,10 @@ Material:
     - _LightingAOMapsPan: {r: 0, g: 0, b: 0, a: 0}
     - _LightingDetailShadowMapsPan: {r: 0, g: 0, b: 0, a: 0}
     - _LightingForcedColor: {r: 1, g: 1, b: 1, a: 1}
-    - _LightingShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightingShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightingShadowMasksPan: {r: 0, g: 0, b: 0, a: 0}
     - _LightngForcedDirection: {r: 0, g: 0, b: 0, a: 1}
-    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LineColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColorAdjustTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _MainTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _MatCap2ndBlendUV1: {r: 0, g: 0, b: 0, a: 0}
