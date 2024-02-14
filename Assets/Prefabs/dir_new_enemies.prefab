@@ -107,10 +107,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2015245357419841791, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_Name
+      value: DuckSpriteFlipped
+      objectReference: {fileID: 0}
     - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98b8b844e60f7334a94aa3acf4a3c980, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
 --- !u!4 &2063869814055670312 stripped

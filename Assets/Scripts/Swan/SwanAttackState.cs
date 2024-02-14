@@ -22,11 +22,13 @@ public class SwanAttackState : ISwanState
         {
             swan.boxCollider.enabled = true;
             swan.animator.SetBool("swanAttack1",true);
+            swan.flippedAnimator.SetBool("swanAttack1", true);
             // If swan stops attacking, switch to move state
             if (Time.time > next)
             {
                 swan.boxCollider.enabled = false;
                 swan.animator.SetBool("swanAttack1", false);
+                swan.flippedAnimator.SetBool("swanAttack1", false);
                 swan.state = new SwanMoveState(swan);
             }
         }

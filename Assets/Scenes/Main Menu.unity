@@ -482,6 +482,10 @@ PrefabInstance:
       propertyPath: m_fontColorGradient.bottomRight.r
       value: 0.16470589
       objectReference: {fileID: 0}
+    - target: {fileID: 3879606697222838132, guid: 001968502c169964d8cd57f5f5d99ced, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3879606697222838137, guid: 001968502c169964d8cd57f5f5d99ced, type: 3}
       propertyPath: screen
       value: 
