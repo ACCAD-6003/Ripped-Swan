@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_01.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_02.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_03.prefab" afterDir="false" />
@@ -18,6 +19,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Low Poly Free Tree Pack/Prefabs/Tree_11.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/lvl1 whitebox beta.unity" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AmplifyShaderEditor/Plugins/Editor/Templates/TemplateMenuItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
