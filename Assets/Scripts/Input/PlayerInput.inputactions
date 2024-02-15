@@ -33,18 +33,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Hold",
+                    "name": "HeavyAttack",
                     "type": "Button",
-                    "id": "46fb590e-2560-4b3f-b8fe-8f0a2619638c",
+                    "id": "b83d74f7-c292-401b-b7f0-5cef23842f41",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HeavyAttack",
+                    "name": "Hold",
                     "type": "Button",
-                    "id": "b83d74f7-c292-401b-b7f0-5cef23842f41",
+                    "id": "46fb590e-2560-4b3f-b8fe-8f0a2619638c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -209,7 +209,7 @@
                 {
                     "name": "",
                     "id": "c4d36eb4-bb9f-4e2c-8fb8-f00babd669e6",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

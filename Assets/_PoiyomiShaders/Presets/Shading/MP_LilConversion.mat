@@ -2,21 +2,30 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MP_LilConversion
-  m_Shader: {fileID: 4800000, guid: 5ca92f1e9fc35504aba297fd1acd62df, type: 3}
-  m_ShaderKeywords: POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE POI_LIGHT_DATA_ADDITIVE_ENABLE
-    POI_VERTEXLIGHT_ON VIGNETTE_MASKED _LIGHTINGMODE_MULTILAYER_MATH _RIM2STYLE_POIYOMI
-    _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+  m_Shader: {fileID: 4800000, guid: 0f79ae495d91cb2408f515a72dd66686, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - VIGNETTE_MASKED
+  - _LIGHTINGMODE_MULTILAYER_MATH
+  - _RIM2STYLE_POIYOMI
+  - _RIMSTYLE_POIYOMI
+  - _STOCHASTICMODE_DELIOT_HEITZ
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
+    AllLockedGUIDS: bf8c5ab91bf6aaa49b949bf74998ddc2
+    OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_MULTILAYER_MATH _RIM2STYLE_POIYOMI
+      _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon
+    RenderType: Opaque
     _AddBlendOp_isPreset: true
     _LightingAdditiveGradientEnd_isPreset: true
     _LightingAdditiveGradientStart_isPreset: true
@@ -536,6 +545,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - GeometryShader_Enabled: 1
     - Instancing: 0
@@ -1603,6 +1613,7 @@ Material:
     - _IridescenceMaskChannel: 0
     - _IridescenceMaskGlobalMask: 0
     - _IridescenceMaskGlobalMaskBlendType: 2
+    - _IridescenceMaskInvert: 0
     - _IridescenceMaskUV: 0
     - _IridescenceMultiplyBlend: 0
     - _IridescenceNormalIntensity: 1
@@ -1639,6 +1650,7 @@ Material:
     - _LightingAddDetailShadowStrengthB: 0
     - _LightingAddDetailShadowStrengthG: 0
     - _LightingAddDetailShadowStrengthR: 1
+    - _LightingAdditiveCastedShadows: 1
     - _LightingAdditiveEnable: 1
     - _LightingAdditiveGradientEnd: 0.6
     - _LightingAdditiveGradientStart: 0.4
@@ -2036,6 +2048,7 @@ Material:
     - _Rim2ApplyGlobalMaskIndex: 0
     - _Rim2BackfaceMask: 1
     - _Rim2BaseColorMix: 0
+    - _Rim2BiasIntensity: 0
     - _Rim2BlendMode: 0
     - _Rim2BlendStrength: 1
     - _Rim2Blur: 0.65
@@ -2062,6 +2075,7 @@ Material:
     - _Rim2LightingInvert: 0
     - _Rim2MainStrength: 0
     - _Rim2MaskChannel: 0
+    - _Rim2MaskInvert: 0
     - _Rim2MaskUV: 0
     - _Rim2NormalStrength: 1
     - _Rim2Power: 1
@@ -2082,6 +2096,7 @@ Material:
     - _RimApplyGlobalMaskIndex: 0
     - _RimBackfaceMask: 1
     - _RimBaseColorMix: 0
+    - _RimBiasIntensity: 0
     - _RimBlendMode: 0
     - _RimBlendStrength: 1
     - _RimBlur: 0.65
@@ -2115,6 +2130,7 @@ Material:
     - _RimLightingInvert: 0
     - _RimMainStrength: 0
     - _RimMaskChannel: 0
+    - _RimMaskInvert: 0
     - _RimMaskUV: 0
     - _RimNormalStrength: 1
     - _RimPower: 1
@@ -2151,7 +2167,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2211,6 +2227,8 @@ Material:
     - _StylizedSpecular: 0
     - _StylizedSpecular2Feather: 0
     - _StylizedSpecularFeather: 0
+    - _StylizedSpecularIgnoreNormal: 0
+    - _StylizedSpecularIgnoreShadow: 0
     - _StylizedSpecularStrength: 1
     - _SubsurfaceScattering: 0
     - _TextEnabled: 0
@@ -2334,6 +2352,10 @@ Material:
     - _VertexSpectrumMotion: 0
     - _VertexSpectrumUV: 0
     - _VertexSpectrumUVDirection: 0
+    - _VertexSphereAlpha: 0
+    - _VertexSphereHeight: 1
+    - _VertexSphereMode: 0
+    - _VertexSphereRadius: 1
     - _VertexWorldTranslationALBand: 0
     - _VideoBacklight: 1
     - _VideoCRTPixelEnergizedTime: 1.9
@@ -2376,6 +2398,14 @@ Material:
     - g_end_Matcap3TPSMaskGroup: 0
     - g_end_Matcap4TPSMaskGroup: 0
     - g_end_MatcapTPSMaskGroup: 0
+    - g_end_MultilayerMath1stBorder: 0
+    - g_end_MultilayerMath1stLayer: 0
+    - g_end_MultilayerMath2ndLayer: 0
+    - g_end_MultilayerMath3rdLayer: 0
+    - g_end_decal1_position: 0
+    - g_end_decal2_position: 0
+    - g_end_decal3_position: 0
+    - g_end_decal_position: 0
     - g_end_deliot: 0
     - g_end_hextile: 0
     - g_start_BRDFTPSMaskGroup: 0
@@ -2392,6 +2422,14 @@ Material:
     - g_start_Matcap3TPSMaskGroup: 0
     - g_start_Matcap4TPSMaskGroup: 0
     - g_start_MatcapTPSMaskGroup: 0
+    - g_start_MultilayerMath1stLayer: 0
+    - g_start_MultilayerMath2ndLayer: 0
+    - g_start_MultilayerMath3rdLayer: 0
+    - g_start_MultilayerMathBorder: 0
+    - g_start_decal1_position: 0
+    - g_start_decal2_position: 0
+    - g_start_decal3_position: 0
+    - g_start_decal_position: 0
     - g_start_deliot: 0
     - g_start_hextile: 0
     - m_AudioLinkCategory: 0
@@ -3052,7 +3090,9 @@ Material:
     - _VertexRoundingRangeAL: {r: 0, g: 0, b: 0, a: 1}
     - _VertexSpectrumOffsetMax: {r: 0, g: 0.1, b: 0, a: 1}
     - _VertexSpectrumOffsetMin: {r: 0, g: 0, b: 0, a: 1}
+    - _VertexSphereCenter: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMax: {r: 0, g: 0, b: 0, a: 1}
     - _VertexWorldTranslationALMin: {r: 0, g: 0, b: 0, a: 1}
     - _VideoMaskTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _VideoResolution: {r: 1280, g: 720, b: 0, a: 0}
+  m_BuildTextureStacks: []
