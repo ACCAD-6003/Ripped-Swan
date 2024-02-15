@@ -86,10 +86,10 @@ public class SampleAgentScript : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         // Set the bullet's collider as a trigger
-        bullet.GetComponent<Collider>().isTrigger = true;
+        bullet.GetComponent<Collider>().isTrigger = false ;
 
         // Calculate the lob trajectory by adding an upward force
-        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.3f; // Adjust the upward force as needed
+        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.1f; // Adjust the upward force as needed
 
         // Set the bullet's direction and speed
         bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized * 11f; // You may need to adjust the speed
