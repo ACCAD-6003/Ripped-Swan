@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using static UnityEngine.GraphicsBuffer;
+using UnityEngine.ProBuilder;
+using UnityEngine.UIElements;
 
-public class SampleAgentScript : MonoBehaviour
+public class Targeting : MonoBehaviour
 {
+    [SerializeField] private float firingAngle=45f;
+    [SerializeField] private float gravity = 10f;
     public Transform target;
     UnityEngine.AI.NavMeshAgent agent;
 
@@ -86,14 +91,52 @@ public class SampleAgentScript : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         // Set the bullet's collider as a trigger
-        bullet.GetComponent<Collider>().isTrigger = true;
+        bullet.GetComponent<Collider>().isTrigger = false ;
 
+      
+
+        
         // Calculate the lob trajectory by adding an upward force
-        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.3f; // Adjust the upward force as needed
+        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.001f; // Adjust the upward force as needed
 
         // Set the bullet's direction and speed
         bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized * 11f; // You may need to adjust the speed
+
+       
     }
 
-   
+   /* 
+    *  Fialed experiement with bullets
+    * 
+    * IEnumerator SimulateProjectile(Transform projectile)
+    {
+       
+
+        // Move projectile to the position of throwing object + add some offset if needed.
+        projectile.position = transform.position + new Vector3(0, 0.0f, 0);
+
+        // Calculate distance to target
+        float target_Distance = Vector3.Distance(projectile.position, target.position);
+
+        // Calculate the velocity needed to throw the object to the target at specified angle.
+        float projectile_Velocity = target_Distance / (Mathf.Sin(2 * firingAngle * Mathf.Deg2Rad) / gravity);
+
+        // Extract the X  Y componenent of the velocity
+        float Vx = Mathf.Sqrt(projectile_Velocity) * Mathf.Cos(firingAngle * Mathf.Deg2Rad);
+        float Vy = Mathf.Sqrt(projectile_Velocity) * Mathf.Sin(firingAngle * Mathf.Deg2Rad);
+
+        // Calculate flight time.
+        float flightDuration = target_Distance / Vx;
+
+        // Rotate projectile to face the target.
+        projectile.rotation = Quaternion.LookRotation(target.position - projectile.position);
+      
+        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.1f; // Adjust the upward force as needed
+        Vector3 finalDirection = new Vector3(lobDirection.normalized.x * Vx, lobDirection.normalized.y * Vy*10f, lobDirection.normalized.z * Vx);
+
+        // Set the bullet's direction and speed
+        projectile.GetComponent<Rigidbody>().velocity = finalDirection; //lobDirection.normalized * 20f; // You may need to adjust the speed
+        yield return null;
+    } */
+
 }

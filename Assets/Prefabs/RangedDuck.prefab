@@ -294,12 +294,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442c5e0d6b6ab814580aaf0c4a8dbfe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firingAngle: 45
+  gravity: 10
   target: {fileID: 0}
   bulletPrefab: {fileID: 5294387218450081108, guid: 18952da5504c3c5409188ce8bad24761, type: 3}
   firePoint: {fileID: 4260777349895383807}
   burstRate: 4
   burstCount: 3
-  proximityDistance: 15
+  proximityDistance: 25
   rotationSpeed: 5
 --- !u!136 &4260777349453884452
 CapsuleCollider:
