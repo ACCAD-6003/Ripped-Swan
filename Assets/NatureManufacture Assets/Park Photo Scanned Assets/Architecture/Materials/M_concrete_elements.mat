@@ -8,19 +8,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_concrete_elements
-  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
-  m_ValidKeywords:
-  - VIGNETTE_MASKED
+  m_Shader: {fileID: 4800000, guid: f089b168478789b499276c477a28270f, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _LIGHTINGMODE_TEXTURERAMP
-  - _RIM2STYLE_POIYOMI
-  - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
-  stringTagMap: {}
+  stringTagMap:
+    AllLockedGUIDS: a471c6d873fba8d468be92f06c3a9e83,ba3f46d3c1a6dba479ec13b0ce7287d7,87bf7b0df8693ee4c94b686103015e0c,e4c117527e6cf7042beba324667a19c2,c951e42771c003a4993dc2fbbee09b34,3e751787895dbc347a3bff73ee082617,5f7473a7543f4834fbfb663ca0b559ad,482f3356406d67f47ae01162ff7eac3d
+    OriginalKeywords: _LIGHTINGMODE_TEXTURERAMP _STOCHASTICMODE_DELIOT_HEITZ
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -2194,7 +2195,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1

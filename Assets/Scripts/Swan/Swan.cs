@@ -26,6 +26,13 @@ public class Swan : MonoBehaviour
     public AudioSource powerUp_Sound;
     public AudioSource hurt;
 
+    enum Attacks
+    {
+        NORMAL,
+        HEAVY,
+        SPECIAL
+    }
+
     void Start()
     {
         state = new SwanMoveState(this);
@@ -33,7 +40,6 @@ public class Swan : MonoBehaviour
         damage = 1;
 
         animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
-        flippedAnimator = gameObject.transform.Find("SwanSpriteFlip").GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 
@@ -58,9 +64,10 @@ public class Swan : MonoBehaviour
     }
 
 
-    public void attack()
+    public void attack(String attackType)
     {
-        state = new SwanAttackState(this);
+        if (state is not SwanAttackState)
+            state = new SwanAttackState(this, attackType);
     }
 
     public void hit()
