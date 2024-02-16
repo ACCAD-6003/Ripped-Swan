@@ -55,6 +55,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""HeavyAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""b83d74f7-c292-401b-b7f0-5cef23842f41"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Hold"",
                     ""type"": ""Button"",
                     ""id"": ""46fb590e-2560-4b3f-b8fe-8f0a2619638c"",
@@ -64,9 +73,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Heavy Attack"",
+                    ""name"": ""SpecialAttack"",
                     ""type"": ""Button"",
-                    ""id"": ""b83d74f7-c292-401b-b7f0-5cef23842f41"",
+                    ""id"": ""737b704a-2ff6-44e5-b3c6-fc11634e02ff"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -231,11 +240,22 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""c4d36eb4-bb9f-4e2c-8fb8-f00babd669e6"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Heavy Attack"",
+                    ""action"": ""HeavyAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3f3d177-078f-4906-9e3f-b6895ed13a64"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpecialAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -249,8 +269,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base_Movement = m_Base.FindAction("Movement", throwIfNotFound: true);
         m_Base_Jump = m_Base.FindAction("Jump", throwIfNotFound: true);
         m_Base_Attack = m_Base.FindAction("Attack", throwIfNotFound: true);
+        m_Base_HeavyAttack = m_Base.FindAction("HeavyAttack", throwIfNotFound: true);
         m_Base_Hold = m_Base.FindAction("Hold", throwIfNotFound: true);
-        m_Base_HeavyAttack = m_Base.FindAction("Heavy Attack", throwIfNotFound: true);
+        m_Base_SpecialAttack = m_Base.FindAction("SpecialAttack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -315,8 +336,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_Movement;
     private readonly InputAction m_Base_Jump;
     private readonly InputAction m_Base_Attack;
-    private readonly InputAction m_Base_Hold;
     private readonly InputAction m_Base_HeavyAttack;
+    private readonly InputAction m_Base_Hold;
+    private readonly InputAction m_Base_SpecialAttack;
     public struct BaseActions
     {
         private @PlayerInput m_Wrapper;
@@ -324,8 +346,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Base_Movement;
         public InputAction @Jump => m_Wrapper.m_Base_Jump;
         public InputAction @Attack => m_Wrapper.m_Base_Attack;
-        public InputAction @Hold => m_Wrapper.m_Base_Hold;
         public InputAction @HeavyAttack => m_Wrapper.m_Base_HeavyAttack;
+        public InputAction @Hold => m_Wrapper.m_Base_Hold;
+        public InputAction @SpecialAttack => m_Wrapper.m_Base_SpecialAttack;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,12 +367,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
-            @Hold.started += instance.OnHold;
-            @Hold.performed += instance.OnHold;
-            @Hold.canceled += instance.OnHold;
             @HeavyAttack.started += instance.OnHeavyAttack;
             @HeavyAttack.performed += instance.OnHeavyAttack;
             @HeavyAttack.canceled += instance.OnHeavyAttack;
+            @Hold.started += instance.OnHold;
+            @Hold.performed += instance.OnHold;
+            @Hold.canceled += instance.OnHold;
+            @SpecialAttack.started += instance.OnSpecialAttack;
+            @SpecialAttack.performed += instance.OnSpecialAttack;
+            @SpecialAttack.canceled += instance.OnSpecialAttack;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -363,12 +389,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
-            @Hold.started -= instance.OnHold;
-            @Hold.performed -= instance.OnHold;
-            @Hold.canceled -= instance.OnHold;
             @HeavyAttack.started -= instance.OnHeavyAttack;
             @HeavyAttack.performed -= instance.OnHeavyAttack;
             @HeavyAttack.canceled -= instance.OnHeavyAttack;
+            @Hold.started -= instance.OnHold;
+            @Hold.performed -= instance.OnHold;
+            @Hold.canceled -= instance.OnHold;
+            @SpecialAttack.started -= instance.OnSpecialAttack;
+            @SpecialAttack.performed -= instance.OnSpecialAttack;
+            @SpecialAttack.canceled -= instance.OnSpecialAttack;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -391,7 +420,8 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnHold(InputAction.CallbackContext context);
         void OnHeavyAttack(InputAction.CallbackContext context);
+        void OnHold(InputAction.CallbackContext context);
+        void OnSpecialAttack(InputAction.CallbackContext context);
     }
 }
