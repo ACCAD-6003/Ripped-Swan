@@ -33,6 +33,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "HeavyAttack",
+                    "type": "Button",
+                    "id": "b83d74f7-c292-401b-b7f0-5cef23842f41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Hold",
                     "type": "Button",
                     "id": "46fb590e-2560-4b3f-b8fe-8f0a2619638c",
@@ -42,9 +51,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "HeavyAttack",
+                    "name": "SpecialAttack",
                     "type": "Button",
-                    "id": "b83d74f7-c292-401b-b7f0-5cef23842f41",
+                    "id": "737b704a-2ff6-44e5-b3c6-fc11634e02ff",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -209,11 +218,22 @@
                 {
                     "name": "",
                     "id": "c4d36eb4-bb9f-4e2c-8fb8-f00babd669e6",
-                    "path": "<Gamepad>/buttonNorth",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "HeavyAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3f3d177-078f-4906-9e3f-b6895ed13a64",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpecialAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
