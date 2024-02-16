@@ -2606,7 +2606,7 @@ Material:
     - m_end_vertexManipulation: 0
     - m_end_videoEffects: 0
     - m_lightingCategory: 1
-    - m_mainCategory: 1
+    - m_mainCategory: 0
     - m_modifierCategory: 0
     - m_postprocessing: 0
     - m_renderingCategory: 0
