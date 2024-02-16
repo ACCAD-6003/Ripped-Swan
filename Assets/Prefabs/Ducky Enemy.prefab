@@ -32,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 1105197983241439571}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 25.18, y: 2.01, z: 1.77}
-  m_LocalScale: {x: 0.60225, y: 0.60225, z: 0.60225}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.33557403, y: 0.33557403, z: 0.33557403}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 97503735367569836}
   - {fileID: 206126794639212627}
@@ -137,7 +137,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 0
-  moveSpeed: 8
+  moveSpeed: 5
   visionRange: 12
   AttackVisionRange: 2
   fieldOfView: 359
