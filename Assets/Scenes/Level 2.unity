@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1499022835}
-  m_IndirectSpecularColor: {r: 0.44965184, g: 0.49677896, b: 0.55982506, a: 1}
+  m_IndirectSpecularColor: {r: 0.44965196, g: 0.4967785, b: 0.55982465, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11905,7 +11905,7 @@ PrefabInstance:
     - target: {fileID: 4260777349453884455, guid: 6811b2a98c50efe47b29eb59c94a8238, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1578585511}
+      objectReference: {fileID: 1890776777}
     - target: {fileID: 4260777349453884455, guid: 6811b2a98c50efe47b29eb59c94a8238, type: 3}
       propertyPath: proximityDistance
       value: 9
@@ -81753,6 +81753,11 @@ SpriteRenderer:
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5223369495931341875, guid: 3e6a6605e558cf547b93521c790e03b1, type: 3}
   m_PrefabInstance: {fileID: 1216521532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1890776777 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4032279034258384524, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+  m_PrefabInstance: {fileID: 1130168790}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903152417
 GameObject:
