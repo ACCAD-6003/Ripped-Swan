@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class EnemyWaveController : MonoBehaviour
 {
+    public delegate void SpecialZoom();
+    public static SpecialZoom specialZoom;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform[] spawnPoints; // Array of spawn points
     [SerializeField] private float timeBetweenWaves = 10f;
@@ -27,6 +29,7 @@ public class EnemyWaveController : MonoBehaviour
 
     private void Start()
     {
+        specialZoom += BigZoom;
         if (Camera.main != null)
         {
             mainCamera = Camera.main;
@@ -140,4 +143,10 @@ public class EnemyWaveController : MonoBehaviour
         mainCamera.GetComponent<Camera>().enabled = true;
         isCameraDetached = false;
     }
+
+    public void BigZoom()
+    {
+        Debug.Log("Big Zoom");
+    }
+
 }
