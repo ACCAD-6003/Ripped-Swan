@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 207559990}
-  m_IndirectSpecularColor: {r: 0.17119339, g: 0.28467923, b: 0.49102157, a: 1}
+  m_IndirectSpecularColor: {r: 0.17129126, g: 0.28467533, b: 0.4911977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12487,11 +12487,6 @@ Transform:
   m_Father: {fileID: 182083091}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &564091490 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4076104069253464644, guid: 11115e42ae4075248bee94842aefd7d1, type: 3}
-  m_PrefabInstance: {fileID: 1424516700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &565393032
 GameObject:
   m_ObjectHideFlags: 0
@@ -19360,11 +19355,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &814976501 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4076104070706518384, guid: 11115e42ae4075248bee94842aefd7d1, type: 3}
-  m_PrefabInstance: {fileID: 1424516700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &822129105
 Mesh:
   m_ObjectHideFlags: 0
@@ -25107,30 +25097,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: hurt
-      value: 
-      objectReference: {fileID: 814976501}
-    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: punch_hit
-      value: 
-      objectReference: {fileID: 1721455870}
-    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: punch_miss
-      value: 
-      objectReference: {fileID: 564091490}
-    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: powerUp_Sound
-      value: 
-      objectReference: {fileID: 1300958773}
-    - target: {fileID: 1942770894, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: heavyAttackControl
-      value: 
-      objectReference: {fileID: 1277147990}
-    - target: {fileID: 1942770894, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: specialAttackControl
-      value: 
-      objectReference: {fileID: 1277147989}
     - target: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Name
       value: Swan Variant
@@ -25882,43 +25848,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
   m_PrefabInstance: {fileID: 1238901645}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1277147980 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-  m_PrefabInstance: {fileID: 1238901645}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277147974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8417838c821d0c94ab4e9c4284e21cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1277147989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277147974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f10cacd029fbc4194e8708e076acaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s: {fileID: 1277147980}
---- !u!114 &1277147990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277147974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 665f414086a2d1b498adaba87e1d383c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  s: {fileID: 1277147980}
 --- !u!1 &1277494444
 GameObject:
   m_ObjectHideFlags: 0
@@ -26622,11 +26551,6 @@ Transform:
   m_Father: {fileID: 1394446084}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1300958773 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4076104069526502601, guid: 11115e42ae4075248bee94842aefd7d1, type: 3}
-  m_PrefabInstance: {fileID: 1424516700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1302869484
 GameObject:
   m_ObjectHideFlags: 0
@@ -35250,11 +35174,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!82 &1721455870 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4076104070693818783, guid: 11115e42ae4075248bee94842aefd7d1, type: 3}
-  m_PrefabInstance: {fileID: 1424516700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1744140644
 GameObject:
   m_ObjectHideFlags: 0
