@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AttackControl : MonoBehaviour
+public class SpecialAttackControl : MonoBehaviour
 {
     [SerializeField] private Swan s;
 
@@ -11,12 +11,11 @@ public class AttackControl : MonoBehaviour
     {
         attackAction.performed += AttackAction_performed;
         attackAction.Enable();
-
     }
 
     private void AttackAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Attack");
-        s.attack("punch");
+        Debug.Log("SpecialAttack");
+        s.attack("special");
     }
 }
