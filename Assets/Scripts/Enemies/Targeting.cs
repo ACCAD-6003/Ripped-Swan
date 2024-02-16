@@ -97,10 +97,10 @@ public class Targeting : MonoBehaviour
 
         
         // Calculate the lob trajectory by adding an upward force
-        Vector3 lobDirection = (target.position - firePoint.position).normalized + Vector3.up * 0.001f; // Adjust the upward force as needed
+        Vector3 lobDirection = (target.position - firePoint.position).normalized ; // Adjust the upward force as needed
 
         // Set the bullet's direction and speed
-        bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized * 11f; // You may need to adjust the speed
+        bullet.GetComponent<Rigidbody>().velocity = lobDirection.normalized *5; // You may need to adjust the speed
 
        
     }
