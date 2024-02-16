@@ -17,6 +17,6 @@ public class AttackControl : MonoBehaviour
     private void AttackAction_performed(InputAction.CallbackContext obj)
     {
         Debug.Log("Attack");
-        s.attack();
+        s.attack("punch");
     }
 }

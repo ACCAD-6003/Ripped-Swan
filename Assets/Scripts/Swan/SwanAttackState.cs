@@ -6,13 +6,21 @@ using UnityEngine;
 public class SwanAttackState : ISwanState
 {
     private Swan swan;
-    float cooldown = 0.3f; // cooldown based on animation length, this needs to change when we get the final sprites
+    float cooldown; // cooldown based on animation length, this needs to change when we get the final sprites
     float next;
+    private string attackType;
 
-    public SwanAttackState(Swan swan)
+    public SwanAttackState(Swan swan, string type)
     {
+        // Cooldown lengths obtained from animation length
+        if (type == "punch") cooldown = 0.35f;
+        if (type == "heavy") cooldown = 0.4f;
+        if (type == "special") { 
+            cooldown = 0.8f;
+        }
         this.swan = swan;
         next = Time.time + cooldown;
+        this.attackType = type;
     }
 
     public void Update()
@@ -21,14 +29,12 @@ public class SwanAttackState : ISwanState
         if (swan.state is SwanAttackState)
         {
             swan.boxCollider.enabled = true;
-            swan.animator.SetBool("swanAttack1",true);
-            swan.flippedAnimator.SetBool("swanAttack1", true);
+            swan.animator.SetBool(attackType, true);
             // If swan stops attacking, switch to move state
             if (Time.time > next)
             {
                 swan.boxCollider.enabled = false;
-                swan.animator.SetBool("swanAttack1", false);
-                swan.flippedAnimator.SetBool("swanAttack1", false);
+                swan.animator.SetBool(attackType, false);
                 swan.state = new SwanMoveState(swan);
             }
         }

@@ -10,6 +10,8 @@ public class SwanController : MonoBehaviour
     [SerializeField] private MovementControl movementController;
     [SerializeField] private JumpControl jumpController;
     [SerializeField] private AttackControl attackController;
+    [SerializeField] private HeavyAttackControl heavyAttackControl;
+    [SerializeField] private SpecialAttackControl specialAttackControl;
     private PlayerInput pScheme;
     
 
@@ -21,6 +23,9 @@ public class SwanController : MonoBehaviour
         movementController.Initialize(pScheme.Base.Movement);
         jumpController.Initialize(pScheme.Base.Jump);
         attackController.Initialize(pScheme.Base.Attack);
+        heavyAttackControl.Initialize(pScheme.Base.HeavyAttack);
+        specialAttackControl.Initialize(pScheme.Base.SpecialAttack);
+
         pScheme.Base.Hold.performed += _ => held = true;
         pScheme.Base.Hold.canceled += _ => held = false;
 
