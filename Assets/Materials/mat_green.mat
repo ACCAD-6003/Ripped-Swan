@@ -8,21 +8,20 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_green
-  m_Shader: {fileID: 4800000, guid: adba224bae5bf2a488050d9eef62b4e4, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
+  m_ValidKeywords:
   - COLOR_GRADING_HDR
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: 7b83ae82a27c2604894dbb80d3e877ce
     OriginalKeywords: COLOR_GRADING_HDR VIGNETTE_MASKED _LIGHTINGMODE_TEXTURERAMP
       _RIM2STYLE_POIYOMI _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
@@ -304,8 +303,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainColorAdjustTexture:
-        m_Texture: {fileID: 2800000, guid: caef4f4ff5344c84f89671cac5a5e8d5, type: 3}
-        m_Scale: {x: 0.1, y: 0.1}
+        m_Texture: {fileID: 2800000, guid: 7835d56bc7345634e9738c0aedc6f47d, type: 3}
+        m_Scale: {x: 0.05, y: 0.05}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -630,7 +629,7 @@ Material:
     - _AngleCompareTo: 0
     - _AngleMinAlpha: 0
     - _AngleType: 0
-    - _Aniso0Blur: 0
+    - _Aniso0Blur: 1
     - _Aniso0Edge: 0.5
     - _Aniso0Offset: 0
     - _Aniso0OffsetMapStrength: 0
@@ -638,7 +637,7 @@ Material:
     - _Aniso0Strength: 1
     - _Aniso0SwitchDirection: 0
     - _Aniso0TintIndex: 0
-    - _Aniso0ToonMode: 0
+    - _Aniso0ToonMode: 1
     - _Aniso1Blur: 0
     - _Aniso1Edge: 0.5
     - _Aniso1Offset: 0
@@ -1686,7 +1685,7 @@ Material:
     - _MainHueALMotionSpeed: 1
     - _MainHueGlobalMask: 0
     - _MainHueGlobalMaskBlendType: 2
-    - _MainHueShift: 0.924
+    - _MainHueShift: 0.937
     - _MainHueShiftReplace: 1
     - _MainHueShiftSpeed: 0
     - _MainHueShiftToggle: 1
@@ -1900,7 +1899,7 @@ Material:
     - _OutlineEmission: 0
     - _OutlineExpansionMode: 1
     - _OutlineFixWidth: 0.5
-    - _OutlineFixedSize: 1
+    - _OutlineFixedSize: 0
     - _OutlineHueOffsetSpeed: 0
     - _OutlineHueShift: 0
     - _OutlineLit: 1
@@ -2169,7 +2168,7 @@ Material:
     - _RimMaskInvert: 0
     - _RimMaskUV: 0
     - _RimNormalStrength: 1
-    - _RimPower: 1
+    - _RimPower: 0.1
     - _RimShadowMask: 0.5
     - _RimShadowMaskInvert: 0
     - _RimShadowMaskRampType: 0
@@ -2203,7 +2202,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2343,10 +2342,10 @@ Material:
     - _UVTileDissolveUV: 0
     - _Unlit_Intensity: 1
     - _UseLightColor: 1
-    - _Use_1stAs2nd: 0
+    - _Use_1stAs2nd: 1
     - _Use_1stShadeMapAlpha_As_ShadowMask: 0
     - _Use_2ndShadeMapAlpha_As_ShadowMask: 0
-    - _Use_BaseAs1st: 0
+    - _Use_BaseAs1st: 1
     - _VertexAudioLinkEnabled: 0
     - _VertexBarrelAlpha: 0
     - _VertexBarrelHeight: 0
@@ -2616,7 +2615,7 @@ Material:
     - m_start_ALVolumeColor: 0
     - m_start_Alpha: 0
     - m_start_AlphaGlobalMask: 0
-    - m_start_Aniso: 0
+    - m_start_Aniso: 1
     - m_start_BlackLightMasking: 0
     - m_start_BonusSliders: 0
     - m_start_CRT: 0
@@ -2753,9 +2752,9 @@ Material:
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _1st_ShadeColor: {r: 0.31772873, g: 0.7924528, b: 0.36823133, a: 1}
     - _1st_ShadeMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _2nd_ShadeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _2nd_ShadeColor: {r: 0.27367392, g: 0.7735849, b: 0.2907649, a: 1}
     - _2nd_ShadeMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _ALDecalColorMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ALDecalVolumeColorHigh: {r: 1, g: 0, b: 0, a: 1}
@@ -2771,8 +2770,8 @@ Material:
     - _AlphaColor: {r: 1, g: 1, b: 1, a: 0}
     - _AlphaTexturePan: {r: 0, g: 0, b: 0, a: 0}
     - _AngleForwardDirection: {r: 0, g: 0, b: 1, a: 1}
-    - _Aniso0Tint: {r: 1, g: 1, b: 1, a: 1}
-    - _Aniso1Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _Aniso0Tint: {r: 0.26674816, g: 0.6509434, b: 0.25485048, a: 1}
+    - _Aniso1Tint: {r: 0.07769749, g: 0.16037738, b: 0.07186722, a: 1}
     - _AnisoColorMapPan: {r: 0, g: 0, b: 0, a: 0}
     - _Ap_Rim2LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3085,8 +3084,8 @@ Material:
     - _RimColor: {r: 0.66, g: 0.5, b: 0.48, a: 1}
     - _RimColorTexPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimEnviroMaskPan: {r: 0, g: 0, b: 0, a: 0}
-    - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimIndirColor: {r: 0.14542542, g: 0.7169812, b: 0.14620979, a: 1}
+    - _RimLightColor: {r: 0.2770114, g: 0.7075472, b: 0.3304389, a: 1}
     - _RimMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _RimShadowAlpha: {r: 0, g: 0, b: 0, a: 1}
     - _RimTexPan: {r: 0, g: 0, b: 0, a: 0}

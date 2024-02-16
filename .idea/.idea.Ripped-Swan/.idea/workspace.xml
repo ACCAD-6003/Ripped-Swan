@@ -60,7 +60,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../Ripped Swan Builds/swan test build 2-5/Ripped-Swan-Game.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Ripped Swan Builds/Swan build 2-16\Brawn Swan.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\jackd\Unity Projects\Ripped Swan Builds\swan test build 2-5" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -129,7 +129,7 @@
       <workItem from="1707934982582" duration="301000" />
       <workItem from="1708051145286" duration="15000" />
       <workItem from="1708065234275" duration="397000" />
-      <workItem from="1708106244477" duration="547000" />
+      <workItem from="1708106244477" duration="1140000" />
     </task>
     <servers />
   </component>

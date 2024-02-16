@@ -15,12 +15,12 @@ Material:
   - _DEPTHFOG_ON
   - _DEPTH_EFFECTS_ON
   - _EDGEFADE_ON
-  - _FLOW_ON
   - _FOAM_ON
+  - _FOAM_STOCHASTIC_ON
   - _NORMALMAP_1_ON
   - _REFLECTIONS_ON
   - _SCREENSPACE_REFLECTIONS_ON
-  - _SPECULAR_ON
+  - _VERT_FLIPBOOK_ON
   m_InvalidKeywords:
   - _NORMAL_FLIPBOOK_STOCHASTIC_ON
   m_LightmapFlags: 4
@@ -149,7 +149,7 @@ Material:
     - _AreaLitRoughnessMult: 1
     - _AreaLitStrength: 1
     - _AreaLitToggle: 0
-    - _BackfaceReflections: 1
+    - _BackfaceReflections: 0
     - _BaseColorDistortionStrength: 0.1
     - _BaseColorOffset: 0
     - _BaseColorStochasticToggle: 0
@@ -175,7 +175,7 @@ Material:
     - _DstBlend: 0
     - _EdgeFadeOffset: 0.5
     - _EdgeFadePower: 300
-    - _EdgeFadeSSR: 0.1
+    - _EdgeFadeSSR: 0.01
     - _EdgeFadeToggle: 1
     - _EmissionDistortionStrength: 0
     - _EmissionMapStochasticToggle: 0
@@ -183,7 +183,7 @@ Material:
     - _FlowMapUV: 0
     - _FlowSpeed: 0.25
     - _FlowStrength: 0.3
-    - _FlowToggle: 1
+    - _FlowToggle: 0
     - _FoamCrestStrength: 1.5
     - _FoamCrestThreshold: 0.5
     - _FoamDistortionStrength: 0.1
@@ -195,7 +195,7 @@ Material:
     - _FoamOffset: 0
     - _FoamPower: 200
     - _FoamRoughness: 0.2
-    - _FoamStochasticToggle: 0
+    - _FoamStochasticToggle: 1
     - _FoamToggle: 1
     - _FogBrightness: 1
     - _FogBrightness2: 1
@@ -233,11 +233,11 @@ Material:
     - _Rotation1: 0
     - _Roughness: 0
     - _SSR: 1
-    - _SSRHeight: 0.2
+    - _SSRHeight: 0.5
     - _SSRStrength: 1
     - _ShadowStrength: 0
     - _SpecStrength: 1
-    - _Specular: 1
+    - _Specular: 0
     - _SrcBlend: 1
     - _StencilRef: 65
     - _SubsurfaceBrightness: 10
@@ -255,15 +255,15 @@ Material:
     - _Turbulence: 1
     - _TurbulenceScale: 3
     - _TurbulenceSpeed: 0.3
-    - _VertOffsetFlipbookSpeed: 8
-    - _VertOffsetFlipbookStrength: 0.2
-    - _VertOffsetMode: 0
+    - _VertOffsetFlipbookSpeed: 2
+    - _VertOffsetFlipbookStrength: 0.5
+    - _VertOffsetMode: 4
     - _VertRemapMax: 1
     - _VertRemapMin: -1
     - _VertexOffsetMaskChannel: 0
     - _VertexOffsetMaskStrength: 1
-    - _VoronoiSpeed: 1.5
-    - _VoronoiWaveHeight: 1
+    - _VoronoiSpeed: 1
+    - _VoronoiWaveHeight: 3.31
     - _WaveDirection0: 0
     - _WaveDirection1: 335
     - _WaveDirection2: 13
@@ -275,7 +275,7 @@ Material:
     - _WaveSpeed0: 1
     - _WaveSpeed1: 1.1
     - _WaveSpeed2: 1.2
-    - _WaveSpeedGlobal: 2
+    - _WaveSpeedGlobal: 1
     - _WaveStrength0: 0.1
     - _WaveStrength1: 0.1
     - _WaveStrength2: 0.1
@@ -320,7 +320,7 @@ Material:
     - _SpecTint: {r: 1, g: 1, b: 1, a: 1}
     - _SubsurfaceTint: {r: 1, g: 1, b: 1, a: 1}
     - _VertOffsetFlipbookScale: {r: 3, g: 3, b: 0, a: 0}
-    - _VoronoiOffset: {r: 0, g: 1, b: 0, a: 0}
+    - _VoronoiOffset: {r: 0, g: 3.3, b: 0, a: 0}
     - _VoronoiScale: {r: 2, g: 2, b: 0, a: 0}
     - _VoronoiScroll: {r: 0, g: -0.25, b: 0, a: 0}
   m_BuildTextureStacks: []
