@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Brown
-  m_Shader: {fileID: 4800000, guid: 86eb7c1a4700f9545ae1c8fd4a39ad68, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5833ad254375cb74aa8e705f12a56da4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - VIGNETTE_MASKED

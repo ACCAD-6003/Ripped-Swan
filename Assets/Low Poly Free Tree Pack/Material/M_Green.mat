@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Green
-  m_Shader: {fileID: 4800000, guid: 730f673da1fde1444815f8b7465d6395, type: 3}
+  m_Shader: {fileID: 4800000, guid: 21af6b783609c324dbd5c6a10b5f32c8, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - VIGNETTE_MASKED
@@ -2786,7 +2786,7 @@ Material:
     - m_start_vertexManipulation: 0
     - m_start_videoEffects: 0
     - m_thirdpartyCategory: 0
-    - shader_is_using_thry_editor: 0
+    - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
     m_Colors:

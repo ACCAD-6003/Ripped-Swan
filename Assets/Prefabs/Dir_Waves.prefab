@@ -184,13 +184,13 @@ MonoBehaviour:
   - {fileID: 535341997271134462}
   timeBetweenWaves: 3
   numberOfWaves: 3
-  mainCamera: {fileID: 0}
   fixedCameraPosition: {fileID: 535341997991223990}
   delayBeforeSpawn: 0.5
   cameraAttachSpeed: 0.5
+  arenaCollision: {fileID: 0}
   arrowUI: {fileID: 535341996020416756}
   arrowDisplayTime: 3
-  spawnSound: {fileID: 0}
+  spawnSound: {fileID: 3362708856601615338}
 --- !u!1 &535341996407676471
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,13 +697,13 @@ MonoBehaviour:
   - {fileID: 535341996585025176}
   timeBetweenWaves: 1
   numberOfWaves: 2
-  mainCamera: {fileID: 0}
   fixedCameraPosition: {fileID: 535341997736925318}
   delayBeforeSpawn: 1
   cameraAttachSpeed: 1
+  arenaCollision: {fileID: 0}
   arrowUI: {fileID: 535341996020416756}
   arrowDisplayTime: 3
-  spawnSound: {fileID: 0}
+  spawnSound: {fileID: 3362708856601615338}
 --- !u!1 &535341996516291144
 GameObject:
   m_ObjectHideFlags: 0
