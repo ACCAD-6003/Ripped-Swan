@@ -30,13 +30,16 @@ public class SwanAttackState : ISwanState
         if (swan.state is SwanAttackState)
         {
             swan.boxCollider.enabled = true;
-            swan.animator.SetBool(attackType, true);
+            swan.spriteAnimator.SetBool(attackType, true);
             // If swan stops attacking, switch to move state
             if (Time.time > next)
             {
                 swan.boxCollider.enabled = false;
-                swan.animator.SetBool(attackType, false);
-                if (attackType == "special") Time.timeScale = 1.0f;
+                swan.spriteAnimator.SetBool(attackType, false);
+                if (attackType == "special")
+                {
+                    Time.timeScale = 1.0f;
+                }
                 swan.state = new SwanMoveState(swan);
             }
         }

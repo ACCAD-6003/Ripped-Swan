@@ -1,15 +1,12 @@
 using Assets.Scripts.Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Swan : MonoBehaviour
 {
     public static int enemiesKilled;
-    public Animator animator;
-    public Animator flippedAnimator;
+    public Animator spriteAnimator;
+    public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
     private int damage;
     public float powerUpStart;
@@ -39,7 +36,8 @@ public class Swan : MonoBehaviour
         enemiesKilled = 0;
         damage = 1;
 
-        animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        specialMovementAnimator = gameObject.GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 
