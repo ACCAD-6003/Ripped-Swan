@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 890bf3215cfcb634a88c806fd741b153
   - enabled: 1
-    path: Assets/Scenes/lvl1 whitebox beta.unity
-    guid: 2334ccec93e25b84190b9b3f3697be9a
+    path: Assets/Scenes/Level 1 Beta.unity
+    guid: cb0ae93325a5b364087fa7708f3268c0
   - enabled: 1
     path: Assets/Scenes/Enemy Wave Tester.unity
     guid: 55325064b44e8ea4f983e912a1e2cda6
+  - enabled: 0
+    path: Assets/Scenes/lvl1 whitebox beta.unity
+    guid: 2334ccec93e25b84190b9b3f3697be9a
   - enabled: 0
     path: Assets/Scenes/Level 2.unity
     guid: e3f6e45be55cfd743ad59db1eb91d8a9

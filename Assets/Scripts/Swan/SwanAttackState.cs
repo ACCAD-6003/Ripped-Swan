@@ -17,6 +17,7 @@ public class SwanAttackState : ISwanState
         if (type == "heavy") cooldown = 0.4f;
         if (type == "special") { 
             cooldown = 0.8f;
+            Time.timeScale = 0.25f;
         }
         this.swan = swan;
         next = Time.time + cooldown;
@@ -35,6 +36,7 @@ public class SwanAttackState : ISwanState
             {
                 swan.boxCollider.enabled = false;
                 swan.animator.SetBool(attackType, false);
+                if (attackType == "special") Time.timeScale = 1.0f;
                 swan.state = new SwanMoveState(swan);
             }
         }
