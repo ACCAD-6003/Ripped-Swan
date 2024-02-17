@@ -1901,7 +1901,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				float offsetMultiplier = 1;
 				float distanceOffset = 1;
-				if ((1.0 /*_OutlineFixedSize*/))
+				if ((0.0 /*_OutlineFixedSize*/))
 				{
 					distanceOffset *= lerp(1.0, clamp((distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, o.localPos).xyz)), 0.0f, (1.0 /*_OutlinesMaxDistance*/)), (0.5 /*_OutlineFixWidth*/));
 				}
@@ -2898,7 +2898,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				poiFragData.alpha = mainTexture.a * float4(0.4008989,0.8584906,0.4070826,1).a;
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
-				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.1,0.1,0,0)), float4(0,0,0,0));
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.05,0.05,0,0)), float4(0,0,0,0));
 				#else
 				float4 hueShiftAlpha = 1;
 				#endif
@@ -2916,7 +2916,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = (0.924 /*_MainHueShift*/);
+					float shift = (0.937 /*_MainHueShift*/);
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -4536,7 +4536,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				float offsetMultiplier = 1;
 				float distanceOffset = 1;
-				if ((1.0 /*_OutlineFixedSize*/))
+				if ((0.0 /*_OutlineFixedSize*/))
 				{
 					distanceOffset *= lerp(1.0, clamp((distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, o.localPos).xyz)), 0.0f, (1.0 /*_OutlinesMaxDistance*/)), (0.5 /*_OutlineFixWidth*/));
 				}
@@ -5373,7 +5373,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				poiFragData.alpha = mainTexture.a * float4(0.4008989,0.8584906,0.4070826,1).a;
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
-				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.1,0.1,0,0)), float4(0,0,0,0));
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.05,0.05,0,0)), float4(0,0,0,0));
 				#else
 				float4 hueShiftAlpha = 1;
 				#endif
@@ -5391,7 +5391,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = (0.924 /*_MainHueShift*/);
+					float shift = (0.937 /*_MainHueShift*/);
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -6948,7 +6948,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				float offsetMultiplier = 1;
 				float distanceOffset = 1;
-				if ((1.0 /*_OutlineFixedSize*/))
+				if ((0.0 /*_OutlineFixedSize*/))
 				{
 					distanceOffset *= lerp(1.0, clamp((distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, o.localPos).xyz)), 0.0f, (1.0 /*_OutlinesMaxDistance*/)), (0.5 /*_OutlineFixWidth*/));
 				}
@@ -7945,7 +7945,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				poiFragData.alpha = mainTexture.a * float4(0.4008989,0.8584906,0.4070826,1).a;
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
-				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.1,0.1,0,0)), float4(0,0,0,0));
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.05,0.05,0,0)), float4(0,0,0,0));
 				#else
 				float4 hueShiftAlpha = 1;
 				#endif
@@ -7963,7 +7963,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = (0.924 /*_MainHueShift*/);
+					float shift = (0.937 /*_MainHueShift*/);
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
@@ -9438,7 +9438,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				float offsetMultiplier = 1;
 				float distanceOffset = 1;
-				if ((1.0 /*_OutlineFixedSize*/))
+				if ((0.0 /*_OutlineFixedSize*/))
 				{
 					distanceOffset *= lerp(1.0, clamp((distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, o.localPos).xyz)), 0.0f, (1.0 /*_OutlinesMaxDistance*/)), (0.5 /*_OutlineFixWidth*/));
 				}
@@ -9848,7 +9848,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				poiFragData.alpha = mainTexture.a * float4(0.4008989,0.8584906,0.4070826,1).a;
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
-				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.1,0.1,0,0)), float4(0,0,0,0));
+				float4 hueShiftAlpha = POI2D_SAMPLER_PAN(_MainColorAdjustTexture, _MainTex, poiUV(poiMesh.uv[(0.0 /*_MainColorAdjustTextureUV*/)], float4(0.05,0.05,0,0)), float4(0,0,0,0));
 				#else
 				float4 hueShiftAlpha = 1;
 				#endif
@@ -9866,7 +9866,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Toon Outline/7b83ae82a27c2604
 				}
 				if ((1.0 /*_MainHueShiftToggle*/))
 				{
-					float shift = (0.924 /*_MainHueShift*/);
+					float shift = (0.937 /*_MainHueShift*/);
 					#ifdef POI_AUDIOLINK
 					if (poiMods.audioLinkAvailable && (0.0 /*_MainHueALCTEnabled*/))
 					{
