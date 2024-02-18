@@ -16,7 +16,7 @@ public class SwanAttackState : ISwanState
         if (type == "punch") cooldown = 0.35f;
         if (type == "heavy") cooldown = 0.4f;
         if (type == "special") {
-            EnemyWaveController.specialZoom();
+            EnemyWaveController.specialZoom?.Invoke();
             cooldown = 0.8f;
             Time.timeScale = 0.25f;
         }

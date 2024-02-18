@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class EnemyWaveController : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class EnemyWaveController : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints; // Array of spawn points
     [SerializeField] private float timeBetweenWaves = 10f;
     [SerializeField] private int numberOfWaves = 3;
-    
+    [SerializeField] private float zoomTime = 2f;
     [SerializeField] private Transform fixedCameraPosition;
     [SerializeField] private float delayBeforeSpawn = 0.1f;
     [SerializeField] private float cameraAttachSpeed = 2f;
@@ -147,6 +148,18 @@ public class EnemyWaveController : MonoBehaviour
     public void BigZoom()
     {
         Debug.Log("Big Zoom");
+        StartCoroutine(Zoomer());
+
+    }
+
+    private IEnumerator Zoomer()
+    {
+        StartCoroutine(AttachCamera());
+        Vector3 hold = followCameraScript.offset;
+        followCameraScript.offset = followCameraScript.zoomedOffset;
+        yield return new WaitForSeconds(zoomTime);
+        followCameraScript.offset = hold;
+        StartCoroutine(DetachCamera());
     }
 
 }
