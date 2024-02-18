@@ -10,6 +10,8 @@ public class Swan : MonoBehaviour
     public BoxCollider boxCollider;
     public int damage;
     public float powerUpStart;
+    [SerializeField] private float scaleFactor = 2f;
+    [SerializeField] private float powerUpDuration = 10f;
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
@@ -52,15 +54,19 @@ public class Swan : MonoBehaviour
        // if (Input.GetMouseButtonDown(0))
          //   state = new SwanAttackState(this);
         state.Update();
-        checkPowerUp();
+        
+        if (swanPoweredUp)
+        {
+            checkPowerUp();
+        }
      } 
 
     private void checkPowerUp()
     {
-        if (swanPoweredUp && Time.time - powerUpStart > 8) // Powerup lasts for 10 seconds
+        if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
             swanPoweredUp = false;
-            transform.localScale = Vector3.one;
+            transform.localScale *= 1/scaleFactor;
         }
     }
 
@@ -73,7 +79,7 @@ public class Swan : MonoBehaviour
 
     public void hit()
     {
-        Debug.Log("Player hit!");
+        //Debug.Log("Player hit!");
         healthPoints--;
         hurt.Play();
         if (healthPoints <= 0)
@@ -98,7 +104,7 @@ public class Swan : MonoBehaviour
         if (collision.gameObject.tag == "bread")
         {
             swanPoweredUp = true;
-            transform.localScale = Vector3.one * 2;
+            transform.localScale *= scaleFactor;
             powerUpStart = Time.time;
             powerUp_Sound.Play();
             Destroy(collision.gameObject);
