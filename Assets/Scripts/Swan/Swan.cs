@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Swan : MonoBehaviour
 {
-    public static int enemiesKilled;
+    public static int feathers;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
@@ -36,7 +36,7 @@ public class Swan : MonoBehaviour
     void Start()
     {
         state = new SwanMoveState(this);
-        enemiesKilled = 0;
+        feathers = 0;
         damage = 1;
 
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();

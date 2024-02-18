@@ -16,7 +16,7 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         float HPtoDisplay = GameObject.FindWithTag("Player").GetComponent<Swan>().healthPoints;
-        int FeathersToDisplay = Swan.enemiesKilled;
+        int FeathersToDisplay = Swan.feathers;
         health.value = HPtoDisplay;
         feathers.value = FeathersToDisplay;
 
