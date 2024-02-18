@@ -14,6 +14,7 @@ internal class SwanBlockState : ISwanState
 
     public void Update()
     {
-        // TODO: Play block animation
+        if (swan.spriteAnimator.GetBool("block") == false)
+            swan.spriteAnimator.SetBool("block", true);
     }
 }
