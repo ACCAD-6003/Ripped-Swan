@@ -381,6 +381,7 @@ MonoBehaviour:
   movementController: {fileID: 1942770890}
   jumpController: {fileID: 1942770893}
   attackController: {fileID: 1942770891}
+  blockController: {fileID: 8941322144998791271}
   heavyAttackControl: {fileID: 247396282514309821}
   specialAttackControl: {fileID: 590248635960242571}
 --- !u!114 &247396282514309821
@@ -406,6 +407,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33f10cacd029fbc4194e8708e076acaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 1942770874}
+--- !u!114 &8941322144998791271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493170928736159064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02c090ed51731142ab82138f94d2f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
