@@ -80,6 +80,42 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemNorth"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb49b94f-7970-4059-b542-470463c50a87"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemEast"",
+                    ""type"": ""Button"",
+                    ""id"": ""2bfaaba1-e54c-4f3f-9b08-c955364cd417"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemSouth"",
+                    ""type"": ""Button"",
+                    ""id"": ""53bc1d60-3db6-48aa-a2a5-a4d0de3c8530"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ItemWest"",
+                    ""type"": ""Button"",
+                    ""id"": ""86fc5fae-c341-490d-8d27-9734cc989043"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -258,39 +294,127 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""SpecialAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Controller"",
-            ""id"": ""e649bc13-792d-4a6b-9025-229acaacc4dc"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""b93535d4-47d1-4b4d-a33c-5d31c3371983"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
+                },
                 {
                     ""name"": """",
-                    ""id"": ""3627ce2d-d4b9-471b-8f09-f086a3641037"",
-                    ""path"": """",
+                    ""id"": ""6293559d-c6fd-4e65-b776-dc3ff12ab8c0"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""New action"",
+                    ""action"": ""ItemNorth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06818e62-0453-487f-85e9-dbfa5e1c9d36"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemNorth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e2028da8-8fee-4ee4-8b6c-1967e9d24040"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemEast"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6ed9849c-8f2f-4b30-b3ea-6b91a3ae630a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemEast"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b1c0374-3f2d-4266-9d91-d7ccaeb1aebc"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemSouth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3320b69-654c-4880-ada4-0494aafbc7c1"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemSouth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3bda3899-32c3-4149-840d-fb2443bd7140"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemWest"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""89520b7e-8c8c-4c2f-aea1-647880b84f73"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ItemWest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Base
         m_Base = asset.FindActionMap("Base", throwIfNotFound: true);
@@ -300,9 +424,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base_HeavyAttack = m_Base.FindAction("HeavyAttack", throwIfNotFound: true);
         m_Base_Hold = m_Base.FindAction("Hold", throwIfNotFound: true);
         m_Base_SpecialAttack = m_Base.FindAction("SpecialAttack", throwIfNotFound: true);
-        // Controller
-        m_Controller = asset.FindActionMap("Controller", throwIfNotFound: true);
-        m_Controller_Newaction = m_Controller.FindAction("New action", throwIfNotFound: true);
+        m_Base_ItemNorth = m_Base.FindAction("ItemNorth", throwIfNotFound: true);
+        m_Base_ItemEast = m_Base.FindAction("ItemEast", throwIfNotFound: true);
+        m_Base_ItemSouth = m_Base.FindAction("ItemSouth", throwIfNotFound: true);
+        m_Base_ItemWest = m_Base.FindAction("ItemWest", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -370,6 +495,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_HeavyAttack;
     private readonly InputAction m_Base_Hold;
     private readonly InputAction m_Base_SpecialAttack;
+    private readonly InputAction m_Base_ItemNorth;
+    private readonly InputAction m_Base_ItemEast;
+    private readonly InputAction m_Base_ItemSouth;
+    private readonly InputAction m_Base_ItemWest;
     public struct BaseActions
     {
         private @PlayerInput m_Wrapper;
@@ -380,6 +509,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @HeavyAttack => m_Wrapper.m_Base_HeavyAttack;
         public InputAction @Hold => m_Wrapper.m_Base_Hold;
         public InputAction @SpecialAttack => m_Wrapper.m_Base_SpecialAttack;
+        public InputAction @ItemNorth => m_Wrapper.m_Base_ItemNorth;
+        public InputAction @ItemEast => m_Wrapper.m_Base_ItemEast;
+        public InputAction @ItemSouth => m_Wrapper.m_Base_ItemSouth;
+        public InputAction @ItemWest => m_Wrapper.m_Base_ItemWest;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -407,6 +540,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpecialAttack.started += instance.OnSpecialAttack;
             @SpecialAttack.performed += instance.OnSpecialAttack;
             @SpecialAttack.canceled += instance.OnSpecialAttack;
+            @ItemNorth.started += instance.OnItemNorth;
+            @ItemNorth.performed += instance.OnItemNorth;
+            @ItemNorth.canceled += instance.OnItemNorth;
+            @ItemEast.started += instance.OnItemEast;
+            @ItemEast.performed += instance.OnItemEast;
+            @ItemEast.canceled += instance.OnItemEast;
+            @ItemSouth.started += instance.OnItemSouth;
+            @ItemSouth.performed += instance.OnItemSouth;
+            @ItemSouth.canceled += instance.OnItemSouth;
+            @ItemWest.started += instance.OnItemWest;
+            @ItemWest.performed += instance.OnItemWest;
+            @ItemWest.canceled += instance.OnItemWest;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -429,6 +574,18 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpecialAttack.started -= instance.OnSpecialAttack;
             @SpecialAttack.performed -= instance.OnSpecialAttack;
             @SpecialAttack.canceled -= instance.OnSpecialAttack;
+            @ItemNorth.started -= instance.OnItemNorth;
+            @ItemNorth.performed -= instance.OnItemNorth;
+            @ItemNorth.canceled -= instance.OnItemNorth;
+            @ItemEast.started -= instance.OnItemEast;
+            @ItemEast.performed -= instance.OnItemEast;
+            @ItemEast.canceled -= instance.OnItemEast;
+            @ItemSouth.started -= instance.OnItemSouth;
+            @ItemSouth.performed -= instance.OnItemSouth;
+            @ItemSouth.canceled -= instance.OnItemSouth;
+            @ItemWest.started -= instance.OnItemWest;
+            @ItemWest.performed -= instance.OnItemWest;
+            @ItemWest.canceled -= instance.OnItemWest;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -446,52 +603,24 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public BaseActions @Base => new BaseActions(this);
-
-    // Controller
-    private readonly InputActionMap m_Controller;
-    private List<IControllerActions> m_ControllerActionsCallbackInterfaces = new List<IControllerActions>();
-    private readonly InputAction m_Controller_Newaction;
-    public struct ControllerActions
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
     {
-        private @PlayerInput m_Wrapper;
-        public ControllerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction => m_Wrapper.m_Controller_Newaction;
-        public InputActionMap Get() { return m_Wrapper.m_Controller; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ControllerActions set) { return set.Get(); }
-        public void AddCallbacks(IControllerActions instance)
+        get
         {
-            if (instance == null || m_Wrapper.m_ControllerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_ControllerActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
-        }
-
-        private void UnregisterCallbacks(IControllerActions instance)
-        {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
-        }
-
-        public void RemoveCallbacks(IControllerActions instance)
-        {
-            if (m_Wrapper.m_ControllerActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IControllerActions instance)
-        {
-            foreach (var item in m_Wrapper.m_ControllerActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_ControllerActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
         }
     }
-    public ControllerActions @Controller => new ControllerActions(this);
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
     public interface IBaseActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -500,9 +629,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnHeavyAttack(InputAction.CallbackContext context);
         void OnHold(InputAction.CallbackContext context);
         void OnSpecialAttack(InputAction.CallbackContext context);
-    }
-    public interface IControllerActions
-    {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnItemNorth(InputAction.CallbackContext context);
+        void OnItemEast(InputAction.CallbackContext context);
+        void OnItemSouth(InputAction.CallbackContext context);
+        void OnItemWest(InputAction.CallbackContext context);
     }
 }
