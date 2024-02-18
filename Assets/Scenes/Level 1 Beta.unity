@@ -21274,7 +21274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472470097126568264, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
       propertyPath: zoomedOffset.z
-      value: -5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4472470097126568265, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
       propertyPath: m_LocalPosition.x

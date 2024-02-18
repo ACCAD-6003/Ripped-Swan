@@ -154,12 +154,21 @@ public class EnemyWaveController : MonoBehaviour
 
     private IEnumerator Zoomer()
     {
-        StartCoroutine(AttachCamera());
+        // StartCoroutine(AttachCamera());
+        followCameraScript.enabled = true;
         Vector3 hold = followCameraScript.offset;
         followCameraScript.offset = followCameraScript.zoomedOffset;
         yield return new WaitForSeconds(zoomTime);
         followCameraScript.offset = hold;
-        StartCoroutine(DetachCamera());
-    }
+        followCameraScript.enabled = false;
+       float elapsedTime = 0f;
+        while (elapsedTime < cameraAttachSpeed )
+        {
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / (cameraAttachSpeed ));
+            elapsedTime += Time.deltaTime;
+        }
+            //mainCamera.transform.position = fixedCameraPosition.position;
+            // StartCoroutine(DetachCamera());
+        }
 
 }
