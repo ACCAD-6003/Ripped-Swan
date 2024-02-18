@@ -21813,6 +21813,11 @@ Transform:
   m_Father: {fileID: 752135954}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &933706088 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3404892556460458454, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+  m_PrefabInstance: {fileID: 1238901645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &943396359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26385,6 +26390,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 933706088}
     - target: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Name
       value: Swan Variant

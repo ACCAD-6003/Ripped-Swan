@@ -24,6 +24,8 @@ public class Swan : MonoBehaviour
     public AudioSource hurt;
     public AudioSource special;
 
+    public ParticleSystem Explosion;
+
     enum Attacks
     {
         NORMAL,
