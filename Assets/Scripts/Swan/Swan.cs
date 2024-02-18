@@ -8,7 +8,7 @@ public class Swan : MonoBehaviour
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
-    private int damage;
+    public int damage;
     public float powerUpStart;
 
     [Tooltip("Health Points")]
@@ -22,6 +22,7 @@ public class Swan : MonoBehaviour
     public AudioSource punch_miss;
     public AudioSource powerUp_Sound;
     public AudioSource hurt;
+    public AudioSource special;
 
     enum Attacks
     {

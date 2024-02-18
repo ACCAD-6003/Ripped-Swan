@@ -225,9 +225,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8417838c821d0c94ab4e9c4284e21cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  flippedAnimator: {fileID: 0}
+  spriteAnimator: {fileID: 0}
+  specialMovementAnimator: {fileID: 0}
   boxCollider: {fileID: 0}
+  damage: 0
   powerUpStart: 0
   healthPoints: 25
   swanPoweredUp: 0
@@ -235,6 +236,7 @@ MonoBehaviour:
   punch_miss: {fileID: 9118012086408980816}
   powerUp_Sound: {fileID: 9118012086690387933}
   hurt: {fileID: 9118012084707979876}
+  special: {fileID: 4444029795020584385}
 --- !u!114 &1942770890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +335,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
+--- !u!82 &4444029795020584385 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 486046518121200895, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+  m_PrefabInstance: {fileID: 4256628658046355774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &9118012084703607435 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5015667037635343285, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
