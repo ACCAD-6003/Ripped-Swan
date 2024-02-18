@@ -11,7 +11,7 @@ public class FollowCamera : MonoBehaviour
     public Vector3 offset = new Vector3(0, -2, -12);
 
     [Tooltip("How far the camera stays from the player.")]
-    public Vector3 zoomedOffset = new Vector3(0, 0, 2);
+    public Vector3 zoomedOffset = new Vector3(0, 2, -5);
 
     [Tooltip("Speed at which the camera approaches the player's new position.")] [Range(0, 1)]
     public float smoothTime = 0.3F;
