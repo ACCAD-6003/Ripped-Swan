@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 207559990}
-  m_IndirectSpecularColor: {r: 0.17129126, g: 0.28467533, b: 0.4911977, a: 1}
+  m_IndirectSpecularColor: {r: 0.17119339, g: 0.28467923, b: 0.49102157, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19256,6 +19256,14 @@ PrefabInstance:
       propertyPath: offset.z
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 4472470097126568264, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
+      propertyPath: zoomedOffset.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472470097126568264, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
+      propertyPath: zoomedOffset.z
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 4472470097126568265, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.65
@@ -21813,6 +21821,11 @@ Transform:
   m_Father: {fileID: 752135954}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &933706088 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3404892556460458454, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+  m_PrefabInstance: {fileID: 1238901645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &943396359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26385,6 +26398,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 933706088}
     - target: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Name
       value: Swan Variant
@@ -26457,6 +26474,10 @@ PrefabInstance:
     - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: zoomTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: spawnSound
@@ -26677,6 +26698,10 @@ PrefabInstance:
     - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: zoomTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: spawnSound
