@@ -65,7 +65,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         if (HitPoints <= 0)
         {
             Die();
-            Swan.enemiesKilled++;
+            Swan.feathers++;
         }
         if (isPoweredUp && !isKockedOut)
             KnockedOut();
