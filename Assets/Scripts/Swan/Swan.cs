@@ -87,11 +87,17 @@ public class Swan : MonoBehaviour
     {
         if (state is not SwanBlockState)
             state = new SwanBlockState(this);
+        else
+        {
+            spriteAnimator.SetBool("block", false);
+            state = new SwanMoveState(this);
+        }
     }
 
     private void breakBlock()
     {
         blockPoints = 5; // reset block points
+        spriteAnimator.SetBool("block", false);
         state = new SwanMoveState(this);
         // TODO: play break block sound effect
     }
