@@ -12,6 +12,10 @@ public class Swan : MonoBehaviour
     public float powerUpStart;
     [SerializeField] private float scaleFactor = 2f;
     [SerializeField] private float powerUpDuration = 10f;
+    
+    [Tooltip("Damage taken")]
+    [Range(0, 10)]
+    [SerializeField] private int damageTake = 1; // how much damage the player takes from a hit
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
@@ -80,7 +84,7 @@ public class Swan : MonoBehaviour
     public void hit()
     {
         //Debug.Log("Player hit!");
-        healthPoints--;
+        healthPoints -= damageTake;
         hurt.Play();
         if (healthPoints <= 0)
         {
