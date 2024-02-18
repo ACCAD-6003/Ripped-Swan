@@ -15,7 +15,8 @@ public class SwanAttackState : ISwanState
         // Cooldown lengths obtained from animation length
         if (type == "punch") cooldown = 0.35f;
         if (type == "heavy") cooldown = 0.4f;
-        if (type == "special") { 
+        if (type == "special") {
+            EnemyWaveController.specialZoom?.Invoke();
             cooldown = 0.8f;
             Time.timeScale = 0.25f;
             swan.damage = 5;
