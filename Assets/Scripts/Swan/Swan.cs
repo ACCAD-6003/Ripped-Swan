@@ -1,17 +1,14 @@
 using Assets.Scripts.Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Swan : MonoBehaviour
 {
     public static int enemiesKilled;
-    public Animator animator;
-    public Animator flippedAnimator;
+    public Animator spriteAnimator;
+    public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
-    private int damage;
+    public int damage;
     public float powerUpStart;
 
     [Tooltip("Health Points")]
@@ -25,6 +22,9 @@ public class Swan : MonoBehaviour
     public AudioSource punch_miss;
     public AudioSource powerUp_Sound;
     public AudioSource hurt;
+    public AudioSource special;
+
+    public ParticleSystem Explosion;
 
     enum Attacks
     {
@@ -39,7 +39,8 @@ public class Swan : MonoBehaviour
         enemiesKilled = 0;
         damage = 1;
 
-        animator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        specialMovementAnimator = gameObject.GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 

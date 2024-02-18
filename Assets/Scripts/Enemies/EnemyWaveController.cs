@@ -123,7 +123,7 @@ public class EnemyWaveController : MonoBehaviour
             yield return null;
         }
 
-        mainCamera.GetComponent<Camera>().enabled = true;
+        mainCamera.enabled = true;
         isCameraDetached = true;
     }
 
@@ -141,7 +141,7 @@ public class EnemyWaveController : MonoBehaviour
             yield return null;
         }
 
-        mainCamera.GetComponent<Camera>().enabled = true;
+        mainCamera.enabled = true;
         isCameraDetached = false;
     }
 
