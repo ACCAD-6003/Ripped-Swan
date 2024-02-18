@@ -20,6 +20,7 @@ public class Swan : MonoBehaviour
     [Tooltip("Health Points")]
     [Range(0, 100)]
     public int healthPoints;
+    public int blockPoints;
     public ISwanState state;
 
     public bool swanPoweredUp;
@@ -44,6 +45,7 @@ public class Swan : MonoBehaviour
         state = new SwanMoveState(this);
         feathers = 0;
         damage = 1;
+        blockPoints = 5;
 
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         specialMovementAnimator = gameObject.GetComponent<Animator>();
@@ -81,14 +83,39 @@ public class Swan : MonoBehaviour
             state = new SwanAttackState(this, attackType);
     }
 
+    public void block()
+    {
+        if (state is not SwanBlockState)
+            state = new SwanBlockState(this);
+    }
+
+    private void breakBlock()
+    {
+        blockPoints = 5; // reset block points
+        state = new SwanMoveState(this);
+        // TODO: play break block sound effect
+    }
+
     public void hit()
     {
-        //Debug.Log("Player hit!");
-        healthPoints -= damageTake;
-        hurt.Play();
-        if (healthPoints <= 0)
+        // Swan can only get hurt if it is not blocking
+        if (state is not SwanBlockState)
         {
-            state = new SwanDeathState(this);
+            //Debug.Log("Player hit!");
+            healthPoints -= damageTake;
+            hurt.Play();
+            if (healthPoints <= 0)
+            {
+                healthPoints--;
+                hurt.Play();
+                if (healthPoints <= 0) state = new SwanDeathState(this);
+            }
+        } 
+        else
+        {
+            blockPoints--;
+            if (blockPoints <= 0)
+                breakBlock();
         }
     }
 
