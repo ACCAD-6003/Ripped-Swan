@@ -18580,6 +18580,14 @@ PrefabInstance:
       propertyPath: offset.z
       value: -7
       objectReference: {fileID: 0}
+    - target: {fileID: 4472470097126568264, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
+      propertyPath: zoomedOffset.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4472470097126568264, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
+      propertyPath: zoomedOffset.z
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 4472470097126568265, guid: 3c6d5eb2fbb23be48a3c60c12dc964f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.65
@@ -25159,6 +25167,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: zoomTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 535341996208593262, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: spawnSound
       value: 
       objectReference: {fileID: 1347223990}
@@ -25194,6 +25206,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1620258974}
+    - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
+      propertyPath: zoomTime
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 535341996468490961, guid: 277e5f607528ff646af4b305165d38c1, type: 3}
       propertyPath: spawnSound
       value: 
