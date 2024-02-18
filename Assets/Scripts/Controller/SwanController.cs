@@ -13,6 +13,8 @@ public class SwanController : MonoBehaviour
     [SerializeField] private BlockControl blockController;
     [SerializeField] private HeavyAttackControl heavyAttackControl;
     [SerializeField] private SpecialAttackControl specialAttackControl;
+    [SerializeField] private ItemController itemController;
+    
     private PlayerInput pScheme;
     
 
@@ -28,6 +30,7 @@ public class SwanController : MonoBehaviour
         specialAttackControl.Initialize(pScheme.Base.SpecialAttack);
         blockController.Initialize(pScheme.Base.Block);
 
+        itemController.Initialize(pScheme.Base.ItemNorth, pScheme.Base.ItemSouth, pScheme.Base.ItemWest, pScheme.Base.ItemEast);
         pScheme.Base.Hold.performed += _ => held = true;
         pScheme.Base.Hold.canceled += _ => held = false;
 

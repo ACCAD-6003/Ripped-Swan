@@ -15,7 +15,7 @@ public class CheckPointManager : MonoBehaviour
         {
             lastCheckPointPos = startPos.position;
             
-            Debug.Log("StartPos: " + lastCheckPointPos);
+            //Debug.Log("StartPos: " + lastCheckPointPos);
         }
     }
 

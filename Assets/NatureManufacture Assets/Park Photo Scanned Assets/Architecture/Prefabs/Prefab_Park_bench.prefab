@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33877712054422236}
   - component: {fileID: 23137541879526568}
   - component: {fileID: 64550411430161368}
+  - component: {fileID: 8298756018109605945}
+  - component: {fileID: 2677114938010312824}
   m_Layer: 0
   m_Name: Park_bench_LOD0
   m_TagString: Untagged
@@ -98,6 +100,32 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300004, guid: accd84b15d8a41c498f16cf6cbc65c97, type: 3}
+--- !u!65 &8298756018109605945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209908207524356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.442125, y: 5.558855, z: 1.4043359}
+  m_Center: {x: 0.06359507, y: -0.00000025232634, z: 0.7109137}
+--- !u!65 &2677114938010312824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209908207524356}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.864755, y: 5.558855, z: 2.7400022}
+  m_Center: {x: 0.85228646, y: -0.00000025232634, z: 1.3787475}
 --- !u!1 &1302591612372252
 GameObject:
   m_ObjectHideFlags: 0
