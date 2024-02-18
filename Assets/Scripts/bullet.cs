@@ -42,7 +42,7 @@ public class bullet : MonoBehaviour
     private IEnumerator Explode()
     {
         gameObject.GetComponent<Collider>().isTrigger = true;
-        transform.localScale += new Vector3(2f, 2f, 2f);
+        transform.localScale += new Vector3(3f, 3f, 3f);
 
         yield return new WaitForSeconds(explodeTime);
         Destroy(gameObject);
