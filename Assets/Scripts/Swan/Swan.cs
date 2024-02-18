@@ -100,15 +100,18 @@ public class Swan : MonoBehaviour
     {
         // Swan can only get hurt if it is not blocking
         if (state is not SwanBlockState)
-        //Debug.Log("Player hit!");
-        healthPoints -= damageTake;
-        hurt.Play();
-        if (healthPoints <= 0)
         {
-            healthPoints--;
+            //Debug.Log("Player hit!");
+            healthPoints -= damageTake;
             hurt.Play();
-            if (healthPoints <= 0) state = new SwanDeathState(this);
-        } else
+            if (healthPoints <= 0)
+            {
+                healthPoints--;
+                hurt.Play();
+                if (healthPoints <= 0) state = new SwanDeathState(this);
+            }
+        } 
+        else
         {
             blockPoints--;
             if (blockPoints <= 0)

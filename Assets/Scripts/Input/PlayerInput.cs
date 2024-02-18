@@ -116,6 +116,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Block"",
+                    ""type"": ""Button"",
+                    ""id"": ""2fea8e8b-df33-49fb-ae2e-9b38c7e76b7d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -382,6 +391,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""ItemWest"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c011dadf-37a1-4b97-b5cf-28642f50b727"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -428,6 +448,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base_ItemEast = m_Base.FindAction("ItemEast", throwIfNotFound: true);
         m_Base_ItemSouth = m_Base.FindAction("ItemSouth", throwIfNotFound: true);
         m_Base_ItemWest = m_Base.FindAction("ItemWest", throwIfNotFound: true);
+        m_Base_Block = m_Base.FindAction("Block", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -499,6 +520,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_ItemEast;
     private readonly InputAction m_Base_ItemSouth;
     private readonly InputAction m_Base_ItemWest;
+    private readonly InputAction m_Base_Block;
     public struct BaseActions
     {
         private @PlayerInput m_Wrapper;
@@ -513,6 +535,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ItemEast => m_Wrapper.m_Base_ItemEast;
         public InputAction @ItemSouth => m_Wrapper.m_Base_ItemSouth;
         public InputAction @ItemWest => m_Wrapper.m_Base_ItemWest;
+        public InputAction @Block => m_Wrapper.m_Base_Block;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -552,6 +575,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ItemWest.started += instance.OnItemWest;
             @ItemWest.performed += instance.OnItemWest;
             @ItemWest.canceled += instance.OnItemWest;
+            @Block.started += instance.OnBlock;
+            @Block.performed += instance.OnBlock;
+            @Block.canceled += instance.OnBlock;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -586,6 +612,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @ItemWest.started -= instance.OnItemWest;
             @ItemWest.performed -= instance.OnItemWest;
             @ItemWest.canceled -= instance.OnItemWest;
+            @Block.started -= instance.OnBlock;
+            @Block.performed -= instance.OnBlock;
+            @Block.canceled -= instance.OnBlock;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -633,5 +662,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnItemEast(InputAction.CallbackContext context);
         void OnItemSouth(InputAction.CallbackContext context);
         void OnItemWest(InputAction.CallbackContext context);
+        void OnBlock(InputAction.CallbackContext context);
     }
 }

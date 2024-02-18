@@ -303,7 +303,11 @@ MonoBehaviour:
   boxCollider: {fileID: 0}
   damage: 0
   powerUpStart: 0
+  scaleFactor: 2
+  powerUpDuration: 10
+  damageTake: 1
   healthPoints: 25
+  blockPoints: 0
   swanPoweredUp: 0
   punch_hit: {fileID: 9118012084703607435}
   punch_miss: {fileID: 9118012086408980816}
@@ -381,6 +385,7 @@ MonoBehaviour:
   movementController: {fileID: 1942770890}
   jumpController: {fileID: 1942770893}
   attackController: {fileID: 1942770891}
+  blockController: {fileID: 717474406799964120}
   heavyAttackControl: {fileID: 247396282514309821}
   specialAttackControl: {fileID: 590248635960242571}
   itemController: {fileID: 977859339517662878}
@@ -420,6 +425,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a50b8f862393c0a478418ed3695033e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  s: {fileID: 1942770874}
+--- !u!114 &717474406799964120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493170928736159064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02c090ed51731142ab82138f94d2f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
