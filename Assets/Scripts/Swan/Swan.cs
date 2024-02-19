@@ -57,7 +57,7 @@ public class Swan : MonoBehaviour
 
      void Update()
      {
-       // if (Input.GetMouseButtonDown(0))
+       // if (Input.GetMouseButtonDown(0)) 
          //   state = new SwanAttackState(this);
         state.Update();
         
