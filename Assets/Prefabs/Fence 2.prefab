@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1629748279891953855}
   - component: {fileID: 1629748279891953852}
   - component: {fileID: 1629748279891953853}
-  - component: {fileID: 1629748279891953730}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -451,20 +450,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748279891953731}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748279891953730
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748279891953731}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748280199369792
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +463,6 @@ GameObject:
   - component: {fileID: 1629748280199369919}
   - component: {fileID: 1629748280199369916}
   - component: {fileID: 1629748280199369917}
-  - component: {fileID: 1629748280199369794}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -916,20 +900,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748280199369792}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748280199369794
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748280199369792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748280631902654
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +913,6 @@ GameObject:
   - component: {fileID: 1629748280631902650}
   - component: {fileID: 1629748280631902651}
   - component: {fileID: 1629748280631902648}
-  - component: {fileID: 1629748280631902649}
   m_Layer: 0
   m_Name: Fence (5)
   m_TagString: Untagged
@@ -1381,20 +1350,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748280631902654}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748280631902649
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748280631902654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748280947508749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1363,6 @@ GameObject:
   - component: {fileID: 1629748280947508744}
   - component: {fileID: 1629748280947508745}
   - component: {fileID: 1629748280947508750}
-  - component: {fileID: 1629748280947508751}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -1846,20 +1800,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748280947508749}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748280947508751
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748280947508749}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748281320299141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,7 +1813,6 @@ GameObject:
   - component: {fileID: 1629748281320299137}
   - component: {fileID: 1629748281320299142}
   - component: {fileID: 1629748281320299143}
-  - component: {fileID: 1629748281320299140}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -2311,20 +2250,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748281320299141}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748281320299140
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748281320299141}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748281408230915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2338,7 +2263,6 @@ GameObject:
   - component: {fileID: 1629748281408231039}
   - component: {fileID: 1629748281408231036}
   - component: {fileID: 1629748281408231037}
-  - component: {fileID: 1629748281408230914}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -2776,20 +2700,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748281408230915}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748281408230914
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748281408230915}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1629748281926317626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,7 +2713,6 @@ GameObject:
   - component: {fileID: 1629748281926317622}
   - component: {fileID: 1629748281926317623}
   - component: {fileID: 1629748281926317620}
-  - component: {fileID: 1629748281926317621}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -3241,20 +3150,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629748281926317626}
   m_Mesh: {fileID: 0}
---- !u!64 &1629748281926317621
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629748281926317626}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6570501422979432269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,7 +3182,7 @@ Transform:
   m_GameObject: {fileID: 6570501422979432269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 31.376398, y: -0.137, z: -75.627594}
-  m_LocalScale: {x: 0.57868, y: 1.6537, z: 1}
+  m_LocalScale: {x: 0.57868, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1629748281320299139}
