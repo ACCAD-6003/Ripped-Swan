@@ -20,6 +20,7 @@ public class Swan : MonoBehaviour
     [Tooltip("Health Points")]
     [Range(0, 100)]
     public int healthPoints;
+    private int maxHealth;
     public int blockPoints;
     public ISwanState state;
 
@@ -32,7 +33,8 @@ public class Swan : MonoBehaviour
     public AudioSource special;
 
     public ParticleSystem Explosion;
-
+    public bool Attacking;// This is so you can't start attacking when already attacking
+    
     enum Attacks
     {
         NORMAL,
@@ -42,6 +44,8 @@ public class Swan : MonoBehaviour
 
     void Start()
     {
+        Attacking = false;
+        maxHealth = healthPoints;
         state = new SwanMoveState(this);
         feathers = 0;
         damage = 1;
@@ -140,10 +144,7 @@ public class Swan : MonoBehaviour
     {
         if (collision.gameObject.tag == "bread")
         {
-            swanPoweredUp = true;
-            transform.localScale *= scaleFactor;
-            powerUpStart = Time.time;
-            powerUp_Sound.Play();
+            powerUp();
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "health_pickup")
@@ -151,5 +152,34 @@ public class Swan : MonoBehaviour
             healthPoints++;
             Destroy(collision.gameObject);
         }
+    }
+
+    public void powerUp()
+    {
+        swanPoweredUp = true;
+        transform.localScale *= scaleFactor;
+        powerUpStart = Time.time;
+        powerUp_Sound.Play();
+    }
+
+    public void Heal(int healPower)
+    {
+        if (healthPoints + healPower > 100)
+            healthPoints = maxHealth;
+        else
+            healthPoints += healPower;
+    }
+
+    public static bool SpendFeathers(int cost)
+    {
+        if (cost < feathers)
+        {
+            if (feathers - cost < 0)
+                feathers = 0;
+            else
+                feathers -= cost;
+            return true;
+        }
+        return false;
     }
 }
