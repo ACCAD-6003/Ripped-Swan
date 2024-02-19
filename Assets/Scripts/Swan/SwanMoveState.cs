@@ -17,11 +17,11 @@ public class SwanMoveState : ISwanState
             Input.GetKey(KeyCode.W) ||
             Input.GetKey(KeyCode.S))
         {
-            //swan.animator.SetBool("isWalking", true);
+            swan.spriteAnimator.SetBool("isWalking", true);
         }
         else
         {
-            //swan.animator.SetBool("isWalking", false);
+            swan.spriteAnimator.SetBool("isWalking", false);
         }
     }
 }

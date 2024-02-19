@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class Swan : MonoBehaviour
 {
-    public static int enemiesKilled;
+    public static int feathers;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
     public int damage;
     public float powerUpStart;
+    [SerializeField] private float scaleFactor = 2f;
+    [SerializeField] private float powerUpDuration = 10f;
+    
+    [Tooltip("Damage taken")]
+    [Range(0, 10)]
+    [SerializeField] private int damageTake = 1; // how much damage the player takes from a hit
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
     public int healthPoints;
+    public int blockPoints;
     public ISwanState state;
 
     public bool swanPoweredUp;
@@ -36,8 +43,9 @@ public class Swan : MonoBehaviour
     void Start()
     {
         state = new SwanMoveState(this);
-        enemiesKilled = 0;
+        feathers = 0;
         damage = 1;
+        blockPoints = 5;
 
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         specialMovementAnimator = gameObject.GetComponent<Animator>();
@@ -49,18 +57,22 @@ public class Swan : MonoBehaviour
 
      void Update()
      {
-       // if (Input.GetMouseButtonDown(0))
+       // if (Input.GetMouseButtonDown(0)) 
          //   state = new SwanAttackState(this);
         state.Update();
-        checkPowerUp();
+        
+        if (swanPoweredUp)
+        {
+            checkPowerUp();
+        }
      } 
 
     private void checkPowerUp()
     {
-        if (swanPoweredUp && Time.time - powerUpStart > 8) // Powerup lasts for 10 seconds
+        if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
             swanPoweredUp = false;
-            transform.localScale = Vector3.one;
+            transform.localScale *= 1/scaleFactor;
         }
     }
 
@@ -71,14 +83,45 @@ public class Swan : MonoBehaviour
             state = new SwanAttackState(this, attackType);
     }
 
+    public void block()
+    {
+        if (state is not SwanBlockState)
+            state = new SwanBlockState(this);
+        else
+        {
+            spriteAnimator.SetBool("block", false);
+            state = new SwanMoveState(this);
+        }
+    }
+
+    private void breakBlock()
+    {
+        blockPoints = 5; // reset block points
+        spriteAnimator.SetBool("block", false);
+        state = new SwanMoveState(this);
+        // TODO: play break block sound effect
+    }
+
     public void hit()
     {
-        Debug.Log("Player hit!");
-        healthPoints--;
-        hurt.Play();
-        if (healthPoints <= 0)
+        // Swan can only get hurt if it is not blocking
+        if (state is not SwanBlockState)
         {
-            state = new SwanDeathState(this);
+            //Debug.Log("Player hit!");
+            healthPoints -= damageTake;
+            hurt.Play();
+            if (healthPoints <= 0)
+            {
+                healthPoints--;
+                hurt.Play();
+                if (healthPoints <= 0) state = new SwanDeathState(this);
+            }
+        } 
+        else
+        {
+            blockPoints--;
+            if (blockPoints <= 0)
+                breakBlock();
         }
     }
 
@@ -98,7 +141,7 @@ public class Swan : MonoBehaviour
         if (collision.gameObject.tag == "bread")
         {
             swanPoweredUp = true;
-            transform.localScale = Vector3.one * 2;
+            transform.localScale *= scaleFactor;
             powerUpStart = Time.time;
             powerUp_Sound.Play();
             Destroy(collision.gameObject);
