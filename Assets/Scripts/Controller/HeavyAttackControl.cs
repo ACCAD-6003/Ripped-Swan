@@ -16,7 +16,7 @@ public class HeavyAttackControl : MonoBehaviour
 
     private void AttackAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("HeavyAttack");
+        
         s.attack("heavy");
     }
 }

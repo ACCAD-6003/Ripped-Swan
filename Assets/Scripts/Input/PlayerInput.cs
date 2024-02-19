@@ -73,15 +73,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SpecialAttack"",
-                    ""type"": ""Button"",
-                    ""id"": ""737b704a-2ff6-44e5-b3c6-fc11634e02ff"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""ItemNorth"",
                     ""type"": ""Button"",
                     ""id"": ""eb49b94f-7970-4059-b542-470463c50a87"",
@@ -295,17 +286,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d3f3d177-078f-4906-9e3f-b6895ed13a64"",
-                    ""path"": ""<Keyboard>/f"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SpecialAttack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""6293559d-c6fd-4e65-b776-dc3ff12ab8c0"",
                     ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
@@ -402,6 +382,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bc31c225-f168-47a8-84c6-5e563b384640"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -443,7 +434,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base_Attack = m_Base.FindAction("Attack", throwIfNotFound: true);
         m_Base_HeavyAttack = m_Base.FindAction("HeavyAttack", throwIfNotFound: true);
         m_Base_Hold = m_Base.FindAction("Hold", throwIfNotFound: true);
-        m_Base_SpecialAttack = m_Base.FindAction("SpecialAttack", throwIfNotFound: true);
         m_Base_ItemNorth = m_Base.FindAction("ItemNorth", throwIfNotFound: true);
         m_Base_ItemEast = m_Base.FindAction("ItemEast", throwIfNotFound: true);
         m_Base_ItemSouth = m_Base.FindAction("ItemSouth", throwIfNotFound: true);
@@ -515,7 +505,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_Attack;
     private readonly InputAction m_Base_HeavyAttack;
     private readonly InputAction m_Base_Hold;
-    private readonly InputAction m_Base_SpecialAttack;
     private readonly InputAction m_Base_ItemNorth;
     private readonly InputAction m_Base_ItemEast;
     private readonly InputAction m_Base_ItemSouth;
@@ -530,7 +519,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Base_Attack;
         public InputAction @HeavyAttack => m_Wrapper.m_Base_HeavyAttack;
         public InputAction @Hold => m_Wrapper.m_Base_Hold;
-        public InputAction @SpecialAttack => m_Wrapper.m_Base_SpecialAttack;
         public InputAction @ItemNorth => m_Wrapper.m_Base_ItemNorth;
         public InputAction @ItemEast => m_Wrapper.m_Base_ItemEast;
         public InputAction @ItemSouth => m_Wrapper.m_Base_ItemSouth;
@@ -560,9 +548,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Hold.started += instance.OnHold;
             @Hold.performed += instance.OnHold;
             @Hold.canceled += instance.OnHold;
-            @SpecialAttack.started += instance.OnSpecialAttack;
-            @SpecialAttack.performed += instance.OnSpecialAttack;
-            @SpecialAttack.canceled += instance.OnSpecialAttack;
             @ItemNorth.started += instance.OnItemNorth;
             @ItemNorth.performed += instance.OnItemNorth;
             @ItemNorth.canceled += instance.OnItemNorth;
@@ -597,9 +582,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Hold.started -= instance.OnHold;
             @Hold.performed -= instance.OnHold;
             @Hold.canceled -= instance.OnHold;
-            @SpecialAttack.started -= instance.OnSpecialAttack;
-            @SpecialAttack.performed -= instance.OnSpecialAttack;
-            @SpecialAttack.canceled -= instance.OnSpecialAttack;
             @ItemNorth.started -= instance.OnItemNorth;
             @ItemNorth.performed -= instance.OnItemNorth;
             @ItemNorth.canceled -= instance.OnItemNorth;
@@ -657,7 +639,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnHeavyAttack(InputAction.CallbackContext context);
         void OnHold(InputAction.CallbackContext context);
-        void OnSpecialAttack(InputAction.CallbackContext context);
         void OnItemNorth(InputAction.CallbackContext context);
         void OnItemEast(InputAction.CallbackContext context);
         void OnItemSouth(InputAction.CallbackContext context);
