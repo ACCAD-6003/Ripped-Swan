@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class JumpControl : MonoBehaviour
 {
     [SerializeField] private SwanJump sj;
+    [SerializeField] private Swan s;
 
     public void Initialize(InputAction jumpAction)
     {
@@ -17,6 +18,7 @@ public class JumpControl : MonoBehaviour
     private void JumpAction_performed(InputAction.CallbackContext obj)
     {
         Debug.Log("Jump");
+        s.jump.Play();
         sj.Jump();
     }
 }

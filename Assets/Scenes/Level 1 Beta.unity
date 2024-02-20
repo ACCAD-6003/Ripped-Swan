@@ -32677,6 +32677,14 @@ PrefabInstance:
       propertyPath: healthPoints
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: swanPoweredUp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 123903129081236717, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2493170928736159064, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_Name
       value: Swan Variant
@@ -32752,6 +32760,14 @@ PrefabInstance:
     - target: {fileID: 3029528297809366003, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294401383104811578, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294401383104811578, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4032279034258384523, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_IsActive

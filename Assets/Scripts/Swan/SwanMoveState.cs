@@ -19,10 +19,12 @@ public class SwanMoveState : ISwanState
             Input.GetKey(KeyCode.S))
         {
             swan.spriteAnimator.SetBool("isWalking", true);
+            //swan.walk.Play();
         }
         else
         {
             swan.spriteAnimator.SetBool("isWalking", false);
+            //swan.walk.Stop();
         }
     }
 }

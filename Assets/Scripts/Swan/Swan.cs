@@ -32,6 +32,12 @@ public class Swan : MonoBehaviour
     public AudioSource hurt;
     public AudioSource special;
 
+    public AudioSource bite;
+    public AudioSource walk;
+    public AudioSource jump;
+    public AudioSource lowhp;
+    public AudioSource swanDeath;
+
     public ParticleSystem Explosion;
     public bool Attacking;// This is so you can't start attacking when already attacking
     
@@ -70,6 +76,7 @@ public class Swan : MonoBehaviour
         {
             checkPowerUp();
         }
+        checkHP();
      }
     
     public void TurnOffAnimations()
@@ -87,6 +94,14 @@ public class Swan : MonoBehaviour
             swanPoweredUp = false;
             transform.localScale *= 1/scaleFactor;
         }
+    }
+
+    private void checkHP()
+    {
+        if (healthPoints <= 15 && !lowhp.isPlaying)
+            lowhp.Play();
+        else if (healthPoints > 15)
+            lowhp.Stop();
     }
 
 

@@ -14,7 +14,11 @@ public class SwanAttackState : ISwanState
     {
         // Cooldown lengths obtained from animation length
         if (type == "punch") cooldown = 0.35f;
-        if (type == "heavy") cooldown = 0.4f;
+        if (type == "heavy")
+        {
+            cooldown = 0.4f;
+            swan.bite.Play();
+        }
         if (type == "special") {
             swan.Attacking = true;
             EnemyWaveController.specialZoom?.Invoke();
