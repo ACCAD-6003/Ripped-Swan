@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mochie/Unity/Prefabs/Materials/Water Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mochie/Unity/Prefabs/Materials/Water Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/Architecture/Prefabs/Prefab_Fountain_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/Architecture/Prefabs/Prefab_Fountain_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableDisable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableDisable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/SwanController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/SwanController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +129,7 @@
       <workItem from="1708289452189" duration="340000" />
       <workItem from="1708289815325" duration="546000" />
       <workItem from="1708464006167" duration="263000" />
-      <workItem from="1708468524794" duration="2446000" />
+      <workItem from="1708468524794" duration="2746000" />
     </task>
     <servers />
   </component>
