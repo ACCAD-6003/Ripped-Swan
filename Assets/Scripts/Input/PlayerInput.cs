@@ -116,6 +116,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f600364a-3a03-4d7d-b902-1806e2d9b69d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -393,6 +402,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Block"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""822f84a1-4364-407b-b1d6-13db62422bc7"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -439,6 +459,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Base_ItemSouth = m_Base.FindAction("ItemSouth", throwIfNotFound: true);
         m_Base_ItemWest = m_Base.FindAction("ItemWest", throwIfNotFound: true);
         m_Base_Block = m_Base.FindAction("Block", throwIfNotFound: true);
+        m_Base_Pause = m_Base.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -510,6 +531,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Base_ItemSouth;
     private readonly InputAction m_Base_ItemWest;
     private readonly InputAction m_Base_Block;
+    private readonly InputAction m_Base_Pause;
     public struct BaseActions
     {
         private @PlayerInput m_Wrapper;
@@ -524,6 +546,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @ItemSouth => m_Wrapper.m_Base_ItemSouth;
         public InputAction @ItemWest => m_Wrapper.m_Base_ItemWest;
         public InputAction @Block => m_Wrapper.m_Base_Block;
+        public InputAction @Pause => m_Wrapper.m_Base_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Base; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -563,6 +586,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Block.started += instance.OnBlock;
             @Block.performed += instance.OnBlock;
             @Block.canceled += instance.OnBlock;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
         }
 
         private void UnregisterCallbacks(IBaseActions instance)
@@ -597,6 +623,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Block.started -= instance.OnBlock;
             @Block.performed -= instance.OnBlock;
             @Block.canceled -= instance.OnBlock;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
         }
 
         public void RemoveCallbacks(IBaseActions instance)
@@ -644,5 +673,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnItemSouth(InputAction.CallbackContext context);
         void OnItemWest(InputAction.CallbackContext context);
         void OnBlock(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
