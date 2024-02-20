@@ -48,11 +48,11 @@ public class EnemyWaveController : MonoBehaviour
     {
         for (int wave = 1; wave <= numberOfWaves; wave++)
         {
-            Debug.Log($"Wave {wave} Incoming!");
+           // Debug.Log($"Wave {wave} Incoming!");
 
             if (!isCameraDetached && wave == 1)
             {
-                Debug.Log("Detaching Camera");
+               // Debug.Log("Detaching Camera");
                 yield return StartCoroutine(DetachCamera());
                 EnableCollision();
             }
@@ -65,7 +65,7 @@ public class EnemyWaveController : MonoBehaviour
 
             if (wave == numberOfWaves)
             {
-                Debug.Log("Attaching Camera");
+               // Debug.Log("Attaching Camera");
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
                 DisableCollision();

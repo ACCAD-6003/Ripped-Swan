@@ -8,19 +8,23 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+
+    public delegate void PauseToggle();
+    public static PauseToggle pauseToggle;
     private bool isPaused;
     public GameObject pauseMenuUI;
 
     // Start is called before the first frame update
     void Start()
     {
+        pauseToggle += PauseActivation;
         isPaused = false; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+      /*  if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
 
@@ -28,8 +32,20 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             else 
                 Resume();
-        }
+        } */
     }
+
+
+    public void PauseActivation()
+    {
+        isPaused = !isPaused;
+        if (isPaused)
+            Pause();
+        else
+            Resume();
+    }
+
+    
 
     public void Pause()
     {

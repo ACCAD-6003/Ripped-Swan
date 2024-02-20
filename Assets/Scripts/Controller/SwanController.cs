@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.iOS.Xcode;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,7 +30,7 @@ public class SwanController : MonoBehaviour
         heavyAttackControl.Initialize(pScheme.Base.HeavyAttack);
         //specialAttackControl.Initialize(pScheme.Base.SpecialAttack);
         blockController.Initialize(pScheme.Base.Block);
-
+        pScheme.Base.Pause.performed += PauseAction_performed;
         itemController.Initialize(pScheme.Base.ItemNorth, pScheme.Base.ItemSouth, pScheme.Base.ItemWest, pScheme.Base.ItemEast);
         pScheme.Base.Hold.performed += _ => held = true;
         pScheme.Base.Hold.canceled += _ => held = false;
@@ -39,6 +40,13 @@ public class SwanController : MonoBehaviour
     private void OnEnable()
     {
         pScheme.Enable();
+        pScheme.Base.Pause.Enable();
+    }
+
+    private void PauseAction_performed(InputAction.CallbackContext obj)
+    {
+        PauseMenu.pauseToggle?.Invoke();
+      
     }
 
 }
