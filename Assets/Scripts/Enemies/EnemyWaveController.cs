@@ -5,6 +5,7 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class EnemyWaveController : MonoBehaviour
 {
+    private bool notOver;
     public delegate void SpecialZoom();
     public static SpecialZoom specialZoom;
     [SerializeField] private GameObject enemyPrefab;
@@ -30,6 +31,7 @@ public class EnemyWaveController : MonoBehaviour
 
     private void Start()
     {
+       
         specialZoom += BigZoom;
         if (Camera.main != null)
         {
@@ -112,6 +114,7 @@ public class EnemyWaveController : MonoBehaviour
 
     IEnumerator DetachCamera()
     {
+        notOver = true;
         followCameraScript.enabled = false;
 
         float elapsedTime = 0f;
@@ -129,6 +132,7 @@ public class EnemyWaveController : MonoBehaviour
 
     IEnumerator AttachCamera()
     {
+        notOver = false;
         followCameraScript.enabled = true;
 
         float elapsedTime = 0f;
@@ -154,12 +158,23 @@ public class EnemyWaveController : MonoBehaviour
 
     private IEnumerator Zoomer()
     {
-        StartCoroutine(AttachCamera());
-        Vector3 hold = followCameraScript.offset;
+        // StartCoroutine(AttachCamera());
+        followCameraScript.enabled = true;
         followCameraScript.offset = followCameraScript.zoomedOffset;
         yield return new WaitForSeconds(zoomTime);
-        followCameraScript.offset = hold;
-        StartCoroutine(DetachCamera());
-    }
+        followCameraScript.offset = followCameraScript.OriginalOffset;
+        if (notOver)
+        {
+            followCameraScript.enabled = false;
+            float elapsedTime = 0f;
+            while (elapsedTime < cameraAttachSpeed)
+            {
+                mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / (cameraAttachSpeed));
+                elapsedTime += Time.deltaTime;
+            }
+        }
+            //mainCamera.transform.position = fixedCameraPosition.position;
+            // StartCoroutine(DetachCamera());
+        }
 
 }

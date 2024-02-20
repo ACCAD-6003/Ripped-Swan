@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Allsky/Cartoon/Cartoon Airbrush FluffyBlueSky/Materials/Sky_Cartoon_FluffyBlueSky Equirect.mat.meta
+guid: 1950a7c90d8b0964693a805d72c68c2e
+NativeFormatImporter:
+========
 guid: e0d127f490edc8c4881afeba3d8f5774
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> main:Assets/Materials/Grass lines.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
