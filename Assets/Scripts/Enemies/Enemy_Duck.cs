@@ -25,6 +25,11 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public int knockback;
 
+    public AudioSource[] Quacks;
+    private int randomQuack;
+    private float cooldown;
+    private float next;
+
     void Awake()
     {
         behavior = GetComponent<EnemyBehavior>();
@@ -44,6 +49,10 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
+
+        randomQuack = Random.Range(0, 7);
+        cooldown = 0.5f;
+        next = Time.time + cooldown;
     }
 
     public void Attack()
@@ -54,6 +63,12 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     private void Update()
     {
         if (isKnockoutOver()) UnfreezeObject();
+        if (Time.time > next)
+        {
+            next = Time.time + Random.Range(0.5f, 2.0f);
+            randomQuack = Random.Range(0, 7);
+            Quacks[randomQuack].Play();
+        }
     }
 
     public void TakeDamage(int damage, bool isPoweredUp)
