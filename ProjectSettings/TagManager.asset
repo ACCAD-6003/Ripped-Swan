@@ -13,6 +13,7 @@ TagManager:
   - bread
   - health_pickup
   - rangeEnemy
+  - ui-element
   layers:
   - Default
   - TransparentFX
