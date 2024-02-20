@@ -176,7 +176,7 @@ Material:
     - _DstBlend: 0
     - _EdgeFadeOffset: 0.5
     - _EdgeFadePower: 300
-    - _EdgeFadeSSR: 0.05
+    - _EdgeFadeSSR: 0
     - _EdgeFadeToggle: 1
     - _EmissionDistortionStrength: 0
     - _EmissionMapStochasticToggle: 0
@@ -234,7 +234,7 @@ Material:
     - _Rotation1: 0
     - _Roughness: 0
     - _SSR: 1
-    - _SSRHeight: 0.5
+    - _SSRHeight: 0.1
     - _SSRStrength: 1
     - _ShadowStrength: 0
     - _SpecStrength: 1

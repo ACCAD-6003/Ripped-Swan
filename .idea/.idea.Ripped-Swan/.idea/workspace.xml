@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Mochie/Unity/Prefabs/Materials/Water Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mochie/Unity/Prefabs/Materials/Water Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/Architecture/Prefabs/Prefab_Fountain_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NatureManufacture Assets/Park Photo Scanned Assets/Architecture/Prefabs/Prefab_Fountain_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableDisable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_Disable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableDisable.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableForSeconds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/Core/ColliderBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.analytics@4.1.0/Runtime/AnalyticsServiceInstance.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -31,27 +36,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Level-1-Park",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Level-1-Park&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\Admin\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Admin\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Ripped Swan Builds/2-18 Brawn Swan\Brawn Swan.exe" />
@@ -129,6 +134,7 @@
       <workItem from="1708289452189" duration="340000" />
       <workItem from="1708289815325" duration="546000" />
       <workItem from="1708464006167" duration="263000" />
+      <workItem from="1708468524794" duration="2446000" />
     </task>
     <servers />
   </component>
