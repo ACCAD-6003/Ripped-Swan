@@ -138,7 +138,7 @@ public class Swan : MonoBehaviour
             //Debug.Log("Player hit!");
             healthPoints -= damageTake;
             hurt.Play();
-            if (healthPoints <= 0)
+            if (healthPoints <= 0 && state is not SwanDeathState)
                 state = new SwanDeathState(this);
             else
             {
