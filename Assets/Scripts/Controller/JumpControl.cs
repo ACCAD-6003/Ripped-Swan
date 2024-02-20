@@ -19,4 +19,6 @@ public class JumpControl : MonoBehaviour
         //Debug.Log("Jump");
         sj.Jump();
     }
+
+
 }

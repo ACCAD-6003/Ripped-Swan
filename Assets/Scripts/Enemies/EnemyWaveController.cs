@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
@@ -42,6 +43,11 @@ public class EnemyWaveController : MonoBehaviour
         originalCameraRotation = mainCamera.transform.rotation;
 
         StartCoroutine(SpawnWaves());
+    }
+
+    private void  OnDestroy()
+    {
+        specialZoom -= BigZoom;
     }
 
     IEnumerator SpawnWaves()

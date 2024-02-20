@@ -21,6 +21,11 @@ public class PauseMenu : MonoBehaviour
         isPaused = false; 
     }
 
+    private void OnDestroy()
+    {
+        pauseToggle -= PauseActivation;
+    }
+
     // Update is called once per frame
     void Update()
     {
