@@ -26,6 +26,7 @@ public class SwanAttackState : ISwanState
         this.swan = swan;
         next = Time.time + cooldown;
         this.attackType = type;
+        swan.TurnOffAnimations();
     }
 
     public void Update()

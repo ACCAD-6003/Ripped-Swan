@@ -44,15 +44,16 @@ public class Swan : MonoBehaviour
 
     void Start()
     {
+        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        specialMovementAnimator = gameObject.GetComponent<Animator>();
+        state = new SwanMoveState(this);
+
         Attacking = false;
         maxHealth = healthPoints;
-        state = new SwanMoveState(this);
         feathers = 0;
         damage = 1;
         blockPoints = 5;
 
-        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
-        specialMovementAnimator = gameObject.GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 
@@ -69,7 +70,15 @@ public class Swan : MonoBehaviour
         {
             checkPowerUp();
         }
-     } 
+     }
+    
+    public void TurnOffAnimations()
+    {
+        foreach (AnimatorControllerParameter parameter in spriteAnimator.parameters)
+        {
+            spriteAnimator.SetBool(parameter.name, false);
+        }
+    }
 
     private void checkPowerUp()
     {
@@ -115,10 +124,11 @@ public class Swan : MonoBehaviour
             healthPoints -= damageTake;
             hurt.Play();
             if (healthPoints <= 0)
+                state = new SwanDeathState(this);
+            else
             {
-                healthPoints--;
-                hurt.Play();
-                if (healthPoints <= 0) state = new SwanDeathState(this);
+                // changes to swan hurt state
+                if (state is not SwanHurtState) state = new SwanHurtState(this);
             }
         } 
         else

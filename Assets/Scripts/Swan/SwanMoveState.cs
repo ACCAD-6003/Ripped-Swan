@@ -8,6 +8,7 @@ public class SwanMoveState : ISwanState
     public SwanMoveState(Swan swan)
     {
         this.swan = swan;
+        swan.TurnOffAnimations();
     }
 
     public void Update()
