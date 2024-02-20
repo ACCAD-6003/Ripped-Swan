@@ -58,7 +58,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public void TakeDamage(int damage, bool isPoweredUp)
     {
-        Debug.Log("Enemy Hit!");
+      //  Debug.Log("Enemy Hit!");
         StartCoroutine(FlashDamage());
         hitPoints -= damage;
         KnockbackEnemy();
@@ -119,7 +119,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public void Die()
     {
-        Debug.Log("Enemy Dead!");
+       // Debug.Log("Enemy Dead!");
         Destroy(gameObject);
     }
 
