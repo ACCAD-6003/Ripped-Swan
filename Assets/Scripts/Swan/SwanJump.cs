@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwanJump : MonoBehaviour
 {
-    Rigidbody rb;
+    [SerializeField] Rigidbody rb;
     [SerializeField] private float jumpForce;
     [SerializeField] private float flapForce;
     [SerializeField] private int totalFlaps;
@@ -13,9 +13,9 @@ public class SwanJump : MonoBehaviour
 
     JumpStates jumpState;
 
-    void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
+       // rb = GetComponent<Rigidbody>();
        jumpState = JumpStates.GROUNDED;
         flaps = totalFlaps;
     }
