@@ -6,6 +6,13 @@ using UnityEngine.InputSystem;
 public class ItemController : MonoBehaviour
 {
     [SerializeField] private Swan s;
+    [SerializeField] private int northItemCost = 5;
+    [SerializeField] private int southItemCost = 5;
+    [SerializeField] private int eastItemCost = 5;
+    [SerializeField] private int westItemCost = 5;
+    [SerializeField] private int healPower = 25;
+
+
 
     public void Initialize(InputAction northAction, InputAction southAction, InputAction westAction, InputAction eastAction)
     {
@@ -24,25 +31,38 @@ public class ItemController : MonoBehaviour
 
     private void ItemNorthAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("NorthItem");
-    
+        if (!s.Attacking && Swan.SpendFeathers(northItemCost))
+        {
+            s.attack("special");
+        }
+
+
     }
 
     private void ItemSouthAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("SouthItem");
+        if (!s.Attacking && Swan.SpendFeathers(southItemCost))
+        {
+
+        }
 
     }
 
     private void ItemWestAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("WestItem");
+        if (!s.Attacking && Swan.SpendFeathers(westItemCost))
+        {
+            s.Heal(healPower);
+        }
 
     }
 
     private void ItemEastAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("EastItem");
+        if (!s.Attacking && Swan.SpendFeathers(eastItemCost))
+        {
+            s.powerUp();
+        }
 
     }
 }
