@@ -7,21 +7,21 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: green 2
-  m_Shader: {fileID: 4800000, guid: 7f173a8b7495e304e8d92a49efee693c, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Name: mat_wood
+  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
+  m_ValidKeywords:
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: 53bf6f2b534d7f541ad89c7f7ee26072
+    AllLockedGUIDS: 75c63cdccfc7a7c45bd799974d95a1eb
     OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI
       _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
@@ -1672,7 +1672,7 @@ Material:
     - _LightingWrappedNormalization: 0
     - _LightingWrappedWrap: 0
     - _LineColorThemeIndex: 0
-    - _LineWidth: 5
+    - _LineWidth: 3
     - _LockTooltip: 0
     - _MainALHueShiftBand: 0
     - _MainALHueShiftCTIndex: 0
@@ -2202,7 +2202,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
@@ -2851,7 +2851,7 @@ Material:
     - _ClearCoatSpecularTint: {r: 1, g: 1, b: 1, a: 1}
     - _ClippingMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _ClothMetallicSmoothnessMapPan: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.3804688, g: 0.5188679, b: 0.3255162, a: 1}
+    - _Color: {r: 0.6981132, g: 0.515422, b: 0.36552152, a: 1}
     - _CubeMapColor: {r: 1, g: 1, b: 1, a: 1}
     - _CubeMapMaskPan: {r: 0, g: 0, b: 0, a: 0}
     - _CubeMapRotation: {r: 0, g: 0, b: 0, a: 0}

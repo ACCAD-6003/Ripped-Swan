@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "SpecialAttack",
-                    "type": "Button",
-                    "id": "737b704a-2ff6-44e5-b3c6-fc11634e02ff",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "ItemNorth",
                     "type": "Button",
                     "id": "eb49b94f-7970-4059-b542-470463c50a87",
@@ -273,17 +264,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d3f3d177-078f-4906-9e3f-b6895ed13a64",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SpecialAttack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6293559d-c6fd-4e65-b776-dc3ff12ab8c0",
                     "path": "<Gamepad>/dpad/up",
                     "interactions": "",
@@ -374,6 +354,17 @@
                     "name": "",
                     "id": "c011dadf-37a1-4b97-b5cf-28642f50b727",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc31c225-f168-47a8-84c6-5e563b384640",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
