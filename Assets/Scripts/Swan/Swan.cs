@@ -81,6 +81,7 @@ public class Swan : MonoBehaviour
             checkPowerUp();
         }
         checkHP();
+        CheckBlock();
      }
     
     public void TurnOffAnimations()
@@ -115,14 +116,17 @@ public class Swan : MonoBehaviour
             state = new SwanAttackState(this, attackType);
     }
 
-    public void block()
+    public void CheckBlock()
     {
-        if (state is not SwanBlockState)
+        if (state is not SwanBlockState && Input.GetKey(KeyCode.E))
             state = new SwanBlockState(this);
         else
         {
-            spriteAnimator.SetBool("block", false);
-            state = new SwanMoveState(this);
+            if (state is SwanBlockState && !Input.GetKey(KeyCode.E))
+            {
+                spriteAnimator.SetBool("block", false);
+                state = new SwanMoveState(this);
+            }
         }
     }
 
