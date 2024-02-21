@@ -16,7 +16,8 @@ public class BlockControl : MonoBehaviour
 
     private void AttackAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Block");
-        s.block();
+        //Debug.Log("Block");
+        // TODO: Re-enable this later
+        //s.block();
     }
 }
