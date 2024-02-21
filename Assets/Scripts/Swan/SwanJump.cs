@@ -15,7 +15,7 @@ public class SwanJump : MonoBehaviour
 
     void Start()
     {
-       // rb = GetComponent<Rigidbody>();
+       rb = GetComponent<Rigidbody>();
        jumpState = JumpStates.GROUNDED;
         flaps = totalFlaps;
     }
