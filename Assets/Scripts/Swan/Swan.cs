@@ -1,6 +1,7 @@
 using Assets.Scripts.Interfaces;
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class Swan : MonoBehaviour
 
     public ParticleSystem Explosion;
     public bool Attacking;// This is so you can't start attacking when already attacking
+
+    public AudioSource[] PunchSound;
     
     enum Attacks
     {
@@ -159,7 +162,7 @@ public class Swan : MonoBehaviour
         if (other.gameObject.tag == "enemy" &&
             state is SwanAttackState)
         {
-            punch_hit.Play();  
+            PunchSound[Random.Range(0, 29)].Play();
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
             enemy.TakeDamage(damage, swanPoweredUp);
         }

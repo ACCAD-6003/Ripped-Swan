@@ -13,7 +13,10 @@ public class SwanAttackState : ISwanState
     public SwanAttackState(Swan swan, string type)
     {
         // Cooldown lengths obtained from animation length
-        if (type == "punch") cooldown = 0.35f;
+        if (type == "punch") 
+        { 
+            cooldown = 0.35f;
+        }
         if (type == "heavy")
         {
             cooldown = 0.4f;
