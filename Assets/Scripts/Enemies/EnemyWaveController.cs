@@ -22,6 +22,8 @@ public class EnemyWaveController : MonoBehaviour
     [SerializeField] private float arrowDisplayTime = 3f;
 
     [SerializeField] private AudioSource spawnSound; // Reference to the AudioSource component
+    [SerializeField] private Animator doorAnimator; // Reference to the Animator component
+    [SerializeField] private bool isLastWave; // Checkbox to indicate if this is the last wave
 
     private Camera mainCamera;
     private FollowCamera followCameraScript;
@@ -69,6 +71,15 @@ public class EnemyWaveController : MonoBehaviour
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
                 DisableCollision();
+
+                if (isLastWave)
+                {
+                    // Trigger the door animation or any other actions for the last wave
+                    PlayDoorAnimation();
+                }
+
+
+
             }
 
             yield return new WaitForSeconds(timeBetweenWaves);
@@ -176,5 +187,13 @@ public class EnemyWaveController : MonoBehaviour
             //mainCamera.transform.position = fixedCameraPosition.position;
             // StartCoroutine(DetachCamera());
         }
-
+    private void PlayDoorAnimation()
+    {
+        // Check if this is the last wave and the doorAnimator is set
+        if (isLastWave)
+        {
+            // Set the DoorOpen parameter to trigger the animation
+            doorAnimator.SetBool("DoorOpen", true);
+        }
+    }
 }
