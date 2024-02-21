@@ -35383,6 +35383,8 @@ MonoBehaviour:
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
+  doorAnimator: {fileID: 0}
+  isLastWave: 0
 --- !u!4 &953339635
 Transform:
   m_ObjectHideFlags: 0
@@ -43352,10 +43354,6 @@ PrefabInstance:
       propertyPath: damageTake
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
-      propertyPath: healthPoints
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 1942770892, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: rb
       value: 
@@ -43374,7 +43372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493170928736159077, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.398
+      value: 0.73
       objectReference: {fileID: 0}
     - target: {fileID: 2493170928736159077, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_LocalPosition.z
@@ -52368,6 +52366,8 @@ MonoBehaviour:
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
+  doorAnimator: {fileID: 0}
+  isLastWave: 0
 --- !u!4 &1455203515
 Transform:
   m_ObjectHideFlags: 0
@@ -58452,6 +58452,8 @@ MonoBehaviour:
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
+  doorAnimator: {fileID: 0}
+  isLastWave: 0
 --- !u!4 &1630099305
 Transform:
   m_ObjectHideFlags: 0
@@ -71824,6 +71826,8 @@ MonoBehaviour:
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
+  doorAnimator: {fileID: 0}
+  isLastWave: 0
 --- !u!4 &1921891441
 Transform:
   m_ObjectHideFlags: 0

@@ -166,15 +166,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.39929828
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.39929828
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.39929828
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +215,10 @@ PrefabInstance:
     - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1840583522201341020, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_Constraints
@@ -357,9 +361,10 @@ MonoBehaviour:
   scaleFactor: 2
   powerUpDuration: 10
   damageTake: 1
-  healthPoints: 25
+  healthPoints: 100
   blockPoints: 0
   swanPoweredUp: 0
+  canStackPowerUps: 0
   punch_hit: {fileID: 9118012084703607435}
   punch_miss: {fileID: 9118012086408980816}
   powerUp_Sound: {fileID: 9118012086690387933}
@@ -441,6 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8496bb2ffd1bee44a0980e8e110ff3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   jumpForce: 5
   flapForce: 2
   totalFlaps: 1
