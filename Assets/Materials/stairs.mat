@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: stairs
-  m_Shader: {fileID: 4800000, guid: 44d8db13df6cb39458c13bafb50f4b9d, type: 3}
+  m_Shader: {fileID: 4800000, guid: ff301d79a5e71234a89a06eb22fc9781, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - VIGNETTE_MASKED
@@ -1672,7 +1672,7 @@ Material:
     - _LightingWrappedNormalization: 0
     - _LightingWrappedWrap: 0
     - _LineColorThemeIndex: 0
-    - _LineWidth: 5
+    - _LineWidth: 3
     - _LockTooltip: 0
     - _MainALHueShiftBand: 0
     - _MainALHueShiftCTIndex: 0

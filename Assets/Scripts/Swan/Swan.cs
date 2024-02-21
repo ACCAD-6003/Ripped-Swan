@@ -26,6 +26,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
+    [SerializeField] private bool canStackPowerUps;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
@@ -170,10 +171,19 @@ public class Swan : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // toggle whether power ups can stack, eg. swan can get more than 2x bigger
         if (collision.gameObject.tag == "bread")
         {
-            powerUp();
-            Destroy(collision.gameObject);
+            if (canStackPowerUps)
+            {
+                powerUp();
+                Destroy(collision.gameObject);
+            }
+            else if (!swanPoweredUp)
+            {
+                powerUp();
+                Destroy(collision.gameObject);
+            }
         }
         if (collision.gameObject.tag == "health_pickup")
         {

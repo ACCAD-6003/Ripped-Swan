@@ -17,8 +17,10 @@ public class JumpControl : MonoBehaviour
     
     private void JumpAction_performed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Jump");
+        //Debug.Log("Jump");
         s.jump.Play();
         sj.Jump();
     }
+
+
 }
