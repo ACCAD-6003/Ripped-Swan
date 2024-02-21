@@ -17,7 +17,9 @@ Material:
   - _EDGEFADE_ON
   - _FOAM_ON
   - _FOAM_STOCHASTIC_ON
+  - _NORMALMAP_0_STOCHASTIC_ON
   - _NORMALMAP_1_ON
+  - _NORMALMAP_1_STOCHASTIC_ON
   - _REFLECTIONS_ON
   - _SCREENSPACE_REFLECTIONS_ON
   - _VERT_FLIPBOOK_ON
@@ -209,8 +211,8 @@ Material:
     - _Metallic: 0
     - _MirrorNormalOffsetSwizzle: 1
     - _NoiseTexBlur: 0.8
-    - _Normal0StochasticToggle: 0
-    - _Normal1StochasticToggle: 0
+    - _Normal0StochasticToggle: 1
+    - _Normal1StochasticToggle: 1
     - _Normal1Toggle: 1
     - _NormalMapFlipbookSpeed: 8
     - _NormalMapFlipbookStrength: 0.2
