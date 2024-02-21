@@ -53,7 +53,7 @@ public class SwanAttackState : ISwanState
                 {
                     Time.timeScale = 1.0f;
                     swan.damage = 1;
-                    swan.Explosion.Play();
+                    //swan.Explosion.Play();
                 }
                 swan.Attacking = false;
                 swan.state = new SwanMoveState(swan);

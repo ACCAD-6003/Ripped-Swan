@@ -10,7 +10,7 @@ internal class SwanDeathState : ISwanState
     {
         this.swan = swan;
         swan.swanDeath.Play();
-        Time.timeScale = 0.1f;
+        //Time.timeScale = 0.1f;
     }
 
 
@@ -18,7 +18,7 @@ internal class SwanDeathState : ISwanState
     {
         if (!swan.swanDeath.isPlaying)
         {
-            Time.timeScale = 1.0f;
+            //Time.timeScale = 1.0f;
             Scene thisScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(thisScene.name);
         }

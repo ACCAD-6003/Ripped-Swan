@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 841c7109073a79e448d4685c6d5ce03f, type: 3}
+    - target: {fileID: 4227371569353819603, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4351104876479501311, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -372,10 +376,18 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: c2cdf34ef6bb6584ba35888671c28094, type: 3}
+    - target: {fileID: 8198845564303462927, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 534c0c29153daa64eaddc76841abca98, type: 3}
     - target: {fileID: 8357978991932081940, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: c6c22af6bde9b744faad5e55676bbaf5, type: 3}
+    - target: {fileID: 8932412503796936493, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+      propertyPath: m_Name
+      value: Audio_Player_Explosion
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
 --- !u!82 &123903129081236717 stripped
@@ -496,7 +508,7 @@ MonoBehaviour:
   lowhp: {fileID: 3294401383104811578}
   swanDeath: {fileID: 4991831058205588094}
   block: {fileID: 8370122822625184021}
-  Explosion: {fileID: 0}
+  Explosion: {fileID: 5393821071336119089}
   Attacking: 0
   PunchSound:
   - {fileID: 6262833251867431737}
@@ -732,6 +744,11 @@ AudioSource:
 --- !u!82 &5255442012317142570 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8357978991932081940, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+  m_PrefabInstance: {fileID: 4256628658046355774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5393821071336119089 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8198845564303462927, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
   m_PrefabInstance: {fileID: 4256628658046355774}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &5423501672294116294 stripped

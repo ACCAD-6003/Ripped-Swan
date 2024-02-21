@@ -41,7 +41,7 @@ public class Swan : MonoBehaviour
     public AudioSource swanDeath;
     public AudioSource block;
 
-    public ParticleSystem Explosion;
+    public AudioSource Explosion;
     public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
@@ -84,7 +84,15 @@ public class Swan : MonoBehaviour
         }
         checkHP();
         CheckBlock();
+        AdjustTime();
      }
+
+    // Just in case the time bug occurs, we adjust the timescale back to normal
+    private void AdjustTime()
+    {
+        if (state is not SwanAttackState)
+            Time.timeScale = 1f;
+    }
     
     public void TurnOffAnimations()
     {
