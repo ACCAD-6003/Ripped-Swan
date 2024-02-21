@@ -14,6 +14,8 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField][Range(0f, 359f)] private float fieldOfView = 90f; // Cone field of view angle
     [SerializeField] private float chaseTime = 10f;   //how long you want them to flee for
 
+    public AudioSource[] Slaps;
+
     private enum State
     {
         Idle, Walk,Pursuit,Cooldown,
@@ -204,6 +206,7 @@ public class EnemyBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && currentState== State.Attack && !other.isTrigger)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
+            Slaps[Random.Range(0, 9)].Play();
             swan.hit();
         }
     }
