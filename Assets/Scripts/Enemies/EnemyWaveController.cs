@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
@@ -46,15 +47,20 @@ public class EnemyWaveController : MonoBehaviour
         StartCoroutine(SpawnWaves());
     }
 
+    private void  OnDestroy()
+    {
+        specialZoom -= BigZoom;
+    }
+
     IEnumerator SpawnWaves()
     {
         for (int wave = 1; wave <= numberOfWaves; wave++)
         {
-            Debug.Log($"Wave {wave} Incoming!");
+           // Debug.Log($"Wave {wave} Incoming!");
 
             if (!isCameraDetached && wave == 1)
             {
-                Debug.Log("Detaching Camera");
+               // Debug.Log("Detaching Camera");
                 yield return StartCoroutine(DetachCamera());
                 EnableCollision();
             }
@@ -67,7 +73,7 @@ public class EnemyWaveController : MonoBehaviour
 
             if (wave == numberOfWaves)
             {
-                Debug.Log("Attaching Camera");
+               // Debug.Log("Attaching Camera");
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
                 DisableCollision();

@@ -1,6 +1,7 @@
 using Assets.Scripts.Interfaces;
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
+    [SerializeField] private bool canStackPowerUps;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
@@ -32,8 +34,16 @@ public class Swan : MonoBehaviour
     public AudioSource hurt;
     public AudioSource special;
 
+    public AudioSource bite;
+    public AudioSource walk;
+    public AudioSource jump;
+    public AudioSource lowhp;
+    public AudioSource swanDeath;
+
     public ParticleSystem Explosion;
     public bool Attacking;// This is so you can't start attacking when already attacking
+
+    public AudioSource[] PunchSound;
     
     enum Attacks
     {
@@ -44,15 +54,16 @@ public class Swan : MonoBehaviour
 
     void Start()
     {
+        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
+        specialMovementAnimator = gameObject.GetComponent<Animator>();
+        state = new SwanMoveState(this);
+
         Attacking = false;
         maxHealth = healthPoints;
-        state = new SwanMoveState(this);
         feathers = 0;
         damage = 1;
         blockPoints = 5;
 
-        spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
-        specialMovementAnimator = gameObject.GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.enabled = false;
 
@@ -69,7 +80,16 @@ public class Swan : MonoBehaviour
         {
             checkPowerUp();
         }
-     } 
+        checkHP();
+     }
+    
+    public void TurnOffAnimations()
+    {
+        foreach (AnimatorControllerParameter parameter in spriteAnimator.parameters)
+        {
+            spriteAnimator.SetBool(parameter.name, false);
+        }
+    }
 
     private void checkPowerUp()
     {
@@ -78,6 +98,14 @@ public class Swan : MonoBehaviour
             swanPoweredUp = false;
             transform.localScale *= 1/scaleFactor;
         }
+    }
+
+    private void checkHP()
+    {
+        if (healthPoints <= 15 && !lowhp.isPlaying)
+            lowhp.Play();
+        else if (healthPoints > 15)
+            lowhp.Stop();
     }
 
 
@@ -114,11 +142,12 @@ public class Swan : MonoBehaviour
             //Debug.Log("Player hit!");
             healthPoints -= damageTake;
             hurt.Play();
-            if (healthPoints <= 0)
+            if (healthPoints <= 0 && state is not SwanDeathState)
+                state = new SwanDeathState(this);
+            else
             {
-                healthPoints--;
-                hurt.Play();
-                if (healthPoints <= 0) state = new SwanDeathState(this);
+                // changes to swan hurt state
+                if (state is not SwanHurtState) state = new SwanHurtState(this);
             }
         } 
         else
@@ -134,7 +163,7 @@ public class Swan : MonoBehaviour
         if (other.gameObject.tag == "enemy" &&
             state is SwanAttackState)
         {
-            punch_hit.Play();  
+            PunchSound[Random.Range(0, 29)].Play();
             IEnemy enemy = other.gameObject.GetComponent<IEnemy>();
             enemy.TakeDamage(damage, swanPoweredUp);
         }
@@ -142,10 +171,19 @@ public class Swan : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        // toggle whether power ups can stack, eg. swan can get more than 2x bigger
         if (collision.gameObject.tag == "bread")
         {
-            powerUp();
-            Destroy(collision.gameObject);
+            if (canStackPowerUps)
+            {
+                powerUp();
+                Destroy(collision.gameObject);
+            }
+            else if (!swanPoweredUp)
+            {
+                powerUp();
+                Destroy(collision.gameObject);
+            }
         }
         if (collision.gameObject.tag == "health_pickup")
         {
