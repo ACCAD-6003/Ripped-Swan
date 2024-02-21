@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 4260777349453884504}
   m_LocalRotation: {x: -0, y: -0.9999463, z: -0, w: -0.010364415}
   m_LocalPosition: {x: 12, y: 6.25, z: 12.75}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.33574, y: 0.33574, z: 0.33574}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4260777349895383807}
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firingAngle: 45
   gravity: 10
-  target: {fileID: 0}
+  target: {fileID: 2493170928736159077, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
   bulletPrefab: {fileID: 5294387218450081108, guid: 18952da5504c3c5409188ce8bad24761, type: 3}
   firePoint: {fileID: 4260777349895383807}
   burstRate: 4
