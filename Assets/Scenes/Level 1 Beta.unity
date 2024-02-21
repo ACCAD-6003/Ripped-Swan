@@ -69199,9 +69199,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1414756212058516321, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489060236878990042, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636842832382134096, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723512317417782663, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903355655963243843, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945231721978054709, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182895445602357331, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2822984054592568278, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2952801605268551565, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183583758704206065, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212940414417402286, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3365453747490467000, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
       propertyPath: m_Name
       value: Audio_Swan_Punches
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831354627939869726, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225857805766476118, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688886826059498208, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742188534609255796, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990352542791874208, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
       propertyPath: m_RootOrder
@@ -69245,6 +69305,66 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990352542791874208, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5081993856213042704, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402001652875974603, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203010752128348204, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255399914518081126, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331637765891999073, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485943453390239486, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125114701351424398, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7233196558479175511, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7431794931838453594, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549954612769761326, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046608362737410523, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822856716247454858, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902425935363926385, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012399863633990083, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203062969762219054, guid: d716e5aa9eb20854d91a0fbecb7e0ce6, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
