@@ -9,6 +9,7 @@ internal class SwanBlockState : ISwanState
     public SwanBlockState(Swan swan)
     {
         this.swan = swan;
+        swan.TurnOffAnimations();
     }
 
 

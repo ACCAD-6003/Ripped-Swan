@@ -9,15 +9,18 @@ internal class SwanDeathState : ISwanState
     public SwanDeathState(Swan swan)
     {
         this.swan = swan;
+        swan.swanDeath.Play();
+        Time.timeScale = 0.1f;
     }
 
 
     public void Update()
     {
-        // TODO: If swan is dead, play death animation and show game over screen
-        // TODO: Play death animation
-        // TODO: Show game over screen
-        Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(thisScene.name);
+        if (!swan.swanDeath.isPlaying)
+        {
+            Time.timeScale = 1.0f;
+            Scene thisScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(thisScene.name);
+        }
     }
 }
