@@ -39,12 +39,14 @@ public class Swan : MonoBehaviour
     public AudioSource jump;
     public AudioSource lowhp;
     public AudioSource swanDeath;
+    public AudioSource block;
 
     public ParticleSystem Explosion;
     public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
-    
+    public AudioSource[] ArmSwingSound;
+
     enum Attacks
     {
         NORMAL,
@@ -103,9 +105,9 @@ public class Swan : MonoBehaviour
 
     private void checkHP()
     {
-        if (healthPoints <= 15 && !lowhp.isPlaying)
+        if (healthPoints <= 5 && !lowhp.isPlaying)
             lowhp.Play();
-        else if (healthPoints > 15)
+        else if (healthPoints > 5)
             lowhp.Stop();
     }
 
@@ -157,6 +159,7 @@ public class Swan : MonoBehaviour
         else
         {
             blockPoints--;
+            block.Play();
             if (blockPoints <= 0)
                 breakBlock();
         }

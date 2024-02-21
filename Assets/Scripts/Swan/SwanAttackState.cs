@@ -16,6 +16,7 @@ public class SwanAttackState : ISwanState
         if (type == "punch") 
         { 
             cooldown = 0.35f;
+            swan.ArmSwingSound[Random.Range(0,9)].Play();
         }
         if (type == "heavy")
         {

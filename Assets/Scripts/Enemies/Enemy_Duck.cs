@@ -134,7 +134,9 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public void Die()
     {
-       // Debug.Log("Enemy Dead!");
+        // Debug.Log("Enemy Dead!");
+        randomQuack = Random.Range(0, 7);
+        Quacks[randomQuack].Play();
         Destroy(gameObject);
     }
 
