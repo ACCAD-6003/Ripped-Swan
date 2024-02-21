@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controller/SwanController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controller/SwanController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Beta.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +133,7 @@
       <workItem from="1708289815325" duration="546000" />
       <workItem from="1708464006167" duration="263000" />
       <workItem from="1708468524794" duration="2746000" />
+      <workItem from="1708476731202" duration="751000" />
     </task>
     <servers />
   </component>
