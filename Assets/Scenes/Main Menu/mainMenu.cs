@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
+using UnityEngine.EventSystems;
 
 public class mainMenu : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class mainMenu : MonoBehaviour
     public bool isLevelLoaded;
 
     private double start;
+
+    [Header("First Selections")]
+    [SerializeField] private GameObject mainMenuFirst;
+    [SerializeField] private GameObject settingMenuFirst;
+
     public void playIntroCutscene()
     {
         screen.SetActive(true);
@@ -29,6 +35,7 @@ public class mainMenu : MonoBehaviour
     {
         isLevelLoaded = false;
         player = videoPlayer.GetComponent<VideoPlayer>();
+        EventSystem.current.SetSelectedGameObject(mainMenuFirst);
     }
 
     private void Update()
@@ -77,5 +84,16 @@ public class mainMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
-    
+
+    public void GoToSettings()
+    {
+        EventSystem.current.SetSelectedGameObject(settingMenuFirst);
+    }
+
+    public void BackToMain()
+    {
+        EventSystem.current.SetSelectedGameObject(mainMenuFirst);
+    }
 }
+    
+

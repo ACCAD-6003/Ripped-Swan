@@ -36,12 +36,30 @@ public class SwanController : MonoBehaviour
     }
     private void OnEnable()
     {
+        pScheme.UI.Enable();
         pScheme.Enable();
         pScheme.Base.Pause.Enable();
     }
 
+
+    private void OnDisable()
+    {
+        pScheme.Disable();
+        pScheme.Base.Pause.Disable();
+    }
+
     private void PauseAction_performed(InputAction.CallbackContext obj)
     {
+       /* if (!pScheme.UI.enabled)
+        {
+            pScheme.UI.Enable();
+            pScheme.Base.Disable();
+        }
+        else
+        {
+            pScheme.UI.Disable();
+            pScheme.Base.Disable();
+        } */
         PauseMenu.pauseToggle?.Invoke();
       
     }
