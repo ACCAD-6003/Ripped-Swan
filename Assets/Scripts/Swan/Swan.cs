@@ -5,6 +5,10 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
+    public static int specialCap = 30;
+    public static int healCap =10;
+    public static int growCap = 20;
+    public static int maxFeathers = 50;
     public static int feathers;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
@@ -53,7 +57,13 @@ public class Swan : MonoBehaviour
         HEAVY,
         SPECIAL
     }
-
+    public static void Cap()
+    {
+        if(feathers> maxFeathers)
+        {
+            feathers = maxFeathers;
+        }
+    }
     void Start()
     {
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
@@ -74,6 +84,7 @@ public class Swan : MonoBehaviour
 
      void Update()
      {
+        Swan.Cap();
        // if (Input.GetMouseButtonDown(0)) 
          //   state = new SwanAttackState(this);
         state.Update();

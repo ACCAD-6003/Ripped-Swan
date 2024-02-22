@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 public class ItemController : MonoBehaviour
 {
     [SerializeField] private Swan s;
-    [SerializeField] private int northItemCost = 5;
+   /* [SerializeField] private int northItemCost = 5;
     [SerializeField] private int southItemCost = 5;
     [SerializeField] private int eastItemCost = 5;
-    [SerializeField] private int westItemCost = 5;
+    [SerializeField] private int westItemCost = 5;*/
     [SerializeField] private int healPower = 25;
 
 
@@ -18,8 +18,8 @@ public class ItemController : MonoBehaviour
     {
         northAction.performed += ItemNorthAction_performed;
         northAction.Enable();
-        southAction.performed += ItemSouthAction_performed;
-        southAction.Enable();
+       // southAction.performed += ItemSouthAction_performed;
+       // southAction.Enable();
         westAction.performed += ItemWestAction_performed;
         westAction.Enable();
         eastAction.performed += ItemEastAction_performed;
@@ -31,7 +31,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemNorthAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(northItemCost))
+        if (!s.Attacking && Swan.SpendFeathers(Swan.specialCap))
         {
             s.attack("special");
         }
@@ -39,18 +39,18 @@ public class ItemController : MonoBehaviour
 
     }
 
-    private void ItemSouthAction_performed(InputAction.CallbackContext obj)
+  /*  private void ItemSouthAction_performed(InputAction.CallbackContext obj)
     {
         if (!s.Attacking && Swan.SpendFeathers(southItemCost))
         {
 
         }
 
-    }
+    }*/
 
     private void ItemWestAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(westItemCost))
+        if (!s.Attacking && Swan.SpendFeathers(Swan.healCap))
         {
             s.Heal(healPower);
         }
@@ -59,7 +59,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemEastAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(eastItemCost))
+        if (!s.Attacking && Swan.SpendFeathers(Swan.growCap))
         {
             s.powerUp();
         }
