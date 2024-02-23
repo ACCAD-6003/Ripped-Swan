@@ -28,7 +28,7 @@ public class SwanAttackState : ISwanState
             //   swan.Attacking = true;
             EnemyWaveController.specialZoom?.Invoke();
             cooldown = 0.8f;
-            Time.timeScale = 0.25f;
+            Time.timeScale = 0.55f;
             swan.damage = 5;
             swan.special.Play();
         }
@@ -111,7 +111,7 @@ public class SwanAttackState : ISwanState
         {
             swan.boxCollider.enabled = true;
             
-            swan.Explosion.Play();
+          //  swan.Explosion.Play();
         }
         if (Time.time > next)
         {
