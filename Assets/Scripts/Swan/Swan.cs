@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
+    public bool superArmor;
     public static int specialCap = 30;
     public static int healCap =10;
     public static int growCap = 20;
@@ -46,7 +47,7 @@ public class Swan : MonoBehaviour
     public AudioSource block;
 
     public AudioSource Explosion;
-    public bool Attacking;// This is so you can't start attacking when already attacking
+  //  public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
     public AudioSource[] ArmSwingSound;
@@ -66,11 +67,12 @@ public class Swan : MonoBehaviour
     }
     void Start()
     {
+        superArmor = false;
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         specialMovementAnimator = gameObject.GetComponent<Animator>();
         state = new SwanMoveState(this);
 
-        Attacking = false;
+      //  Attacking = false;
         maxHealth = healthPoints;
         feathers = 0;
         damage = 1;
@@ -181,7 +183,11 @@ public class Swan : MonoBehaviour
     public void hit()
     {
         // Swan can only get hurt if it is not blocking
-        if (state is not SwanBlockState)
+        if (superArmor)
+        {
+
+        }
+       else if (state is not SwanBlockState)
         {
             //Debug.Log("Player hit!");
             healthPoints -= damageTake;
