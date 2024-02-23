@@ -229,6 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   offset: {x: 0, y: 4, z: -7}
+  zoomedOffset: {x: 0, y: 3, z: -6}
+  OriginalOffset: {x: 0, y: 0, z: 0}
   smoothTime: 0.3
   fixedZ: 1
 --- !u!114 &7630791311444635710
