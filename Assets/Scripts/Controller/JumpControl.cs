@@ -17,9 +17,12 @@ public class JumpControl : MonoBehaviour
     
     private void JumpAction_performed(InputAction.CallbackContext obj)
     {
-        //Debug.Log("Jump");
-        s.jump.Play();
-        sj.Jump();
+        if (s.state is SwanMoveState)
+        {
+            //Debug.Log("Jump");
+            s.jump.Play();
+            sj.Jump();
+        }
     }
 
 

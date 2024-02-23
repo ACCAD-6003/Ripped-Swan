@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c09f6646b165a46bbc121bb6a23e27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  s: {fileID: 1942770874}
   speed: 5
 --- !u!114 &1942770891
 MonoBehaviour:
@@ -666,10 +667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
-  northItemCost: 5
-  southItemCost: 5
-  eastItemCost: 5
-  westItemCost: 5
   healPower: 25
 --- !u!4 &2493170928736159077 stripped
 Transform:
