@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MovementControl : MonoBehaviour
 {
+    [SerializeField] Swan s;
     public static Vector3 direction;
     private GameObject playerToMove;
     [SerializeField] private float speed = 5f;
@@ -26,21 +27,24 @@ public class MovementControl : MonoBehaviour
     //reads value from movement actions and translattes them to vector3 for the player a can move in real time.
     void FixedUpdate()
     {
-        pMovement = this.moveAction.ReadValue<Vector2>();
-        Vector3 pVelocity = new Vector3(pMovement.x * speed, playerToMove.GetComponent<Rigidbody>().velocity.y, pMovement.y * speed);
-        playerToMove.GetComponent<Rigidbody>().velocity = pVelocity;
-        if (pVelocity != Vector3.zero)
+        if (s.state is SwanMoveState)
         {
-            if (pVelocity.x > 0)
+            pMovement = this.moveAction.ReadValue<Vector2>();
+            Vector3 pVelocity = new Vector3(pMovement.x * speed, playerToMove.GetComponent<Rigidbody>().velocity.y, pMovement.y * speed);
+            playerToMove.GetComponent<Rigidbody>().velocity = pVelocity;
+            if (pVelocity != Vector3.zero)
             {
-                // transform.rotation = Quaternion.LookRotation(playerToMove.GetComponent<Rigidbody>().velocity.normalized);
-                direction = Vector3.right;
-                transform.rotation = Quaternion.LookRotation(direction);
-            }
-            else if(pVelocity.x < 0)
-            {
-                direction = Vector3.left;
-                transform.rotation = Quaternion.LookRotation(direction);
+                if (pVelocity.x > 0)
+                {
+                    // transform.rotation = Quaternion.LookRotation(playerToMove.GetComponent<Rigidbody>().velocity.normalized);
+                    direction = Vector3.right;
+                    transform.rotation = Quaternion.LookRotation(direction);
+                }
+                else if (pVelocity.x < 0)
+                {
+                    direction = Vector3.left;
+                    transform.rotation = Quaternion.LookRotation(direction);
+                }
             }
         }
     }

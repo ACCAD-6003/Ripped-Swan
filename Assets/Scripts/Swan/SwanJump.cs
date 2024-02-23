@@ -28,6 +28,7 @@ public class SwanJump : MonoBehaviour
 
     public void Jump()
     {
+
         if(jumpState == JumpStates.GROUNDED)
         {
             rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);

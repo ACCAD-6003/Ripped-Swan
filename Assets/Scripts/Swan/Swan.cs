@@ -94,7 +94,7 @@ public class Swan : MonoBehaviour
             checkPowerUp();
         }
         checkHP();
-        CheckBlock();
+       // CheckBlock();
        // AdjustTime();
      }
 
@@ -137,19 +137,38 @@ public class Swan : MonoBehaviour
             state = new SwanAttackState(this, attackType);
     }
 
+    /*
     public void CheckBlock()
     {
-        if (state is not SwanBlockState && Input.GetKey(KeyCode.E))
+        if (state is not SwanBlockState )
             state = new SwanBlockState(this);
         else
         {
-            if (state is SwanBlockState && !Input.GetKey(KeyCode.E))
+            if (state is SwanBlockState )
             {
                 spriteAnimator.SetBool("block", false);
                 state = new SwanMoveState(this);
             }
         }
     }
+    */
+
+    public void StartBlock()
+    {
+        
+        if (state is not SwanBlockState)
+            state = new SwanBlockState(this);
+    }
+
+    public void EndBlock()
+    {
+        if (state is SwanBlockState)
+        {
+            spriteAnimator.SetBool("block", false);
+            state = new SwanMoveState(this);
+        }
+    }
+
 
     private void breakBlock()
     {

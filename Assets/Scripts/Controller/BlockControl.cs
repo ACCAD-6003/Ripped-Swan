@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,17 +8,29 @@ public class BlockControl : MonoBehaviour
 {
     [SerializeField] private Swan s;
 
-    public void Initialize(InputAction attackAction)
+    public void Initialize(InputAction blockAction)
     {
-        attackAction.performed += AttackAction_performed;
-        attackAction.Enable();
+        blockAction.performed += BlockAction_performed;
+        blockAction.canceled += BlockAction_cancelled;
+
+        blockAction.Enable();
 
     }
 
-    private void AttackAction_performed(InputAction.CallbackContext obj)
+    private void BlockAction_cancelled(InputAction.CallbackContext context)
     {
-        //Debug.Log("Block");
-        // TODO: Re-enable this later
-        //s.block();
+       s.EndBlock();
     }
+
+    private void BlockAction_performed(InputAction.CallbackContext obj)
+    {
+        if (s.state is SwanMoveState)
+        {
+            s.StartBlock();
+        }
+       
+    
+    }
+
+
 }
