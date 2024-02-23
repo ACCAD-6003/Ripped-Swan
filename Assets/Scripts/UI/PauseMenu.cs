@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PauseMenu : MonoBehaviour
     public static PauseToggle pauseToggle;
     private bool isPaused;
     public GameObject pauseMenuUI;
+
+    [Header("First Selections")]
+    [SerializeField] private GameObject pauseMenuFirst;
 
     // Start is called before the first frame update
     void Start()
@@ -55,13 +59,16 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(pauseMenuFirst);
         Time.timeScale = 0.0f;
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1.0f;
+       
+    
+    Time.timeScale = 1.0f;
     }
     
     public void MainMenu()

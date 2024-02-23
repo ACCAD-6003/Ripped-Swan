@@ -84,7 +84,7 @@ public class Swan : MonoBehaviour
         }
         checkHP();
         CheckBlock();
-        AdjustTime();
+       // AdjustTime();
      }
 
     // Just in case the time bug occurs, we adjust the timescale back to normal
