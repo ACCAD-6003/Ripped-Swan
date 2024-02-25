@@ -6,10 +6,10 @@ using UnityEngine.Serialization;
 
 public class lvl1_end_cutscene : MonoBehaviour
 {
-    [SerializeField] private GameObject _swanController;
+    [FormerlySerializedAs("_swanController")] [SerializeField] private GameObject _swanPlayer;
     //[SerializeField] private SwanController _swanController;
     [SerializeField] private Animator _cutsceneAnimator;
-    [SerializeField] private Animator _trainAnimator;
+    //[SerializeField] private Animator _trainAnimator;
     
     private void OnTriggerEnter (Collider col)
     {
@@ -23,12 +23,21 @@ public class lvl1_end_cutscene : MonoBehaviour
                 (optional) vignette
              */
 
-            _swanController.SetActive(false);
+            _swanPlayer.SetActive(false);
             
-            _cutsceneAnimator.Play(0);
+            _cutsceneAnimator.Play("End cutscene");
 
+            StartCoroutine(WaitForAnimationComplete());
             //Debug.Log("Load Next scene");
-            //SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
+    }
+    
+    IEnumerator WaitForAnimationComplete()
+    {
+        float animationLength = _cutsceneAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSecondsRealtime(animationLength);
+        
+        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
