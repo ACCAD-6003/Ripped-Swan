@@ -31,7 +31,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
-    [SerializeField] private bool canStackPowerUps;
+    private bool canStackPowerUps = false;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
