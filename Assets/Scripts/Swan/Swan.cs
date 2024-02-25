@@ -1,6 +1,7 @@
 using Assets.Scripts.Interfaces;
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
@@ -49,7 +50,8 @@ public class Swan : MonoBehaviour
     public AudioSource swanDeath;
     public AudioSource block;
 
-    public AudioSource Explosion;
+    [FormerlySerializedAs("explosion")] public AudioSource explosionSound;
+    [SerializeField] public ParticleSystem explosionParticleSystem;
   //  public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
