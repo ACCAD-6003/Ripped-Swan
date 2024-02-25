@@ -82,6 +82,7 @@ public class Swan : MonoBehaviour
         boxCollider.enabled = false;
 
         swanPoweredUp = false;
+        lowhp.volume = 0.05f;
     }
 
      void Update()
@@ -135,7 +136,7 @@ public class Swan : MonoBehaviour
 
     public void attack(String attackType)
     {
-        if (state is not SwanAttackState)
+        if (state is not SwanAttackState && state is not SwanDeathState)
             state = new SwanAttackState(this, attackType);
     }
 
@@ -158,13 +159,13 @@ public class Swan : MonoBehaviour
     public void StartBlock()
     {
         
-        if (state is not SwanBlockState)
+        if (state is not SwanBlockState && state is not SwanDeathState)
             state = new SwanBlockState(this);
     }
 
     public void EndBlock()
     {
-        if (state is SwanBlockState)
+        if (state is SwanBlockState && state is not SwanDeathState)
         {
             spriteAnimator.SetBool("block", false);
             state = new SwanMoveState(this);
