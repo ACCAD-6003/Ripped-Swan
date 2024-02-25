@@ -206,8 +206,11 @@ public class EnemyBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && currentState== State.Attack && !other.isTrigger)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
-            Slaps[Random.Range(0, 9)].Play();
-            swan.hit();
+            if (swan.state is not SwanDeathState)
+            {
+                Slaps[Random.Range(0, 9)].Play();
+                swan.hit();
+            }
         }
     }
 
