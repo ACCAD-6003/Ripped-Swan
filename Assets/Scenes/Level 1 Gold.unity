@@ -23877,7 +23877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &578345572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23969,7 +23969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _swanPlayer: {fileID: 1277147974}
-  _cutsceneAnimator: {fileID: 0}
+  _cutsceneAnimator: {fileID: 1180643835}
 --- !u!43 &600290660
 Mesh:
   m_ObjectHideFlags: 0
@@ -35993,7 +35993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &859713480
 BoxCollider:
   m_ObjectHideFlags: 0
