@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.08324931
       objectReference: {fileID: 0}
+    - target: {fileID: 1840583522201341016, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
     - target: {fileID: 1840583522201341017, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -485,6 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8417838c821d0c94ab4e9c4284e21cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superArmor: 0
   spriteAnimator: {fileID: 0}
   specialMovementAnimator: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -496,7 +501,6 @@ MonoBehaviour:
   healthPoints: 100
   blockPoints: 0
   swanPoweredUp: 0
-  canStackPowerUps: 0
   punch_hit: {fileID: 9118012084703607435}
   punch_miss: {fileID: 9118012086408980816}
   powerUp_Sound: {fileID: 9118012086690387933}
@@ -509,7 +513,6 @@ MonoBehaviour:
   swanDeath: {fileID: 4991831058205588094}
   block: {fileID: 8370122822625184021}
   Explosion: {fileID: 5393821071336119089}
-  Attacking: 0
   PunchSound:
   - {fileID: 6262833251867431737}
   - {fileID: 8945850097960093595}
