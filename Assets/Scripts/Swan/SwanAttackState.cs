@@ -111,7 +111,8 @@ public class SwanAttackState : ISwanState
         {
             swan.boxCollider.enabled = true;
             
-          //  swan.Explosion.Play();
+            swan.explosionSound.Play();
+            swan.explosionParticleSystem.Play();
         }
         if (Time.time > next)
         {
