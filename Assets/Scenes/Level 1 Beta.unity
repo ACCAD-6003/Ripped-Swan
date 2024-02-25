@@ -48780,7 +48780,7 @@ PrefabInstance:
       objectReference: {fileID: 933706088}
     - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: damageTake
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1942770890, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: speed
