@@ -5,10 +5,13 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
+    [SerializeField] private  int maxSwanSize =2;
+    private int swanSize;
+
     public bool superArmor;
     public static int specialCap = 30;
     public static int healCap =10;
-    public static int growCap = 20;
+    public static int growCap = 1;
     public static int maxFeathers = 50;
     public static int feathers;
     public Animator spriteAnimator;
@@ -67,6 +70,7 @@ public class Swan : MonoBehaviour
     }
     void Start()
     {
+        swanSize = 0;
         superArmor = false;
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         specialMovementAnimator = gameObject.GetComponent<Animator>();
@@ -92,7 +96,7 @@ public class Swan : MonoBehaviour
          //   state = new SwanAttackState(this);
         state.Update();
         
-        if (swanPoweredUp)
+        if (swanSize>0)
         {
             checkPowerUp();
         }
@@ -120,7 +124,12 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-            swanPoweredUp = false;
+
+            if (swanSize <= 0)
+            {
+                swanPoweredUp = false;
+                swanSize = 0;
+            }
             transform.localScale *= 1/scaleFactor;
         }
     }
@@ -228,11 +237,13 @@ public class Swan : MonoBehaviour
         {
             if (canStackPowerUps)
             {
+                if(CanPowerUp())
                 powerUp();
                 Destroy(collision.gameObject);
             }
             else if (!swanPoweredUp)
             {
+                if (CanPowerUp())
                 powerUp();
                 Destroy(collision.gameObject);
             }
@@ -246,10 +257,19 @@ public class Swan : MonoBehaviour
 
     public void powerUp()
     {
+        swanSize++;
         swanPoweredUp = true;
         transform.localScale *= scaleFactor;
         powerUpStart = Time.time;
         powerUp_Sound.Play();
+    }
+    public bool CanPowerUp()
+    {
+        if(swanSize < maxSwanSize)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void Heal(int healPower)
