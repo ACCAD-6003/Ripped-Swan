@@ -13,6 +13,10 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
     public double Damage { get { return damage; } }
 
     public SpriteRenderer spriteRenderer; // Now public
+    public Animator spriteAnimator;
+    private const float hurtCooldown = 0.25f;
+    private float hurtTime;
+    private bool duckIsHurt;
 
     Rigidbody rb;
     public Transform spriteTransform;
@@ -38,6 +42,9 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
 
     public void Start()
     {
+        spriteAnimator = gameObject.transform.Find("DuckSprite").GetComponent<Animator>();
+        duckIsHurt = false;
+
         damage = 0.5;
         hitPoints = 5;
         rb = GetComponent<Rigidbody>();
@@ -69,11 +76,19 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
             randomQuack = Random.Range(0, 7);
             Quacks[randomQuack].Play();
         }
+        if (duckIsHurt && Time.time > hurtTime)
+        {
+            spriteAnimator.SetBool("DuckHurt",false);
+            duckIsHurt = false;
+        }
     }
 
     public void TakeDamage(int damage, bool isPoweredUp)
     {
-      //  Debug.Log("Enemy Hit!");
+        spriteAnimator.SetBool("DuckHurt", true);
+        hurtTime = Time.time + hurtCooldown;
+        duckIsHurt = true;
+
         StartCoroutine(FlashDamage());
         hitPoints -= damage;
         KnockbackEnemy();
