@@ -6,10 +6,12 @@ using UnityEngine.Serialization;
 
 public class lvl1_end_cutscene : MonoBehaviour
 {
-    [FormerlySerializedAs("_swanController")] [SerializeField] private GameObject _swanPlayer;
+    [SerializeField] private GameObject _swanController;
     //[SerializeField] private SwanController _swanController;
     [SerializeField] private Animator _cutsceneAnimator;
     //[SerializeField] private Animator _trainAnimator;
+    int keyframes = 360;
+    int keyframesPerSecond = 60;
     
     private void OnTriggerEnter (Collider col)
     {
@@ -23,7 +25,7 @@ public class lvl1_end_cutscene : MonoBehaviour
                 (optional) vignette
              */
 
-            _swanPlayer.SetActive(false);
+            _swanController.SetActive(false);
             
             _cutsceneAnimator.Play("End cutscene");
 
@@ -35,8 +37,9 @@ public class lvl1_end_cutscene : MonoBehaviour
     
     IEnumerator WaitForAnimationComplete()
     {
-        float animationLength = _cutsceneAnimator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSecondsRealtime(animationLength);
+        //float animationLength = _cutsceneAnimator.GetCurrentAnimatorStateInfo(0).length;
+        
+        yield return new WaitForSecondsRealtime(keyframes/keyframesPerSecond);
         
         SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
     }

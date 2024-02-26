@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,11 +14,18 @@ public class UI_Manager : MonoBehaviour
     public TMP_Text Feathers_Text;
     public Slider health;
     public Slider feathers;
+    private float HPtoDisplay;
+    private Swan swan;
+
+    private void Start()
+    {
+        swan = GameObject.FindWithTag("Player").GetComponent<Swan>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        float HPtoDisplay = GameObject.FindWithTag("Player").GetComponent<Swan>().healthPoints;
+        HPtoDisplay = swan.healthPoints;
         int FeathersToDisplay = Swan.feathers;
         health.value = HPtoDisplay;
         feathers.value = FeathersToDisplay;
