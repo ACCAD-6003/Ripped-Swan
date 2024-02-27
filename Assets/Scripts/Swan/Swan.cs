@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
-    [SerializeField] private  int maxSwanSize =2;
+    private  int maxSwanSize;
     private int swanSize;
 
     public bool superArmor;
@@ -35,7 +35,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
-    private bool canStackPowerUps = false;
+    //private bool canStackPowerUps = false;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
@@ -63,6 +63,7 @@ public class Swan : MonoBehaviour
         HEAVY,
         SPECIAL
     }
+    
     public static void Cap()
     {
         if(feathers> maxFeathers)
@@ -89,6 +90,8 @@ public class Swan : MonoBehaviour
 
         swanPoweredUp = false;
         lowhp.volume = 0.05f;
+        
+        
     }
 
      void Update()
@@ -237,13 +240,7 @@ public class Swan : MonoBehaviour
         // toggle whether power ups can stack, eg. swan can get more than 2x bigger
         if (collision.gameObject.tag == "bread")
         {
-            if (canStackPowerUps)
-            {
-                if(CanPowerUp())
-                powerUp();
-                Destroy(collision.gameObject);
-            }
-            else if (!swanPoweredUp)
+            if (!swanPoweredUp)
             {
                 if (CanPowerUp())
                 powerUp();
