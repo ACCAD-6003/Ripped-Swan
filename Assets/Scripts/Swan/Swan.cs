@@ -126,13 +126,9 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-
-            if (swanSize <= 0)
-            {
-                swanPoweredUp = false;
-                swanSize = 0;
-            }
-            transform.localScale *= 1/scaleFactor;
+            swanSize--;
+            swanPoweredUp = false;
+            transform.localScale = new Vector3(1,1,1);
         }
     }
 
