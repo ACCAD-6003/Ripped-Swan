@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2493170928736159074}
-  jumpForce: 7
+  jumpForce: 8
   flapForce: 4
   totalFlaps: 1
 --- !u!114 &1942770893

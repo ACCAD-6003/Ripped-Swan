@@ -27,6 +27,7 @@ public class lvl1_end_cutscene : MonoBehaviour
 
             _swanController.SetActive(false);
             
+            _cutsceneAnimator.enabled = true;
             _cutsceneAnimator.Play("End cutscene");
 
             StartCoroutine(WaitForAnimationComplete());
