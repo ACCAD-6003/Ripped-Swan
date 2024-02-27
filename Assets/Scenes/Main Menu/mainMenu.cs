@@ -41,7 +41,8 @@ public class mainMenu : MonoBehaviour
     private void Update()
     {
         // Player can interrupt intro scene by pressing any key
-        if (Input.anyKeyDown && player.isPlaying)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton14))
+            && player.isPlaying)
         {
             player.Stop();
             screen.SetActive(false);
