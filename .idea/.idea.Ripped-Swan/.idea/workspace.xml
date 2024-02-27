@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +140,7 @@
       <workItem from="1708842730651" duration="24000" />
       <workItem from="1708895799007" duration="3542000" />
       <workItem from="1708977738453" duration="87000" />
-      <workItem from="1709063408904" duration="2686000" />
+      <workItem from="1709063408904" duration="3488000" />
     </task>
     <servers />
   </component>

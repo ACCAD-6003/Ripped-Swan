@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8417838c821d0c94ab4e9c4284e21cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSwanSize: 2
+  maxSwanSize: 1
   superArmor: 0
   spriteAnimator: {fileID: 0}
   specialMovementAnimator: {fileID: 0}

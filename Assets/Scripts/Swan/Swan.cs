@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
-    [SerializeField] private  int maxSwanSize =2;
+    [FormerlySerializedAs("maxSwanSize")] [SerializeField] private  int maxTimesTheSwanCanGrow = 1;
     private int swanSize;
 
     public bool superArmor;
@@ -257,7 +257,7 @@ public class Swan : MonoBehaviour
     }
     public bool CanPowerUp()
     {
-        return swanSize < maxSwanSize;
+        return swanSize < maxTimesTheSwanCanGrow;
     }
 
     public void Heal(int healPower)
