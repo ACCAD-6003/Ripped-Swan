@@ -64,7 +64,9 @@ public class EnemyWaveController : MonoBehaviour
             {
                Debug.Log("Detaching Camera");
                 yield return StartCoroutine(DetachCamera());
-                // EnableCollision();
+                
+                //Enable the arena collision
+                EnableCollision();
             }
 
             yield return new WaitForSeconds(delayBeforeSpawn);
@@ -78,7 +80,7 @@ public class EnemyWaveController : MonoBehaviour
                Debug.Log("Attaching Camera");
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
-                //DisableCollision();
+                DisableCollision();
 
                 // Better than having an unnecessary bool
                 if (doorAnimator != null)
@@ -140,8 +142,8 @@ public class EnemyWaveController : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < cameraAttachSpeed)
         {
-            Camera.main.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / cameraAttachSpeed);
-            Camera.main.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, fixedCameraPosition.rotation, elapsedTime / cameraAttachSpeed);
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / cameraAttachSpeed);
+            mainCamera.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, fixedCameraPosition.rotation, elapsedTime / cameraAttachSpeed);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -197,7 +199,7 @@ public class EnemyWaveController : MonoBehaviour
     private void PlayDoorAnimation()
     {
         // Check if this is the last wave and the doorAnimator is set
-        if (isLastWave)
+        //if (isLastWave)
         {
             // Set the DoorOpen parameter to trigger the animation
             doorAnimator.SetBool("DoorOpen", true);
