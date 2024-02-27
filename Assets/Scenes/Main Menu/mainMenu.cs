@@ -16,7 +16,7 @@ public class mainMenu : MonoBehaviour
     public GameObject videoPlayer;
     public VideoPlayer player;
     public bool isLevelLoaded;
-
+    private bool inCutscene;
     private double start;
 
     [Header("First Selections")]
@@ -29,18 +29,34 @@ public class mainMenu : MonoBehaviour
         videoPlayer.SetActive(true);
         player.Play();
         start = Time.time;
+        inCutscene = true;
     }
 
     private void Start()
     {
+       player = videoPlayer.GetComponent<VideoPlayer>();
+        EventSystem.current.SetSelectedGameObject(mainMenuFirst);
+    }
+
+    private void OnEnable()
+    {
+        inCutscene = false;
         isLevelLoaded = false;
         player = videoPlayer.GetComponent<VideoPlayer>();
         EventSystem.current.SetSelectedGameObject(mainMenuFirst);
+
     }
 
     private void Update()
     {
-        // Player can interrupt intro scene by pressing any key
+
+        if (inCutscene)
+            CutSceneChecker();
+    }
+
+
+    private void CutSceneChecker()
+    {
         if (Input.anyKeyDown && player.isPlaying)
         {
             player.Stop();
@@ -55,6 +71,7 @@ public class mainMenu : MonoBehaviour
             videoPlayer.SetActive(false);
             LoadLevel(1);
         }
+
     }
 
     public void LoadLevel(int sceneIndex)
