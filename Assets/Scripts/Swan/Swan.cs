@@ -6,15 +6,15 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
-    private  int maxSwanSize;
+    [FormerlySerializedAs("maxSwanSize")] [SerializeField] private  int maxTimesTheSwanCanGrow = 1;
     private int swanSize;
 
     public bool superArmor;
     public static int specialCap = 30;
     public static int healCap =10;
-    public static int growCap = 1;
+    public static int growCap = 20;
     public static int maxFeathers = 50;
-    public static int feathers = 0;
+    public static int feathers;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
@@ -25,7 +25,7 @@ public class Swan : MonoBehaviour
     
     [Tooltip("Damage taken")]
     [Range(0, 10)]
-    [SerializeField] private int damageTake = 3; // how much damage the player takes from a hit
+    [SerializeField] private int damageTake = 1; // how much damage the player takes from a hit
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
@@ -35,7 +35,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
-    //private bool canStackPowerUps = false;
+    private bool canStackPowerUps = false;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
@@ -52,6 +52,8 @@ public class Swan : MonoBehaviour
 
     [FormerlySerializedAs("explosion")] public AudioSource explosionSound;
     [SerializeField] public ParticleSystem explosionParticleSystem;
+    //[SerializeField] public GameObject explosionParticlePrefab;
+    
   //  public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
@@ -63,7 +65,6 @@ public class Swan : MonoBehaviour
         HEAVY,
         SPECIAL
     }
-    
     public static void Cap()
     {
         if(feathers> maxFeathers)
@@ -81,6 +82,7 @@ public class Swan : MonoBehaviour
 
       //  Attacking = false;
         maxHealth = healthPoints;
+        feathers = 0;
         damage = 1;
         blockPoints = 5;
 
@@ -89,8 +91,6 @@ public class Swan : MonoBehaviour
 
         swanPoweredUp = false;
         lowhp.volume = 0.05f;
-        
-        
     }
 
      void Update()
@@ -128,8 +128,8 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-            swanSize--;
             swanPoweredUp = false;
+            swanSize = 0;
             transform.localScale = new Vector3(1,1,1);
         }
     }
@@ -235,12 +235,9 @@ public class Swan : MonoBehaviour
         // toggle whether power ups can stack, eg. swan can get more than 2x bigger
         if (collision.gameObject.tag == "bread")
         {
-            if (!swanPoweredUp)
-            {
                 if (CanPowerUp())
-                powerUp();
+                    powerUp();
                 Destroy(collision.gameObject);
-            }
         }
         if (collision.gameObject.tag == "health_pickup")
         {
@@ -251,19 +248,18 @@ public class Swan : MonoBehaviour
 
     public void powerUp()
     {
-        swanSize++;
-        swanPoweredUp = true;
-        transform.localScale *= scaleFactor;
-        powerUpStart = Time.time;
-        powerUp_Sound.Play();
+        if (CanPowerUp())
+        {
+            swanSize++;
+            swanPoweredUp = true;
+            transform.localScale *= scaleFactor;
+            powerUpStart = Time.time;
+            powerUp_Sound.Play();
+        }
     }
     public bool CanPowerUp()
     {
-        if(swanSize < maxSwanSize)
-        {
-            return true;
-        }
-        return false;
+        return swanSize < maxTimesTheSwanCanGrow;
     }
 
     public void Heal(int healPower)

@@ -29,7 +29,7 @@ public class SwanAttackState : ISwanState
             //   swan.Attacking = true;
             EnemyWaveController.specialZoom?.Invoke();
             cooldown = 0.8f;
-            Time.timeScale = 0.55f;
+            Time.timeScale = 0.5f;
             swan.damage = 5;
             swan.special.Play();
         }
@@ -46,8 +46,14 @@ public class SwanAttackState : ISwanState
             Attack();
         else if (attackType == "heavy")
             HeavyAttack();
-        else if(attackType == "special")
-            SpecialAttack();
+        else if (attackType == "special")
+        {
+            Vector3 swanCurrentPos = swan.transform.position;
+            SpecialAttack(swanCurrentPos);
+            
+        }
+            
+        
         
         
         
@@ -104,25 +110,25 @@ public class SwanAttackState : ISwanState
         }
     }
 
-    private void SpecialAttack()
+    private void SpecialAttack(Vector3 swanImpactPos)
     {
         
         swan.spriteAnimator.SetBool(attackType, true);
+        
         if (Time.time < next && Time.time > next -0.1f)
         {
             swan.boxCollider.enabled = true;
-            
+
+            Time.timeScale = 1.0f;
             swan.explosionSound.Play();
             swan.explosionParticleSystem.Play();
+            swan.explosionParticleSystem.transform.position = swanImpactPos;
         }
         if (Time.time > next)
         {
             swan.boxCollider.enabled = false;
             swan.spriteAnimator.SetBool(attackType, false);
-           
-                Time.timeScale = 1.0f;
-                swan.damage = 1;
-
+            swan.damage = 1;
             swan.superArmor = false;
             swan.state = new SwanMoveState(swan);
         }
