@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +19,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLogic/tr_EnableForSeconds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/lvl1_end_cutscene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/Core/ColliderBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.analytics@4.1.0/Runtime/AnalyticsServiceInstance.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -38,11 +40,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -133,6 +137,9 @@
       <workItem from="1708468524794" duration="2746000" />
       <workItem from="1708476731202" duration="1210000" />
       <workItem from="1708842730651" duration="24000" />
+      <workItem from="1708895799007" duration="3542000" />
+      <workItem from="1708977738453" duration="87000" />
+      <workItem from="1709063408904" duration="2003000" />
     </task>
     <servers />
   </component>

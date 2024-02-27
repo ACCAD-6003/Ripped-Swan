@@ -13,11 +13,13 @@ namespace BrawnSwan
     {
         public Scrollbar scrollbar;
         public TMP_Text progressText;
+        private CheckPointManager _checkPointManager;
 
         public void LoadLevel(int sceneIndex)
         {
             StartCoroutine(LoadAsynchronously(sceneIndex));
             //SceneManager.LoadScene(1);
+            
         }
 
         IEnumerator LoadAsynchronously(int sceneIndex)
