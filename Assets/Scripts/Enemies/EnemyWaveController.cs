@@ -38,13 +38,14 @@ public class EnemyWaveController : MonoBehaviour
     {
 
        // specialZoom += BigZoom;
-        if (Camera.main != null)
+       if (Camera.main != null)
        {
            mainCamera = Camera.main;
-        }
-        followCameraScript = mainCamera.GetComponent<FollowCamera>();
-        originalCameraZPosition = mainCamera.transform.position.z;
-        originalCameraRotation = mainCamera.transform.rotation;
+       }
+       
+       followCameraScript = mainCamera.GetComponent<FollowCamera>();
+       originalCameraZPosition = mainCamera.transform.position.z;
+       originalCameraRotation = mainCamera.transform.rotation;
 
         StartCoroutine(SpawnWaves());
     }
