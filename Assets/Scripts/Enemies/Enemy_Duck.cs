@@ -106,6 +106,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         knockoutStart = Time.time;
         isKockedOut = true;
 
+        spriteTransform.Translate(new Vector3(0,0.5f,0));
         spriteTransform.Rotate(new Vector3(0,0,1), 180);
         Vector3 position = spriteTransform.position;
         position.y -= 1;
@@ -125,6 +126,7 @@ public class Enemy_Duck : MonoBehaviour, IEnemy
         isKockedOut = false;
         rb.constraints = RigidbodyConstraints.None; 
         spriteTransform.Rotate(new Vector3(0, 0, 1), 180);
+        spriteTransform.Translate(new Vector3(0, -0.5f, 0));
         Vector3 position = spriteTransform.position;
         position.y += 1;
         spriteTransform.position = position;
