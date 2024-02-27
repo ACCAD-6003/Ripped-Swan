@@ -10,7 +10,7 @@ public class Swan : MonoBehaviour
     private int swanSize;
 
     public bool superArmor;
-    public static int specialCap = 30;
+    public static int specialCap = 1;
     public static int healCap =10;
     public static int growCap = 20;
     public static int maxFeathers = 50;
@@ -52,6 +52,8 @@ public class Swan : MonoBehaviour
 
     [FormerlySerializedAs("explosion")] public AudioSource explosionSound;
     [SerializeField] public ParticleSystem explosionParticleSystem;
+    //[SerializeField] public GameObject explosionParticlePrefab;
+    
   //  public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
