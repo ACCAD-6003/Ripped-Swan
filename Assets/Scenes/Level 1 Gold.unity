@@ -41039,6 +41039,7 @@ MonoBehaviour:
   delayBeforeSpawn: 1
   cameraAttachSpeed: 1
   arenaCollision: {fileID: 864414695}
+  endLevelTrigger: {fileID: 0}
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
@@ -51043,6 +51044,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swan Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2493170928736159074, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2493170928736159077, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -60052,6 +60057,7 @@ MonoBehaviour:
   delayBeforeSpawn: 1
   cameraAttachSpeed: 1
   arenaCollision: {fileID: 1765436201}
+  endLevelTrigger: {fileID: 0}
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
@@ -67401,6 +67407,7 @@ MonoBehaviour:
   delayBeforeSpawn: 1
   cameraAttachSpeed: 1
   arenaCollision: {fileID: 1617626263}
+  endLevelTrigger: {fileID: 0}
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}
@@ -82420,6 +82427,7 @@ MonoBehaviour:
   delayBeforeSpawn: 1
   cameraAttachSpeed: 1
   arenaCollision: {fileID: 791770374}
+  endLevelTrigger: {fileID: 0}
   arrowUI: {fileID: 1247094304}
   arrowDisplayTime: 3
   spawnSound: {fileID: 1347223990}

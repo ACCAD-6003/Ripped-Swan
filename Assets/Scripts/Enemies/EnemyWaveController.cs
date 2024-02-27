@@ -80,7 +80,8 @@ public class EnemyWaveController : MonoBehaviour
                 DisplayArrowUI();
                 //DisableCollision();
 
-                if (isLastWave)
+                // Better than having an unnecessary bool
+                if (doorAnimator != null)
                 {
                     // Trigger the door animation or any other actions for the last wave
                     PlayDoorAnimation();
