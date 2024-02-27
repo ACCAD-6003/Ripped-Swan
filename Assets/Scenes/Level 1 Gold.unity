@@ -50949,6 +50949,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
+      propertyPath: damageTake
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942770874, guid: b22a2373367dbc44eaa4a3c249174279, type: 3}
       propertyPath: explosionSound
       value: 
       objectReference: {fileID: 2060251030}
