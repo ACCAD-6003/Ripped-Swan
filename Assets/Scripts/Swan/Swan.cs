@@ -14,7 +14,7 @@ public class Swan : MonoBehaviour
     public static int healCap =10;
     public static int growCap = 1;
     public static int maxFeathers = 50;
-    public static int feathers;
+    public static int feathers = 0;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
@@ -80,7 +80,6 @@ public class Swan : MonoBehaviour
 
       //  Attacking = false;
         maxHealth = healthPoints;
-        feathers = 0;
         damage = 1;
         blockPoints = 5;
 
