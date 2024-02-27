@@ -126,13 +126,9 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-
-            if (swanSize <= 0)
-            {
-                swanPoweredUp = false;
-                swanSize = 0;
-            }
-            transform.localScale *= 1/scaleFactor;
+            swanPoweredUp = false;
+            swanSize = 0;
+            transform.localScale = new Vector3(1,1,1);
         }
     }
 
@@ -238,7 +234,7 @@ public class Swan : MonoBehaviour
         if (collision.gameObject.tag == "bread")
         {
                 if (CanPowerUp())
-                powerUp();
+                    powerUp();
                 Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "health_pickup")
@@ -250,7 +246,7 @@ public class Swan : MonoBehaviour
 
     public void powerUp()
     {
-        if (!swanPoweredUp)
+        if (CanPowerUp())
         {
             swanSize++;
             swanPoweredUp = true;
@@ -261,11 +257,7 @@ public class Swan : MonoBehaviour
     }
     public bool CanPowerUp()
     {
-        if(swanSize < maxSwanSize)
-        {
-            return true;
-        }
-        return false;
+        return swanSize < maxSwanSize;
     }
 
     public void Heal(int healPower)
