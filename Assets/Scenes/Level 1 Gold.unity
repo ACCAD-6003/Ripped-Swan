@@ -97473,10 +97473,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1180643836}
     m_Modifications:
-    - target: {fileID: 514847182042667490, guid: b3f90e02f4957dc409f8bb284a7e840c, type: 3}
-      propertyPath: weight
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 514847182042667491, guid: b3f90e02f4957dc409f8bb284a7e840c, type: 3}
       propertyPath: m_Name
       value: Post Process Volume
