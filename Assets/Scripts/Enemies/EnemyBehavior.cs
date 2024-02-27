@@ -16,6 +16,12 @@ public class EnemyBehavior : MonoBehaviour
 
     public AudioSource[] Slaps;
 
+    /* Used for attack animation */
+    public Animator spriteAnimator;
+    private const float attackCooldown = 0.333f;
+    private float attackTime;
+    private bool isAttacking;
+
     private enum State
     {
         Idle, Walk,Pursuit,Cooldown,
@@ -31,6 +37,8 @@ public class EnemyBehavior : MonoBehaviour
 
     void Start()
     {
+        spriteAnimator = gameObject.transform.Find("DuckSprite").GetComponent<Animator>();
+        isAttacking = false;
 
         currentState = State.Idle; // start in idle
         rb = GetComponent<Rigidbody>(); //rigidbody for movement
@@ -181,12 +189,16 @@ public class EnemyBehavior : MonoBehaviour
     {
       
         yield return new WaitForSeconds(prepTime);
-        
+
+        spriteAnimator.SetBool("DuckAttack",true);
+
         currentState = State.Attack;
         BoxCollider myBC = gameObject.GetComponent<BoxCollider>();
         myBC.enabled = true;
         gameObject.transform.GetChild(1).gameObject.SetActive(true);
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.333f);
+
+        spriteAnimator.SetBool("DuckAttack", false);
         gameObject.transform.GetChild(1).gameObject.SetActive(false);
         myBC.enabled = false;
         currentState = State.Cooldown;
@@ -206,8 +218,11 @@ public class EnemyBehavior : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && currentState== State.Attack && !other.isTrigger)
         {
             Swan swan = other.gameObject.GetComponent<Swan>();
-            Slaps[Random.Range(0, 9)].Play();
-            swan.hit();
+            if (swan.state is not SwanDeathState)
+            {
+                Slaps[Random.Range(0, 9)].Play();
+                swan.hit();
+            }
         }
     }
 

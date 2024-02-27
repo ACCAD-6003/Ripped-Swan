@@ -59,7 +59,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemEastAction_performed(InputAction.CallbackContext obj)
     {
-        if (s.state is SwanMoveState && Swan.SpendFeathers(Swan.growCap))
+        if (s.state is SwanMoveState &&  s.CanPowerUp() && Swan.SpendFeathers(Swan.growCap) )
         {
             s.powerUp();
         }

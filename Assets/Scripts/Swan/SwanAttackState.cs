@@ -21,6 +21,7 @@ public class SwanAttackState : ISwanState
         if (type == "heavy")
         {
             cooldown = 0.4f;
+            swan.damage = 3;
             swan.bite.Play();
         }
         if (type == "special") {
@@ -92,12 +93,12 @@ public class SwanAttackState : ISwanState
     {
         swan.boxCollider.enabled = true;
         swan.spriteAnimator.SetBool(attackType, true);
-
         if (Time.time > next)
         {
             swan.boxCollider.enabled = false;
             swan.spriteAnimator.SetBool(attackType, false);
-           
+
+            swan.damage = 1;
             //  swan.Attacking = false;
             swan.state = new SwanMoveState(swan);
         }
@@ -111,7 +112,8 @@ public class SwanAttackState : ISwanState
         {
             swan.boxCollider.enabled = true;
             
-          //  swan.Explosion.Play();
+            swan.explosionSound.Play();
+            swan.explosionParticleSystem.Play();
         }
         if (Time.time > next)
         {
