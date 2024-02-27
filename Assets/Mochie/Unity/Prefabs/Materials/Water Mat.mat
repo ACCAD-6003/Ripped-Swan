@@ -236,7 +236,7 @@ Material:
     - _Rotation1: 0
     - _Roughness: 0
     - _SSR: 1
-    - _SSRHeight: 0.1
+    - _SSRHeight: 0.2
     - _SSRStrength: 1
     - _ShadowStrength: 0
     - _SpecStrength: 1

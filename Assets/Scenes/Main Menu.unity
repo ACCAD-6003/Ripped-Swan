@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1142,6 +1142,7 @@ GameObject:
   - component: {fileID: 1181912445}
   - component: {fileID: 1181912444}
   - component: {fileID: 1181912443}
+  - component: {fileID: 1181912446}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1207,14 +1208,23 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181912442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.10363412, y: 0.12981112, z: 0.013643686, w: 0.98601365}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -12, y: 15, z: 0}
+--- !u!45 &1181912446
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181912442}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 03fd6598ab9b50143bdf7ee50f33f7b7, type: 2}
 --- !u!1 &1647713409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1338,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677650789}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 6e4b2b5a698efd748b3df4233188ec8e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d7e5946a03cf6b246ba22c1b4587e81a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}

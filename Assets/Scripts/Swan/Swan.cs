@@ -5,9 +5,13 @@ using Random = UnityEngine.Random;
 
 public class Swan : MonoBehaviour
 {
+    [SerializeField] private  int maxSwanSize =2;
+    private int swanSize;
+
+    public bool superArmor;
     public static int specialCap = 30;
     public static int healCap =10;
-    public static int growCap = 20;
+    public static int growCap = 1;
     public static int maxFeathers = 50;
     public static int feathers;
     public Animator spriteAnimator;
@@ -30,7 +34,7 @@ public class Swan : MonoBehaviour
     public ISwanState state;
 
     public bool swanPoweredUp;
-    [SerializeField] private bool canStackPowerUps;
+    private bool canStackPowerUps = false;
 
     public AudioSource punch_hit;
     public AudioSource punch_miss;
@@ -46,7 +50,7 @@ public class Swan : MonoBehaviour
     public AudioSource block;
 
     public AudioSource Explosion;
-    public bool Attacking;// This is so you can't start attacking when already attacking
+  //  public bool Attacking;// This is so you can't start attacking when already attacking
 
     public AudioSource[] PunchSound;
     public AudioSource[] ArmSwingSound;
@@ -66,11 +70,13 @@ public class Swan : MonoBehaviour
     }
     void Start()
     {
+        swanSize = 0;
+        superArmor = false;
         spriteAnimator = gameObject.transform.Find("SwanSprite").GetComponent<Animator>();
         specialMovementAnimator = gameObject.GetComponent<Animator>();
         state = new SwanMoveState(this);
 
-        Attacking = false;
+      //  Attacking = false;
         maxHealth = healthPoints;
         feathers = 0;
         damage = 1;
@@ -80,6 +86,7 @@ public class Swan : MonoBehaviour
         boxCollider.enabled = false;
 
         swanPoweredUp = false;
+        lowhp.volume = 0.05f;
     }
 
      void Update()
@@ -89,12 +96,12 @@ public class Swan : MonoBehaviour
          //   state = new SwanAttackState(this);
         state.Update();
         
-        if (swanPoweredUp)
+        if (swanSize>0)
         {
             checkPowerUp();
         }
         checkHP();
-        CheckBlock();
+       // CheckBlock();
        // AdjustTime();
      }
 
@@ -117,7 +124,12 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-            swanPoweredUp = false;
+
+            if (swanSize <= 0)
+            {
+                swanPoweredUp = false;
+                swanSize = 0;
+            }
             transform.localScale *= 1/scaleFactor;
         }
     }
@@ -133,23 +145,42 @@ public class Swan : MonoBehaviour
 
     public void attack(String attackType)
     {
-        if (state is not SwanAttackState)
+        if (state is not SwanAttackState && state is not SwanDeathState)
             state = new SwanAttackState(this, attackType);
     }
 
+    /*
     public void CheckBlock()
     {
-        if (state is not SwanBlockState && Input.GetKey(KeyCode.E))
+        if (state is not SwanBlockState )
             state = new SwanBlockState(this);
         else
         {
-            if (state is SwanBlockState && !Input.GetKey(KeyCode.E))
+            if (state is SwanBlockState )
             {
                 spriteAnimator.SetBool("block", false);
                 state = new SwanMoveState(this);
             }
         }
     }
+    */
+
+    public void StartBlock()
+    {
+        
+        if (state is not SwanBlockState && state is not SwanDeathState)
+            state = new SwanBlockState(this);
+    }
+
+    public void EndBlock()
+    {
+        if (state is SwanBlockState && state is not SwanDeathState)
+        {
+            spriteAnimator.SetBool("block", false);
+            state = new SwanMoveState(this);
+        }
+    }
+
 
     private void breakBlock()
     {
@@ -162,7 +193,11 @@ public class Swan : MonoBehaviour
     public void hit()
     {
         // Swan can only get hurt if it is not blocking
-        if (state is not SwanBlockState)
+        if (superArmor)
+        {
+
+        }
+       else if (state is not SwanBlockState)
         {
             //Debug.Log("Player hit!");
             healthPoints -= damageTake;
@@ -202,11 +237,13 @@ public class Swan : MonoBehaviour
         {
             if (canStackPowerUps)
             {
+                if(CanPowerUp())
                 powerUp();
                 Destroy(collision.gameObject);
             }
             else if (!swanPoweredUp)
             {
+                if (CanPowerUp())
                 powerUp();
                 Destroy(collision.gameObject);
             }
@@ -220,10 +257,19 @@ public class Swan : MonoBehaviour
 
     public void powerUp()
     {
+        swanSize++;
         swanPoweredUp = true;
         transform.localScale *= scaleFactor;
         powerUpStart = Time.time;
         powerUp_Sound.Play();
+    }
+    public bool CanPowerUp()
+    {
+        if(swanSize < maxSwanSize)
+        {
+            return true;
+        }
+        return false;
     }
 
     public void Heal(int healPower)

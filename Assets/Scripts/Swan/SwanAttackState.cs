@@ -21,13 +21,15 @@ public class SwanAttackState : ISwanState
         if (type == "heavy")
         {
             cooldown = 0.4f;
+            swan.damage = 3;
             swan.bite.Play();
         }
         if (type == "special") {
-            swan.Attacking = true;
+            swan.superArmor = true;
+            //   swan.Attacking = true;
             EnemyWaveController.specialZoom?.Invoke();
             cooldown = 0.8f;
-            Time.timeScale = 0.25f;
+            Time.timeScale = 0.55f;
             swan.damage = 5;
             swan.special.Play();
         }
@@ -39,7 +41,18 @@ public class SwanAttackState : ISwanState
 
     public void Update()
     {
-        // If swan is in attack state, set attack anim to be true
+
+        if (attackType == "punch")
+            Attack();
+        else if (attackType == "heavy")
+            HeavyAttack();
+        else if(attackType == "special")
+            SpecialAttack();
+        
+        
+        
+        
+        /*  // If swan is in attack state, set attack anim to be true
         if (swan.state is SwanAttackState)
         {
             swan.boxCollider.enabled = true;
@@ -55,9 +68,62 @@ public class SwanAttackState : ISwanState
                     swan.damage = 1;
                     //swan.Explosion.Play();
                 }
-                swan.Attacking = false;
+              //  swan.Attacking = false;
                 swan.state = new SwanMoveState(swan);
             }
+        } */
+    }
+
+    private void Attack()
+    {
+        swan.boxCollider.enabled = true;
+        swan.spriteAnimator.SetBool(attackType, true);
+
+        if (Time.time > next)
+        {
+            swan.boxCollider.enabled = false;
+            swan.spriteAnimator.SetBool(attackType, false);
+           
+            swan.state = new SwanMoveState(swan);
+        }
+
+    }
+
+    private void HeavyAttack()
+    {
+        swan.boxCollider.enabled = true;
+        swan.spriteAnimator.SetBool(attackType, true);
+        if (Time.time > next)
+        {
+            swan.boxCollider.enabled = false;
+            swan.spriteAnimator.SetBool(attackType, false);
+
+            swan.damage = 1;
+            //  swan.Attacking = false;
+            swan.state = new SwanMoveState(swan);
+        }
+    }
+
+    private void SpecialAttack()
+    {
+        
+        swan.spriteAnimator.SetBool(attackType, true);
+        if (Time.time < next && Time.time > next -0.1f)
+        {
+            swan.boxCollider.enabled = true;
+            
+          //  swan.Explosion.Play();
+        }
+        if (Time.time > next)
+        {
+            swan.boxCollider.enabled = false;
+            swan.spriteAnimator.SetBool(attackType, false);
+           
+                Time.timeScale = 1.0f;
+                swan.damage = 1;
+
+            swan.superArmor = false;
+            swan.state = new SwanMoveState(swan);
         }
     }
 }

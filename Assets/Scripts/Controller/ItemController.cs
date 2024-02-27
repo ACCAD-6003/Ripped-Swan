@@ -31,7 +31,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemNorthAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(Swan.specialCap))
+        if (s.state is SwanMoveState && Swan.SpendFeathers(Swan.specialCap))
         {
             s.attack("special");
         }
@@ -50,7 +50,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemWestAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(Swan.healCap))
+        if (s.state is SwanMoveState && Swan.SpendFeathers(Swan.healCap))
         {
             s.Heal(healPower);
         }
@@ -59,7 +59,7 @@ public class ItemController : MonoBehaviour
 
     private void ItemEastAction_performed(InputAction.CallbackContext obj)
     {
-        if (!s.Attacking && Swan.SpendFeathers(Swan.growCap))
+        if (s.state is SwanMoveState &&  s.CanPowerUp() && Swan.SpendFeathers(Swan.growCap) )
         {
             s.powerUp();
         }
