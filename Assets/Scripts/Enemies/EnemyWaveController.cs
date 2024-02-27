@@ -18,6 +18,7 @@ public class EnemyWaveController : MonoBehaviour
     [SerializeField] private float delayBeforeSpawn = 0.1f;
     [SerializeField] private float cameraAttachSpeed = 2f;
     [SerializeField] private GameObject arenaCollision;
+    [SerializeField] private GameObject endLevelTrigger;
 
     [SerializeField] private GameObject arrowUI;
     [SerializeField] private float arrowDisplayTime = 3f;
@@ -32,13 +33,14 @@ public class EnemyWaveController : MonoBehaviour
     private float originalCameraZPosition;
     private Quaternion originalCameraRotation;
 
+
     private void Start()
     {
-       
-        specialZoom += BigZoom;
+
+       // specialZoom += BigZoom;
         if (Camera.main != null)
-        {
-            mainCamera = Camera.main;
+       {
+           mainCamera = Camera.main;
         }
         followCameraScript = mainCamera.GetComponent<FollowCamera>();
         originalCameraZPosition = mainCamera.transform.position.z;
@@ -47,10 +49,10 @@ public class EnemyWaveController : MonoBehaviour
         StartCoroutine(SpawnWaves());
     }
 
-    private void  OnDestroy()
-    {
-        specialZoom -= BigZoom;
-    }
+    // private void  OnDestroy()
+   // {
+    //    specialZoom -= BigZoom;
+   // }
 
     IEnumerator SpawnWaves()
     {
@@ -60,9 +62,9 @@ public class EnemyWaveController : MonoBehaviour
 
             if (!isCameraDetached && wave == 1)
             {
-               // Debug.Log("Detaching Camera");
+               Debug.Log("Detaching Camera");
                 yield return StartCoroutine(DetachCamera());
-                EnableCollision();
+                // EnableCollision();
             }
 
             yield return new WaitForSeconds(delayBeforeSpawn);
@@ -73,10 +75,10 @@ public class EnemyWaveController : MonoBehaviour
 
             if (wave == numberOfWaves)
             {
-               // Debug.Log("Attaching Camera");
+               Debug.Log("Attaching Camera");
                 yield return StartCoroutine(AttachCamera());
                 DisplayArrowUI();
-                DisableCollision();
+                //DisableCollision();
 
                 if (isLastWave)
                 {
@@ -137,13 +139,13 @@ public class EnemyWaveController : MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < cameraAttachSpeed)
         {
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / cameraAttachSpeed);
-            mainCamera.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, fixedCameraPosition.rotation, elapsedTime / cameraAttachSpeed);
+            Camera.main.transform.position = Vector3.Lerp(mainCamera.transform.position, fixedCameraPosition.position, elapsedTime / cameraAttachSpeed);
+            Camera.main.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, fixedCameraPosition.rotation, elapsedTime / cameraAttachSpeed);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        mainCamera.enabled = true;
+        Camera.main.enabled = true;
         isCameraDetached = true;
     }
 
@@ -152,26 +154,24 @@ public class EnemyWaveController : MonoBehaviour
         notOver = false;
         followCameraScript.enabled = true;
 
-        float elapsedTime = 0f;
-        while (elapsedTime < cameraAttachSpeed)
-        {
-            Vector3 targetPosition = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, originalCameraZPosition);
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPosition, elapsedTime / cameraAttachSpeed);
-            mainCamera.transform.rotation = Quaternion.Slerp(mainCamera.transform.rotation, originalCameraRotation, elapsedTime / cameraAttachSpeed);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+        // Ensure camera position and rotation are reset
+        mainCamera.transform.position = fixedCameraPosition.position;
+        mainCamera.transform.rotation = fixedCameraPosition.rotation;
+
+        // Delay for a short time to allow the camera to settle
+        yield return new WaitForSeconds(0.1f);
 
         mainCamera.enabled = true;
         isCameraDetached = false;
     }
 
-    public void BigZoom()
-    {
-        Debug.Log("Big Zoom");
-        StartCoroutine(Zoomer());
 
-    }
+    //public void BigZoom()
+  //  {
+   //     Debug.Log("Big Zoom");
+   //     StartCoroutine(Zoomer());
+
+   // }
 
     private IEnumerator Zoomer()
     {
@@ -200,6 +200,8 @@ public class EnemyWaveController : MonoBehaviour
         {
             // Set the DoorOpen parameter to trigger the animation
             doorAnimator.SetBool("DoorOpen", true);
+            endLevelTrigger.SetActive(true);
+
         }
     }
 }
