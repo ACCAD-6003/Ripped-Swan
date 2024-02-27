@@ -7114,6 +7114,7 @@ GameObject:
   - component: {fileID: 200525104}
   - component: {fileID: 200525103}
   - component: {fileID: 200525106}
+  - component: {fileID: 200525107}
   m_Layer: 0
   m_Name: Ui Trigger jump
   m_TagString: Untagged
@@ -7213,6 +7214,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1914820872}
   seconds: 3
+--- !u!114 &200525107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200525100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415699244e01fb8449eab27ffe872d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1623556766}
+  seconds: 2.5
 --- !u!43 &201665650
 Mesh:
   m_ObjectHideFlags: 0
@@ -42230,6 +42245,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5232067236690362670, guid: 6accce3c3b8897943aac8c9a46c0e36d, type: 3}
   m_PrefabInstance: {fileID: 1056980270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1062375741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3640996763959607329, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+  m_PrefabInstance: {fileID: 946360527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1066879018
 GameObject:
   m_ObjectHideFlags: 0
@@ -55931,6 +55951,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2063869813352197467, guid: b462c9cfd03b9594291fe29a6127f797, type: 3}
   m_PrefabInstance: {fileID: 1398497917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1401115831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1252860610537465622, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+  m_PrefabInstance: {fileID: 946360527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403173324
 GameObject:
   m_ObjectHideFlags: 0
@@ -61589,6 +61614,7 @@ GameObject:
   - component: {fileID: 1568269413}
   - component: {fileID: 1568269412}
   - component: {fileID: 1568269415}
+  - component: {fileID: 1568269416}
   m_Layer: 0
   m_Name: Ui Trigger attack
   m_TagString: Untagged
@@ -61687,6 +61713,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1970019700}
+  seconds: 5
+--- !u!114 &1568269416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568269409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415699244e01fb8449eab27ffe872d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1062375741}
   seconds: 5
 --- !u!1 &1571936749
 GameObject:
@@ -62068,6 +62108,7 @@ GameObject:
   - component: {fileID: 1584771716}
   - component: {fileID: 1584771715}
   - component: {fileID: 1584771714}
+  - component: {fileID: 1584771718}
   m_Layer: 0
   m_Name: Ui Trigger special
   m_TagString: Untagged
@@ -62167,6 +62208,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584771712}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1584771718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584771712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415699244e01fb8449eab27ffe872d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1401115831}
+  seconds: 5
 --- !u!43 &1585217586
 Mesh:
   m_ObjectHideFlags: 0
@@ -63962,6 +64017,7 @@ GameObject:
   - component: {fileID: 1592512207}
   - component: {fileID: 1592512206}
   - component: {fileID: 1592512205}
+  - component: {fileID: 1592512209}
   m_Layer: 0
   m_Name: Ui Trigger bite
   m_TagString: Untagged
@@ -64061,6 +64117,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592512203}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1592512209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592512203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 415699244e01fb8449eab27ffe872d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2102583870}
+  seconds: 5
 --- !u!1 &1601397238
 GameObject:
   m_ObjectHideFlags: 0
@@ -65188,6 +65258,11 @@ Transform:
   m_Father: {fileID: 752135954}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1623556766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8605891601383592082, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+  m_PrefabInstance: {fileID: 946360527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1630099303
 GameObject:
   m_ObjectHideFlags: 0
@@ -90109,6 +90184,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092189030}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2102583870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4507351687927354532, guid: e8fa84f1185b69d4abdd47332bcde0a0, type: 3}
+  m_PrefabInstance: {fileID: 946360527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2104276780
 Mesh:
   m_ObjectHideFlags: 0
