@@ -14,7 +14,7 @@ public class Swan : MonoBehaviour
     public static int healCap =10;
     public static int growCap = 1;
     public static int maxFeathers = 50;
-    public static int feathers;
+    public static int feathers = 0;
     public Animator spriteAnimator;
     public Animator specialMovementAnimator;
     public BoxCollider boxCollider;
@@ -25,7 +25,7 @@ public class Swan : MonoBehaviour
     
     [Tooltip("Damage taken")]
     [Range(0, 10)]
-    [SerializeField] private int damageTake = 1; // how much damage the player takes from a hit
+    [SerializeField] private int damageTake = 3; // how much damage the player takes from a hit
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
@@ -81,7 +81,6 @@ public class Swan : MonoBehaviour
 
       //  Attacking = false;
         maxHealth = healthPoints;
-        feathers = 0;
         damage = 1;
         blockPoints = 5;
 
@@ -129,13 +128,9 @@ public class Swan : MonoBehaviour
     {
         if (Time.time - powerUpStart > powerUpDuration) // Powerup lasts for 10 seconds
         {
-
-            if (swanSize <= 0)
-            {
-                swanPoweredUp = false;
-                swanSize = 0;
-            }
-            transform.localScale *= 1/scaleFactor;
+            swanSize--;
+            swanPoweredUp = false;
+            transform.localScale = new Vector3(1,1,1);
         }
     }
 
