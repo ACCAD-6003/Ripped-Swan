@@ -13,17 +13,20 @@ public class EndCredits : MonoBehaviour
 
     private double start;
     private bool creditsHaveStarted;
+    private bool playerStarted;
 
     private void Start()
     {
         start = Time.time;
         creditsHaveStarted = false;
+        playerStarted = false;
     }
 
     private void Update()
     {
-        if (creditsHaveStarted) {
-            if ((double)Time.time - start > player.length)
+        if (player.isPlaying) playerStarted = true;
+        if (creditsHaveStarted && playerStarted) {
+            if (!player.isPlaying)
             {
                 AudioListener.pause = false;
                 Time.timeScale = 1.0f;
