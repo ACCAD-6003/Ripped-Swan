@@ -100,10 +100,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 929744132532875189, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1232190630935003853, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -268,10 +264,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Swan Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 1840583522201341030, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2190562594221789125, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -403,10 +395,6 @@ PrefabInstance:
     - target: {fileID: 6805476423893623224, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7583894220693137511, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7583894220693137511, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
       propertyPath: m_IsActive
@@ -541,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8417838c821d0c94ab4e9c4284e21cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSwanSize: 2
+  maxTimesTheSwanCanGrow: 1
   superArmor: 0
   spriteAnimator: {fileID: 0}
   specialMovementAnimator: {fileID: 0}
@@ -550,7 +538,7 @@ MonoBehaviour:
   powerUpStart: 0
   scaleFactor: 2
   powerUpDuration: 10
-  damageTake: 1
+  damageTake: 3
   healthPoints: 100
   blockPoints: 0
   swanPoweredUp: 0
@@ -565,7 +553,7 @@ MonoBehaviour:
   lowhp: {fileID: 3294401383104811578}
   swanDeath: {fileID: 4991831058205588094}
   block: {fileID: 8370122822625184021}
-  explosionSound: {fileID: 0}
+  explosionSound: {fileID: 5393821071336119089}
   explosionParticleSystem: {fileID: 0}
   PunchSound:
   - {fileID: 6262833251867431737}
@@ -622,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
-  speed: 5
+  speed: 4.5
 --- !u!114 &1942770891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,9 +636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8496bb2ffd1bee44a0980e8e110ff3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  jumpForce: 5
-  flapForce: 2
+  rb: {fileID: 2493170928736159074}
+  jumpForce: 7
+  flapForce: 3
   totalFlaps: 1
 --- !u!114 &1942770893
 MonoBehaviour:
@@ -725,6 +713,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s: {fileID: 1942770874}
   healPower: 25
+--- !u!54 &2493170928736159074 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1840583522201341020, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+  m_PrefabInstance: {fileID: 4256628658046355774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2493170928736159077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1840583522201341019, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
@@ -798,6 +791,11 @@ AudioSource:
 --- !u!82 &5255442012317142570 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8357978991932081940, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
+  m_PrefabInstance: {fileID: 4256628658046355774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &5393821071336119089 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8198845564303462927, guid: 381d566342cbffe47a1bc0d89cc89f1e, type: 3}
   m_PrefabInstance: {fileID: 4256628658046355774}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &5423501672294116294 stripped

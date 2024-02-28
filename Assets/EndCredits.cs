@@ -13,17 +13,20 @@ public class EndCredits : MonoBehaviour
 
     private double start;
     private bool creditsHaveStarted;
+    private bool playerStarted;
 
     private void Start()
     {
         start = Time.time;
         creditsHaveStarted = false;
+        playerStarted = false;
     }
 
     private void Update()
     {
-        if (creditsHaveStarted) {
-            if ((double)Time.time - start > player.length)
+        if (player.isPlaying && !playerStarted) playerStarted = true; // sets to true once
+        if (playerStarted) {
+            if (!player.isPlaying)
             {
                 AudioListener.pause = false;
                 Time.timeScale = 1.0f;
@@ -35,14 +38,14 @@ public class EndCredits : MonoBehaviour
     public void StartCredits()
     {
         start = Time.time;
-        canvas.transform.Find("UI_Box").gameObject.SetActive(false);
+        /*canvas.transform.Find("UI_Box").gameObject.SetActive(false);
         canvas.transform.Find("UI_PlayerHP").gameObject.SetActive(false);
         canvas.transform.Find("UI_Feathers").gameObject.SetActive(false);
         canvas.transform.Find("UI_specialAttackMenu").gameObject.SetActive(false);
         canvas.transform.Find("UI_controlInstructions").gameObject.SetActive(false);
-        canvas.transform.Find("Screen").gameObject.SetActive(true);
+        canvas.transform.Find("Screen").gameObject.SetActive(true); */
         AudioListener.pause = true;
-        creditsHaveStarted = true;
+        //creditsHaveStarted = true;
         Time.timeScale = 0.0f;
         player.Play();
     }
