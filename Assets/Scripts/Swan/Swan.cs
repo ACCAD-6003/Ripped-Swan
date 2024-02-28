@@ -11,7 +11,7 @@ public class Swan : MonoBehaviour
 
     public bool superArmor;
     public static int specialCap = 30;
-    public static int healCap =10;
+    public static int healCap = 10;
     public static int growCap = 20;
     public static int maxFeathers = 50;
     public static int feathers;
