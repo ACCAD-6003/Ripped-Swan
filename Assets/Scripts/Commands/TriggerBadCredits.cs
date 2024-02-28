@@ -9,7 +9,7 @@ public class TriggerBadCredits : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene("EndCreditsBad");
         }
     }
 }

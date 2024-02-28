@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/mat_black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/mat_black.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Swan Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/feather.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/feather.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/power_up.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/power_up.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PoiyomiShaders/Textures/Misc/T_LightRainbowVertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PoiyomiShaders/Textures/Misc/T_LightRainbowVertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LowPolyFarmLite/LowPolyFarmLite_2020.3_HDRP_v1.02.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LowPolyFarmLite/LowPolyFarmLite_2020.3_URP_v1.02.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerBadCredits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerBadCredits.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerGoodCredits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerGoodCredits.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerMamaScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/TriggerMamaScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../Ripped Swan Builds/2-24 Brawn Swan\Brawn Swan.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../Ripped Swan Builds/2-28 lvl2\Brawn Swan.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\jackd\Unity Projects\Ripped Swan Builds\swan test build 2-5" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -149,6 +148,7 @@
       <workItem from="1709083666076" duration="689000" />
       <workItem from="1709084418979" duration="6000" />
       <workItem from="1709132738229" duration="1000" />
+      <workItem from="1709135296626" duration="110000" />
     </task>
     <servers />
   </component>
