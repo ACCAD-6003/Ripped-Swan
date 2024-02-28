@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3747929755996734635}
   - component: {fileID: 7704756445504138192}
   m_Layer: 0
-  m_Name: feather
+  m_Name: feather white
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0a7c00092409d894490276c46e7e4cd8, type: 2}
+  - {fileID: 2100000, guid: 98b8b844e60f7334a94aa3acf4a3c980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

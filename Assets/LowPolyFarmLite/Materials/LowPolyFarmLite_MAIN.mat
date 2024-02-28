@@ -1399,7 +1399,7 @@ Material:
     - _EnableIridescence: 0
     - _EnableMirrorOptions: 0
     - _EnableMotionVectorForVertexAnimation: 0
-    - _EnableOutlines: 0
+    - _EnableOutlines: 1
     - _EnablePathing: 0
     - _EnableRim2Lighting: 0
     - _EnableRimLighting: 0
@@ -3008,7 +3008,7 @@ Material:
     - m_start_vertexGlitching: 0
     - m_start_vertexManipulation: 0
     - m_start_videoEffects: 0
-    - m_thirdpartyCategory: 0
+    - m_thirdpartyCategory: 1
     - shader_is_using_thry_editor: 69
     - shader_locale: 0
     - shader_master_label: 0
