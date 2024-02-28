@@ -11,6 +11,7 @@ public class mainMenu : MonoBehaviour
 {
     public Scrollbar scrollbar;
     public TMP_Text progressText;
+    public GameObject skip;
 
     public GameObject screen;
     public GameObject videoPlayer;
@@ -25,6 +26,7 @@ public class mainMenu : MonoBehaviour
 
     public void playIntroCutscene()
     {
+        skip.SetActive(true);
         screen.SetActive(true);
         videoPlayer.SetActive(true);
         player.Play();
@@ -57,8 +59,10 @@ public class mainMenu : MonoBehaviour
 
     private void CutSceneChecker()
     {
-        if (Input.anyKeyDown && player.isPlaying)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+            && player.isPlaying)
         {
+            skip.SetActive(false);
             player.Stop();
             screen.SetActive(false);
             videoPlayer.SetActive(false);
@@ -67,6 +71,7 @@ public class mainMenu : MonoBehaviour
         // At the end of intro scene, load level
         if ((Time.time - start > player.length) && !isLevelLoaded)
         {
+            skip.SetActive(false);
             screen.SetActive(false);
             videoPlayer.SetActive(false);
             LoadLevel(1);

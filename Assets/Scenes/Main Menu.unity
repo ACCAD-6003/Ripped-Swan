@@ -843,6 +843,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3879606697222838137, guid: 001968502c169964d8cd57f5f5d99ced, type: 3}
+      propertyPath: skip
+      value: 
+      objectReference: {fileID: 355248967}
+    - target: {fileID: 3879606697222838137, guid: 001968502c169964d8cd57f5f5d99ced, type: 3}
       propertyPath: screen
       value: 
       objectReference: {fileID: 1647713409}
