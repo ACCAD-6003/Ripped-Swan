@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Sprite_Shadow
-  m_Shader: {fileID: 4800000, guid: 300b9b2e5f092cb41a550359addb5ad3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 7984191b738b7b447b68cbb6eb900b6a, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - VIGNETTE_MASKED

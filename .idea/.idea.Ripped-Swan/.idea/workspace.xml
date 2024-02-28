@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="800e4352-8f8c-487d-8640-670cfb2c801b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ripped-Swan/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1 Gold.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 2 Gold.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 2 Gold.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/Swan.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Swan/SwanAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Swan/SwanAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/ExplosionDistortion.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Prefabs/BigExplosion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Prefabs/BigExplosion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/CheckPointManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +138,7 @@
       <workItem from="1708895799007" duration="3542000" />
       <workItem from="1708977738453" duration="87000" />
       <workItem from="1709063408904" duration="4117000" />
-      <workItem from="1709071910348" duration="2173000" />
+      <workItem from="1709071910348" duration="2790000" />
     </task>
     <servers />
   </component>
