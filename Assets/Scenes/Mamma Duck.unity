@@ -16772,8 +16772,6 @@ GameObject:
   - component: {fileID: 518253731}
   - component: {fileID: 518253732}
   - component: {fileID: 518253733}
-  - component: {fileID: 518253735}
-  - component: {fileID: 518253734}
   - component: {fileID: 518253736}
   m_Layer: 0
   m_Name: MamaDuck
@@ -16830,35 +16828,6 @@ MonoBehaviour:
   playerCollider: {fileID: 1515027663}
   destroySoundSource: {fileID: 376788278}
   screenFadeImage: {fileID: 1589224022}
-  triggerCredits: {fileID: 518253735}
---- !u!114 &518253734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518253730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83206a28d224b544ba8d4fba138dbd28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: {fileID: 0}
-  player: {fileID: 0}
-  canvas: {fileID: 0}
---- !u!114 &518253735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518253730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25ce0ff37b69c5e4680618c07c967f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endCredits: {fileID: 518253734}
 --- !u!95 &518253736
 Animator:
   serializedVersion: 4
