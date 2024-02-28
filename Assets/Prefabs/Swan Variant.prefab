@@ -538,7 +538,7 @@ MonoBehaviour:
   powerUpStart: 0
   scaleFactor: 2
   powerUpDuration: 10
-  damageTake: 1
+  damageTake: 3
   healthPoints: 100
   blockPoints: 0
   swanPoweredUp: 0

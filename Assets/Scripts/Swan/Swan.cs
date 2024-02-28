@@ -25,7 +25,7 @@ public class Swan : MonoBehaviour
     
     [Tooltip("Damage taken")]
     [Range(0, 10)]
-    [SerializeField] private int damageTake = 1; // how much damage the player takes from a hit
+    [SerializeField] private int damageTake = 3; // how much damage the player takes from a hit
 
     [Tooltip("Health Points")]
     [Range(0, 100)]
