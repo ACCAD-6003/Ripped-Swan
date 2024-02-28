@@ -8,20 +8,19 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_brown
-  m_Shader: {fileID: 4800000, guid: ee8cd58e2f67748439d08d75d1ef2879, type: 3}
-  m_ValidKeywords: []
-  m_InvalidKeywords:
+  m_Shader: {fileID: 4800000, guid: 034460dc851505a42baca2ba6514f9f0, type: 3}
+  m_ValidKeywords:
   - VIGNETTE_MASKED
   - _LIGHTINGMODE_TEXTURERAMP
   - _RIM2STYLE_POIYOMI
   - _RIMSTYLE_POIYOMI
   - _STOCHASTICMODE_DELIOT_HEITZ
+  m_InvalidKeywords: []
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
-    AllLockedGUIDS: 8ebe09b97229c4742a33d272cba04c04
     OriginalKeywords: VIGNETTE_MASKED _LIGHTINGMODE_TEXTURERAMP _RIM2STYLE_POIYOMI
       _RIMSTYLE_POIYOMI _STOCHASTICMODE_DELIOT_HEITZ
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Toon Outline
@@ -2202,7 +2201,7 @@ Material:
     - _Set_RimLightMaskChannel: 1
     - _Set_RimLightMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShaderUIWarning0: -0
     - _ShaderUIWarning1: -0
     - _ShadingEnabled: 1
