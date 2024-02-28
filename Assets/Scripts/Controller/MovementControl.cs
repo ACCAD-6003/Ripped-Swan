@@ -27,7 +27,8 @@ public class MovementControl : MonoBehaviour
     //reads value from movement actions and translattes them to vector3 for the player a can move in real time.
     void FixedUpdate()
     {
-        if (s.state is SwanMoveState)
+        if (s.state is SwanMoveState ||
+            (s.state is SwanAttackState && ((SwanAttackState)s.state).attackType != "special"))
         {
             pMovement = this.moveAction.ReadValue<Vector2>();
             Vector3 pVelocity = new Vector3(pMovement.x * speed, playerToMove.GetComponent<Rigidbody>().velocity.y, pMovement.y * speed);

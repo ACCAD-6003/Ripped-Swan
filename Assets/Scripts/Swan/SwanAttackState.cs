@@ -8,7 +8,7 @@ public class SwanAttackState : ISwanState
     private Swan swan;
     float cooldown; // cooldown based on animation length, this needs to change when we get the final sprites
     float next;
-    private string attackType;
+    public string attackType;
 
     public SwanAttackState(Swan swan, string type)
     {
