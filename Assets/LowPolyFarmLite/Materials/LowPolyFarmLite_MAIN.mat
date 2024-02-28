@@ -1399,7 +1399,7 @@ Material:
     - _EnableIridescence: 0
     - _EnableMirrorOptions: 0
     - _EnableMotionVectorForVertexAnimation: 0
-    - _EnableOutlines: 0
+    - _EnableOutlines: 1
     - _EnablePathing: 0
     - _EnableRim2Lighting: 0
     - _EnableRimLighting: 0
