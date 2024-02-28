@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7703534013705660994}
   - component: {fileID: 5071812934556073163}
   - component: {fileID: 2497752288244539605}
-  - component: {fileID: 4621524666083218266}
   - component: {fileID: 2781687309594295714}
   - component: {fileID: 5814899478089208847}
   - component: {fileID: 3907489690292073251}
@@ -582,20 +581,6 @@ MonoBehaviour:
     RefIds:
     - rid: 8036929920854917125
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
---- !u!114 &4621524666083218266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126862316443589554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db5601510725a654d98e632ef25bb397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCollider: {fileID: 0}
-  destroySoundSource: {fileID: 5878666107530117053}
 --- !u!23 &2781687309594295714
 MeshRenderer:
   m_ObjectHideFlags: 0
