@@ -15,6 +15,7 @@ public class mainMenu : MonoBehaviour
 
     public GameObject screen;
     public GameObject videoPlayer;
+    public AudioSource mainTheme;
     public VideoPlayer player;
     public bool isLevelLoaded;
     private bool inCutscene;
@@ -26,6 +27,7 @@ public class mainMenu : MonoBehaviour
 
     public void playIntroCutscene()
     {
+        mainTheme.Stop();
         skip.SetActive(true);
         screen.SetActive(true);
         videoPlayer.SetActive(true);
