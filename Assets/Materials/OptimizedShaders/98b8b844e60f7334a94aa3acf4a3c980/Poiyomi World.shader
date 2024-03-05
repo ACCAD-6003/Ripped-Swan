@@ -2630,7 +2630,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 					return float4(mainTexture.rgb * .0001, 1);
 				}
 				#if defined(DIRECTIONAL)
-				if ((1.0 /*_DisableDirectionalInAdd*/))
+				if ((0.0 /*_DisableDirectionalInAdd*/))
 				{
 					return float4(mainTexture.rgb * .0001, 1);
 				}
@@ -2736,7 +2736,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				if ((0.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
@@ -5065,7 +5065,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 					return float4(mainTexture.rgb * .0001, 1);
 				}
 				#if defined(DIRECTIONAL)
-				if ((1.0 /*_DisableDirectionalInAdd*/))
+				if ((0.0 /*_DisableDirectionalInAdd*/))
 				{
 					return float4(mainTexture.rgb * .0001, 1);
 				}
@@ -5166,7 +5166,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				if ((0.0 /*_Mode*/) == POI_MODE_CUTOUT && !(0.0 /*_AlphaToCoverage*/))
 				{
 					poiFragData.alpha = 1;
@@ -6896,7 +6896,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				return float4(poiFragData.finalColor, poiFragData.alpha) + POI_SAFE_RGB0;
 			}
 			ENDCG
@@ -8863,7 +8863,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi World/98b8b844e60f7334a94aa3a
 				{
 					poiFragData.alpha = 1;
 				}
-				clip(poiFragData.alpha - (0.5 /*_Cutoff*/));
+				clip(poiFragData.alpha - (0.0 /*_Cutoff*/));
 				#ifdef POI_PASS_META
 				UnityMetaInput meta;
 				UNITY_INITIALIZE_OUTPUT(UnityMetaInput, meta);

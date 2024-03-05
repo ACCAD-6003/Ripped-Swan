@@ -303,7 +303,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainColorAdjustTexture:
-        m_Texture: {fileID: 2800000, guid: 74e70070f7e1e764b8b05d57c3f67882, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 0.21, y: 0.1}
         m_Offset: {x: 0.38, y: 0}
     - _MainTex:
@@ -2668,7 +2668,7 @@ Material:
     - m_start_GlobalThemes: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
-    - m_start_MainHueShift: 1
+    - m_start_MainHueShift: 0
     - m_start_MainHueShiftGlobalMask: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
